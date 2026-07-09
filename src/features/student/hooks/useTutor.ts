@@ -13,11 +13,8 @@ const SESSIONS_KEY = 'mon_ecole_ai_tutor_sessions_v3';
 export function useTutor() {
   const { utilisateur } = useAuthStore();
   const studentName = utilisateur?.nom || 'Assane Diop';
-  const [grades, setGrades] = useState<Grade[]>([]);
-  const [courses, setCourses] = useState<Course[]>([]);
-  const [homeworks, setHomeworks] = useState<Homework[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [input, setInput] = useState('');
+  const [grades, setGrades] = useState<Grade[]>([]), [courses, setCourses] = useState<Course[]>([]), [homeworks, setHomeworks] = useState<Homework[]>([]);
+  const [isLoading, setIsLoading] = useState(false), [input, setInput] = useState('');
   const [attachedFile, setAttachedFile] = useState<{ name: string; mimeType: string; data: string } | null>(null);
   const [sessions, setSessions] = useState<TutorSession[]>(() => {
     const saved = localStorage.getItem(SESSIONS_KEY);
@@ -27,9 +24,9 @@ export function useTutor() {
 
   useEffect(() => {
     Promise.all([
-      axios.get('/api/student/grades').then(r => r.data),
-      axios.get('/api/student/courses').then(r => r.data),
-      axios.get('/api/student/homeworks').then(r => r.data)
+      axios.get('/api/student/grades').then(r => Array.isArray(r.data) ? r.data : []),
+      axios.get('/api/student/courses').then(r => Array.isArray(r.data) ? r.data : []),
+      axios.get('/api/student/homeworks').then(r => Array.isArray(r.data) ? r.data : [])
     ]).then(([g, c, h]) => { setGrades(g); setCourses(c); setHomeworks(h); })
       .catch(err => console.error("Data error:", err));
   }, []);
