@@ -12,6 +12,7 @@ interface ScannerDashboardSectionProps {
   readonly setManualId: (value: string) => void;
   readonly onManualSubmit: (e: React.FormEvent) => void;
   readonly onScanComplete: () => void;
+  readonly resetKey: number;
 }
 
 export function ScannerDashboardSection({
@@ -23,6 +24,7 @@ export function ScannerDashboardSection({
   setManualId,
   onManualSubmit,
   onScanComplete,
+  resetKey,
 }: ScannerDashboardSectionProps) {
   return (
     <div className="space-y-4" id="vigil-scanner-dashboard-section">
@@ -64,23 +66,28 @@ export function ScannerDashboardSection({
           </div>
         </div>
       ) : (
-        <div className="bg-white border border-neutral-200/60 p-5 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] space-y-5 animate-fade-in">
-          <div className="flex justify-center py-2">
-            <QRCameraScanner onScanComplete={onScanComplete} />
+        <div className="bg-white border border-neutral-200/60 p-6 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center gap-5 animate-fade-in text-center">
+          <div className="space-y-1">
+            <h3 className="font-extrabold text-base text-neutral-800">Scanner les Badges Étudiants</h3>
+            <p className="text-xs text-neutral-500">Placez le QR Code de l'étudiant devant la caméra</p>
           </div>
 
-          <div className="relative flex py-1 items-center">
+          <div className="w-full max-w-sm rounded-2xl overflow-hidden border border-neutral-200/60 bg-neutral-50 relative p-1 flex items-center justify-center">
+            <QRCameraScanner key={resetKey} onScanComplete={onScanComplete} />
+          </div>
+
+          <div className="w-full relative flex py-1 items-center">
             <div className="flex-grow border-t border-neutral-200/60" />
             <span className="flex-shrink mx-4 text-[10px] font-black text-neutral-400 uppercase tracking-widest">
-              OU SAISIR MANUELLEMENT
+              OU SAISIR LE MATRICULE
             </span>
             <div className="flex-grow border-t border-neutral-200/60" />
           </div>
 
-          <form onSubmit={onManualSubmit} className="space-y-3">
+          <form onSubmit={onManualSubmit} className="w-full">
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-400">
-                <Keyboard className="h-4 w-4" />
+                <Keyboard className="h-4.5 w-4.5" />
               </div>
               <input
                 type="text"
@@ -88,11 +95,11 @@ export function ScannerDashboardSection({
                 value={manualId}
                 onChange={(e) => setManualId(e.target.value)}
                 placeholder="Entrez le matricule (ex: 221-5092-B)"
-                className="w-full bg-[#F8F9FA] border border-neutral-200/80 rounded-xl pl-10 pr-12 py-3 text-xs font-semibold text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#ba0013]/30 focus:border-[#ba0013] transition-all uppercase"
+                className="w-full bg-[#F8F9FA] border border-neutral-200/80 rounded-2xl pl-10 pr-12 py-3 text-xs font-semibold text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#ba0013]/30 focus:border-[#ba0013] transition-all uppercase"
               />
               <button
                 type="submit"
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1.5 bg-[#ba0013]/10 text-[#ba0013] rounded-lg hover:bg-[#ba0013] hover:text-white transition-colors duration-200 cursor-pointer"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1.5 bg-[#ba0013]/10 text-[#ba0013] rounded-xl hover:bg-[#ba0013] hover:text-white transition-colors duration-200 cursor-pointer"
                 title="Valider le matricule"
               >
                 <Search className="h-4 w-4 stroke-[2.5]" />

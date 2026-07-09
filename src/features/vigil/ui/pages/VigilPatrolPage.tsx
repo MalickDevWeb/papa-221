@@ -14,7 +14,7 @@ export function VigilPatrolPage() {
   const location = useLocation();
   const currentPath = location.pathname;
   const {
-    manualId, setManualId, feedback, scanLogs, checkpoints, searchQuery, setSearchQuery, showBadge, setShowBadge,
+    manualId, setManualId, resetKey, feedback, scanLogs, checkpoints, searchQuery, setSearchQuery, showBadge, setShowBadge,
     scanMode, setScanMode, dateFilter, setDateFilter, showDateDropdown, setShowDateDropdown, currentPage, setCurrentPage,
     progressPercent, completedCheckpoints, paginatedLogs, totalPages, handleScanSuccess, handleManualSubmit,
     checkCheckpoint, resetCheckpoints, clearScanLogs,
@@ -31,7 +31,8 @@ export function VigilPatrolPage() {
           manualId={manualId}
           setManualId={setManualId}
           onManualSubmit={handleManualSubmit}
-          onScanComplete={() => void handleScanSuccess(manualId, false)}
+          onScanComplete={() => void handleScanSuccess('', false)}
+          resetKey={resetKey}
         />
       )}
 

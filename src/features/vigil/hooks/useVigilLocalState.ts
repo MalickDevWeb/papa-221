@@ -2,11 +2,12 @@ import { useState, useEffect, useCallback } from 'react';
 import { useVigil } from './useVigil';
 import { audioService } from '../infrastructure/config/dependencies';
 import { APP_CONFIG } from '@/core/config/app.config';
-import { DEFAULT_LOGS, DEFAULT_CHECKPOINTS } from '../ui/pages/vigilData';
+import { DEFAULT_LOGS, DEFAULT_CHECKPOINTS, MOCK_STUDENTS } from '../ui/pages/vigilData';
 
 export function useVigilLocalState() {
   const { executeScan } = useVigil();
-  const [manualId, setManualId] = useState(APP_CONFIG.scanner.defaultSimulatedBadge);
+  const [manualId, setManualId] = useState('');
+  const [resetKey, setResetKey] = useState(0);
   const [feedback, setFeedback] = useState<{ success: boolean; message: string } | null>(null);
   const [scanLogs, setScanLogs] = useState(() => {
     const saved = localStorage.getItem('v_scan_logs');
@@ -30,36 +31,52 @@ export function useVigilLocalState() {
 
   const handleScanSuccess = useCallback(async (badgeId: string, isManual = false) => {
     const nowStr = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    let resolvedId = badgeId;
+
+    if (!isManual) {
+      const keys = Object.keys(MOCK_STUDENTS);
+      resolvedId = keys[Math.floor(Math.random() * keys.length)];
+    }
+
+    const studentInfo = MOCK_STUDENTS[resolvedId];
+
     try {
-      await executeScan(badgeId);
+      await executeScan(resolvedId);
       if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(100);
       audioService.playSuccessBeep();
-      setScanLogs((p: any) => [
-        {
-          id: Date.now().toString(),
-          name: badgeId === APP_CONFIG.scanner.defaultSimulatedBadge ? 'Mamadou Ndiaye' : 'Étudiant Validé',
-          studentId: badgeId === APP_CONFIG.scanner.defaultSimulatedBadge ? 'Master 2 Big Data' : badgeId,
-          status: 'Autorisé', time: nowStr, type: isManual ? 'Manuel' : 'Scanner', date: "Aujourd'hui",
-          avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
-        },
-        ...p,
-      ]);
-      setFeedback({ success: true, message: `Badge validé - ${badgeId}` });
+
+      const newLog = {
+        id: Date.now().toString(),
+        name: studentInfo ? studentInfo.name : 'Étudiant Validé',
+        studentId: resolvedId,
+        status: studentInfo ? studentInfo.status : 'Autorisé',
+        time: nowStr,
+        type: isManual ? 'Manuel' : 'Scanner',
+        date: "Aujourd'hui",
+        avatar: studentInfo ? studentInfo.avatar : 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
+      };
+
+      setScanLogs((p: any) => [newLog, ...p]);
+      setFeedback({ success: true, message: `Badge validé - ${resolvedId}` });
     } catch {
       if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate([100, 50, 100]);
       audioService.playFailureBeep();
       setScanLogs((p: any) => [
-        { id: Date.now().toString(), name: 'Inconnu', studentId: badgeId || 'Badge non reconnu', status: 'Refusé', time: nowStr, type: isManual ? 'Manuel' : 'Scanner', date: "Aujourd'hui", avatar: null },
+        { id: Date.now().toString(), name: 'Inconnu', studentId: resolvedId || 'Badge non reconnu', status: 'Refusé', time: nowStr, type: isManual ? 'Manuel' : 'Scanner', date: "Aujourd'hui", avatar: null },
         ...p,
       ]);
       setFeedback({ success: false, message: APP_CONFIG.texts.errorBadgeUnknown });
     }
     setTimeout(() => setFeedback(null), 2000);
+    setResetKey(k => k + 1);
   }, [executeScan]);
 
   const handleManualSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (manualId.trim()) void handleScanSuccess(manualId.trim(), true);
+    if (manualId.trim()) {
+      void handleScanSuccess(manualId.trim().toUpperCase(), true);
+      setManualId('');
+    }
   };
 
   const checkCheckpoint = (id: string) => {
@@ -84,7 +101,7 @@ export function useVigilLocalState() {
   const paginatedLogs = filteredLogs.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return {
-    manualId, setManualId, feedback, scanLogs, checkpoints, searchQuery, setSearchQuery, showBadge, setShowBadge,
+    manualId, setManualId, resetKey, feedback, scanLogs, checkpoints, searchQuery, setSearchQuery, showBadge, setShowBadge,
     scanMode, setScanMode, dateFilter, setDateFilter, showDateDropdown, setShowDateDropdown, currentPage, setCurrentPage,
     progressPercent, completedCheckpoints, paginatedLogs, totalPages, handleScanSuccess, handleManualSubmit,
     checkCheckpoint, resetCheckpoints, clearScanLogs,
