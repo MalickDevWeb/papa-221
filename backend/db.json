@@ -1,0 +1,515 @@
+{
+  "promotions": [
+    {
+      "id": "p-1",
+      "name": "221-GL",
+      "filiere": "Master 1 GL",
+      "faculte": "Sciences g& Technologies"
+    },
+    {
+      "id": "p-2",
+      "name": "221-MOBI",
+      "filiere": "Master Flutter Mobile",
+      "faculte": "Sciences & Technologies"
+    }
+  ],
+  "students": [
+    {
+      "id": "usr-etudiant-01",
+      "name": "Assane Diop",
+      "matricule": "221-M382",
+      "promotion_id": "p-1",
+      "average": 15.6,
+      "gpa": 3.8,
+      "mood": "Motivé et concentré",
+      "statutFrais": "Paiement en retard"
+    },
+    {
+      "id": "usr-etudiant-02",
+      "name": "Fatou Sow",
+      "matricule": "221-M383",
+      "promotion_id": "p-2",
+      "average": 17.2,
+      "gpa": 3.9,
+      "mood": "Concentrée sur mon projet Flutter"
+    },
+    {
+      "id": "usr-etudiant-03",
+      "name": "Malick Ndiaye",
+      "matricule": "221-M384",
+      "promotion_id": "p-1",
+      "average": 14.1,
+      "gpa": 3.4,
+      "mood": "Ravi de retrouver la classe virtuelle"
+    }
+  ],
+  "professors": [
+    {
+      "id": "prof-1",
+      "name": "Dr. Aly Diatta",
+      "email": "aly.diatta@ecole221.sn"
+    },
+    {
+      "id": "prof-2",
+      "name": "M. Malick Teuw",
+      "email": "malick.teuw@ecole221.sn"
+    },
+    {
+      "id": "prof-3",
+      "name": "Dr. Cheikh Ahmadou Bamba",
+      "email": "professeur221@gmail.com"
+    },
+    {
+      "id": "prof-4",
+      "name": "Prof. S. Diop",
+      "email": "professeur222@gmail.com"
+    }
+  ],
+  "courses": [
+    {
+      "id": "c-1",
+      "titre": "Algorithmique Avancée & Complexité",
+      "coefficient": 4,
+      "progress": 85,
+      "unites": [
+        "Graphes",
+        "Programmation Dynamique",
+        "Arbres Binaires"
+      ],
+      "professeur_id": "prof-1",
+      "promotion_id": "p-1",
+      "prochain_cours": "Lundi 8h00 - Amphi A"
+    },
+    {
+      "id": "c-2",
+      "titre": "Développement Web Fullstack",
+      "coefficient": 5,
+      "progress": 65,
+      "unites": [
+        "Vite/React",
+        "Node.js & Express",
+        "ORM & Database"
+      ],
+      "professeur_id": "prof-2",
+      "promotion_id": "p-1",
+      "prochain_cours": "Lundi 14h00 - Labo 10"
+    },
+    {
+      "id": "c-3",
+      "titre": "Intelligence Artificielle & TAL",
+      "coefficient": 4,
+      "progress": 90,
+      "unites": [
+        "Réseaux Neuronaux",
+        "NLP & Transformers",
+        "Prompt Engineering"
+      ],
+      "professeur_id": "prof-3",
+      "promotion_id": "p-1",
+      "prochain_cours": "Mardi 13h00 - Amphi A"
+    },
+    {
+      "id": "c-4",
+      "titre": "Développement Flutter Mobile",
+      "coefficient": 5,
+      "progress": 65,
+      "unites": [
+        "State management",
+        "Widgets advanced",
+        "Database Integration"
+      ],
+      "professeur_id": "prof-4",
+      "promotion_id": "p-2",
+      "prochain_cours": "Jeudi 10h00 - Salle 5"
+    }
+  ],
+  "attendances": [
+    {
+      "id": "att-1783567410698",
+      "student_id": "usr-etudiant-01",
+      "timestamp": "2026-07-09T03:23:30.698Z",
+      "type": "arrivée",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "salle": "Portail Principal",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441"
+    },
+    {
+      "id": "att-1783565913577",
+      "student_id": "usr-etudiant-01",
+      "timestamp": "2026-07-09T02:58:33.577Z",
+      "type": "départ",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "salle": "Portail Principal",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441"
+    },
+    {
+      "id": "att-1783565370947",
+      "student_id": "usr-etudiant-01",
+      "timestamp": "2026-07-09T02:49:30.947Z",
+      "type": "arrivée",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "salle": "Portail Principal",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441"
+    },
+    {
+      "id": "att-1783565357991",
+      "student_id": "usr-etudiant-01",
+      "timestamp": "2026-07-09T02:49:17.991Z",
+      "type": "départ",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "salle": "Portail Principal",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441"
+    },
+    {
+      "id": "att-1783565346243",
+      "student_id": "usr-etudiant-01",
+      "timestamp": "2026-07-09T02:49:06.243Z",
+      "type": "arrivée",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "salle": "Portail Principal",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441"
+    },
+    {
+      "id": "att-1",
+      "student_id": "usr-etudiant-01",
+      "timestamp": "2026-06-21T08:02:15.000Z",
+      "type": "arrivée",
+      "method": "QR Code",
+      "status": "Validé d'office",
+      "salle": "Amphi A",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441"
+    },
+    {
+      "id": "att-2",
+      "student_id": "usr-etudiant-01",
+      "timestamp": "2026-06-21T12:05:40.000Z",
+      "type": "départ",
+      "method": "Camera Scan",
+      "status": "Validé",
+      "salle": "Amphi A",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441"
+    }
+  ],
+  "homeworks": [
+    {
+      "id": "t1",
+      "course_id": "c-2",
+      "titre": "Wireframing Dashboard Portal",
+      "desc": "Créer les wireframes basse fidélité pour le module de gestion des notes de l'école.",
+      "prio": "haute",
+      "statut": "a_faire",
+      "deadlineStr": "2 jours restants",
+      "submittedFiles": []
+    },
+    {
+      "id": "t2",
+      "course_id": "c-4",
+      "titre": "Analyse de Marché EdTech",
+      "desc": "Étude comparative des plateformes LMS majeures en Afrique de l'Ouest.",
+      "prio": "normale",
+      "statut": "a_faire",
+      "deadlineStr": "12 Oct",
+      "submittedFiles": []
+    },
+    {
+      "id": "t3",
+      "course_id": "c-1",
+      "titre": "TP Arbres Binaires",
+      "desc": "Implémentation d'arbres de recherche binaire optimisés et parcours.",
+      "prio": "haute",
+      "statut": "en_cours",
+      "deadlineStr": "Dernière modif: Il y a 2h",
+      "progress": 65,
+      "submittedFiles": []
+    },
+    {
+      "id": "t4",
+      "course_id": "c-2",
+      "titre": "Requêtes SQL Avancées",
+      "desc": "Optimisation de requêtes avec des jointures multiples et indexation avancée.",
+      "prio": "normale",
+      "statut": "soumis",
+      "deadlineStr": "Fini le 15 Oct",
+      "note": "18 / 20",
+      "submittedFiles": [
+        "sql_optimize_final.sql"
+      ]
+    }
+  ],
+  "liveSessions": [
+    {
+      "id": "live-1",
+      "course_id": "c-3",
+      "title": "Introduction aux Réseaux Neuronaux Convolutifs (CNN)",
+      "startTime": "12:00",
+      "endTime": "14:00",
+      "status": "active",
+      "attendeesCount": 38,
+      "thumbnail": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500&auto=format&fit=crop&q=60",
+      "hlsUrl": "https://meet.google.com/abc-defg-hij",
+      "reactions": {
+        "heart": 24,
+        "like": 42,
+        "clap": 15,
+        "mindblown": 9
+      },
+      "chatMessages": [
+        {
+          "id": "m1",
+          "user": "Dr. Cheikh Bamba (Professeur)",
+          "text": "Bienvenue au cours en direct ! Aujourd'hui nous étudions les CNN.",
+          "timestamp": "12:05",
+          "isTeacher": true
+        },
+        {
+          "id": "m2",
+          "user": "Mariama Fall",
+          "text": "Bonjour tout le monde ! Est-ce que le support PDF est sous Moodle ?",
+          "timestamp": "12:08",
+          "isTeacher": false
+        },
+        {
+          "id": "m3",
+          "user": "Ibrahima Ndiaye",
+          "text": "Oui Mariama, c'est dans le dossier de la semaine 4 !",
+          "timestamp": "12:10",
+          "isTeacher": false
+        }
+      ]
+    }
+  ],
+  "grades": [
+    {
+      "id": "g-001",
+      "module": "Machine Learning Foundations",
+      "prof": "Prof. A. Ndiaye",
+      "ects": 8,
+      "cc": 17.5,
+      "examen": 18.75,
+      "moyPromo": 13.4
+    },
+    {
+      "id": "g-002",
+      "module": "Cybersecurity Essentials",
+      "prof": "Prof. M. Fall",
+      "ects": 6,
+      "cc": 13.5,
+      "examen": 15.15,
+      "moyPromo": 12.1
+    },
+    {
+      "id": "g-003",
+      "module": "Advanced Mobile Dev (Flutter)",
+      "prof": "Prof. S. Diop",
+      "ects": 8,
+      "cc": 15.5,
+      "examen": 17.65,
+      "moyPromo": 14.2
+    },
+    {
+      "id": "g-004",
+      "module": "Business Intelligence",
+      "prof": "Prof. K. Sy",
+      "ects": 6,
+      "cc": 14.2,
+      "examen": 16.2,
+      "moyPromo": 12.8
+    },
+    {
+      "id": "g-005",
+      "module": "Ethics in Technology",
+      "prof": "Prof. L. Camara",
+      "ects": 2,
+      "cc": 18,
+      "examen": 19.65,
+      "moyPromo": 16.5
+    }
+  ],
+  "sessions": [
+    {
+      "id": "p1",
+      "nom": "Algorithmique Avancée",
+      "jour": "LUN",
+      "jourComplet": "LUNDI",
+      "dateStr": "23 Oct",
+      "heureDebut": "08:00",
+      "heureFin": "10:00",
+      "heureStr": "08:00 - 10:00",
+      "type": "CM",
+      "salle": "Amphi A",
+      "professeur": "Dr. Aly Diatta",
+      "description": "Analyse de complexité théorique, structures de données avancées, graphes et programmation dynamique.",
+      "status": "termine"
+    },
+    {
+      "id": "p2",
+      "nom": "Éthique & Droit Numérique",
+      "jour": "LUN",
+      "jourComplet": "LUNDI",
+      "dateStr": "23 Oct",
+      "heureDebut": "10:00",
+      "heureFin": "12:05",
+      "heureStr": "10:00 - 12:00",
+      "type": "CM",
+      "salle": "Amphi B",
+      "professeur": "Dr. Kane",
+      "description": "Aspects juridiques des données à caractère personnel, législation cybernétique au Sénégal et éthique des algorithmes.",
+      "status": "termine"
+    },
+    {
+      "id": "p3",
+      "nom": "Développement Web Fullstack",
+      "jour": "LUN",
+      "jourComplet": "LUNDI",
+      "dateStr": "23 Oct",
+      "heureDebut": "14:00",
+      "heureFin": "16:00",
+      "heureStr": "14:00 - 16:00",
+      "type": "TP",
+      "salle": "Labo 10",
+      "professeur": "M. Malick Teuw",
+      "description": "Industrialisation d'une application React avec Vite, typage TypeScript strict, state managers et intégration back-end.",
+      "status": "termine"
+    },
+    {
+      "id": "p4",
+      "nom": "Anglais Technique",
+      "jour": "MAR",
+      "jourComplet": "MARDI",
+      "dateStr": "24 Oct",
+      "heureDebut": "09:00",
+      "heureFin": "11:00",
+      "heureStr": "09:00 - 11:00",
+      "type": "TD",
+      "salle": "Salle 301",
+      "professeur": "Mrs. Ndiaye",
+      "description": "Lecture de documentations techniques en anglais informatique, rédaction de cahiers des charges et pitch de projets innovants.",
+      "status": "termine"
+    },
+    {
+      "id": "p5",
+      "nom": "Intelligence Artificielle",
+      "jour": "MAR",
+      "jourComplet": "MARDI",
+      "dateStr": "24 Oct",
+      "heureDebut": "13:00",
+      "heureFin": "16:00",
+      "heureStr": "13:00 - 16:00",
+      "type": "CM",
+      "salle": "Amphi A",
+      "professeur": "Prof. Sy",
+      "description": "Modélisation de réseaux neuronaux, apprentissage machine non-supervisé et applications du TAL.",
+      "status": "termine"
+    },
+    {
+      "id": "p6",
+      "nom": "Architecture Réseaux",
+      "jour": "MER",
+      "jourComplet": "MERCREDI",
+      "dateStr": "25 Oct",
+      "heureDebut": "08:00",
+      "heureFin": "11:00",
+      "heureStr": "08:00 - 11:00",
+      "type": "TP",
+      "salle": "Labo 204",
+      "professeur": "M. Diop",
+      "description": "Modélisation de topologies physiques et virtuelles, routage dynamique, VPN IPSec et pare-feux de nouvelle génération.",
+      "status": "actuel"
+    },
+    {
+      "id": "p7",
+      "nom": "Base de Données SQL",
+      "jour": "JEU",
+      "jourComplet": "JEUDI",
+      "dateStr": "26 Oct",
+      "heureDebut": "13:00",
+      "heureFin": "15:00",
+      "heureStr": "13:00 - 15:00",
+      "type": "TD",
+      "salle": "Salle 205",
+      "professeur": "Mme. Sow",
+      "description": "Modélisation relationnelle de données, algèbre relationnelle complexe et optimisation de requêtes d'agrégation SQL.",
+      "status": "a_venir"
+    },
+    {
+      "id": "p8",
+      "nom": "Cybersécurité",
+      "jour": "JEU",
+      "jourComplet": "JEUDI",
+      "dateStr": "26 Oct",
+      "heureDebut": "15:00",
+      "heureFin": "17:00",
+      "heureStr": "15:00 - 17:00",
+      "type": "CM",
+      "salle": "Amphi C",
+      "professeur": "Dr. Wade",
+      "description": "Analyse des vulnérabilités logicielles communes (OWASP Top 10), cryptographie asymétrique et réponse de crise cyber.",
+      "status": "a_venir"
+    },
+    {
+      "id": "p9",
+      "nom": "Mathématiques Appliquées",
+      "jour": "VEN",
+      "jourComplet": "VENDREDI",
+      "dateStr": "27 Oct",
+      "heureDebut": "08:00",
+      "heureFin": "10:00",
+      "heureStr": "08:00 - 10:00",
+      "type": "TD",
+      "salle": "Salle 102",
+      "professeur": "Prof. Ba",
+      "description": "Probabilités discrètes et de Poisson, algèbre linéaire numérique, vecteurs propres et valeurs singulières appliquées au traitement du signal.",
+      "status": "a_venir"
+    },
+    {
+      "id": "p10",
+      "nom": "Systèmes d'Exploitation",
+      "jour": "VEN",
+      "jourComplet": "VENDREDI",
+      "dateStr": "27 Oct",
+      "heureDebut": "10:00",
+      "heureFin": "12:00",
+      "heureStr": "10:00 - 12:00",
+      "type": "TP",
+      "salle": "Salle Info 4",
+      "professeur": "M. Sene",
+      "description": "Concurrence de processus, sémaphores de Dijkstra, gestion de la mémoire paginée et programmation système Bash/C.",
+      "status": "a_venir"
+    },
+    {
+      "id": "p-wed-12-14",
+      "nom": "TD Algorithmique Avancée",
+      "jour": "MER",
+      "jourComplet": "MERCREDI",
+      "dateStr": "25 Oct",
+      "heureDebut": "12:00",
+      "heureFin": "14:00",
+      "heureStr": "12:00 - 14:00",
+      "type": "TD",
+      "salle": "Labo 5",
+      "professeur": "Dr. Aly Diatta",
+      "description": "Séance pratique d'exercices sur la complexité et les tris.",
+      "status": "a_venir"
+    },
+    {
+      "id": "p-wed-17-20",
+      "nom": "Sécurité des Systèmes d'Information",
+      "jour": "MER",
+      "jourComplet": "MERCREDI",
+      "dateStr": "25 Oct",
+      "heureDebut": "17:00",
+      "heureFin": "20:00",
+      "heureStr": "17:00 - 20:00",
+      "type": "CM",
+      "salle": "Amphi B",
+      "professeur": "Dr. Aly Diatta",
+      "description": "Cryptographie avancée, modélisation de menaces et protocoles de communication sécurisés.",
+      "status": "a_venir"
+    }
+  ]
+}

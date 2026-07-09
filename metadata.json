@@ -1,0 +1,6 @@
+{
+  "name": "École 221",
+  "description": "Portail complet de l'École 221 : Espaces d'apprentissage Étudiant, Gestion de la sécurité (Vigile) et Administration académique (Professeur).",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
