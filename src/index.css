@@ -8,6 +8,13 @@ html, body {
   -ms-overflow-style: none !important; /* IE 10+ */
 }
 
+/* Helper to lock background scroll when modal is active */
+.no-scroll {
+  overflow: hidden !important;
+  height: 100% !important;
+  touch-action: none;
+}
+
 html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: none !important; /* Safari and Chrome */
 }

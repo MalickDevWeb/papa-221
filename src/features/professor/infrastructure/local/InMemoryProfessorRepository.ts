@@ -740,6 +740,36 @@ export class InMemoryProfessorRepository implements ProfessorRepository {
     }
 
     this.saveGradesToStorage(allGrades);
+
+    // Envoyer une notification en temps réel à l'étudiant
+    try {
+      const course = [...MOCK_COURSES_TEACHER_1, ...MOCK_COURSES_TEACHER_2].find(c => c.id === courseId);
+      const courseTitle = course ? course.titre : "un module";
+      const payload = {
+        title: `Nouvelle note publiée`,
+        desc: `Votre note pour le cours de "${courseTitle}" a été mise à jour : Moyenne ${finalGrade}/20 (${status}).`,
+        time: "À l'instant",
+        read: false,
+        icon: "grade",
+        color: "text-[#E3A857] bg-[#E3A857]/10"
+      };
+
+      // Notification locale (localStorage)
+      const notifs = JSON.parse(localStorage.getItem('student_notifications') || '[]');
+      notifs.unshift({
+        id: `notif-${Date.now()}`,
+        ...payload
+      });
+      localStorage.setItem('student_notifications', JSON.stringify(notifs));
+
+      // Notification Firestore temps réel
+      notificationRepository.sendNotification(payload).catch(err => {
+        console.error("Firestore notification failed:", err);
+      });
+    } catch (e) {
+      console.error("Failed to generate grade notification:", e);
+    }
+
     return updatedGrade;
   }
 

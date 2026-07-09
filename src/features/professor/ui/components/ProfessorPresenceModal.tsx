@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Icon } from '@iconify/react';
 import type { StudentEnrolled } from '../../domain/ProfessorModels';
@@ -16,6 +16,15 @@ interface Props {
 }
 
 export function ProfessorPresenceModal({ profName, onClose, pointageType = 'arrivée', onScanComplete }: Props) {
+  useEffect(() => {
+    document.body.classList.add('no-scroll');
+    document.documentElement.classList.add('no-scroll');
+    return () => {
+      document.body.classList.remove('no-scroll');
+      document.documentElement.classList.remove('no-scroll');
+    };
+  }, []);
+
   return createPortal(
     <div 
       className="fixed inset-0 z-[250] bg-black/65 flex items-center justify-center p-4 backdrop-blur-sm font-sans"

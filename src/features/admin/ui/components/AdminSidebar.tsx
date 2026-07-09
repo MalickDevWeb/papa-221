@@ -18,10 +18,20 @@ export function AdminSidebar({ onLogout }: Props) {
     >
       <div className="mb-6 px-4 flex flex-col items-start">
         <div
+          style={{
+            paddingLeft: '11px',
+            paddingRight: '1px',
+            paddingTop: '7px',
+            paddingBottom: '9px',
+            marginLeft: '0px',
+            marginTop: '-13px',
+            marginRight: '0px',
+            marginBottom: '0px',
+          }}
           className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#B3181C] to-[#6B0E10] text-white flex items-center justify-center font-black shadow-md shadow-[#B3181C]/25 transition-transform duration-300 hover:scale-105 active:scale-95 cursor-pointer"
           onClick={() => navigate(ROUTES.admin.dashboard)}
         >
-          <span translate="no" className="material-symbols-outlined text-[20px] font-bold">admin_panel_settings</span>
+          <span translate="no" className="material-symbols-outlined text-[20px] font-bold">school</span>
         </div>
         <div className="flex flex-col mt-3">
           <h1 className="font-black text-[#1E293B] text-[15px] leading-tight tracking-tight">École 221</h1>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDashboard } from '@/features/dashboard/hooks/useDashboard';
 import { useRealTimeMeet } from '@/features/dashboard/hooks/useRealTimeMeet';
@@ -6,15 +6,16 @@ import { PresenceModal } from '../components/PresenceModal';
 import { ActiveLiveStream } from '../components/ActiveLiveStream';
 import { WeeklySchedule } from '../components/WeeklySchedule';
 import { RecentAcademicPerformance } from '../components/RecentAcademicPerformance';
-import { RegisteredCourses } from '../components/RegisteredCourses';
 import { AITutorPanel } from '../components/AITutorPanel';
 import { StudentNotificationToast } from '../components/StudentNotificationToast';
 import { StudentHeaderBanner } from '../components/StudentHeaderBanner';
 import { LiveStreamBanner } from '../components/LiveStreamBanner';
+import { StudentQRZoomOverlay } from '../components/StudentQRZoomOverlay';
 
 export function StudentDashboardPage() {
   const navigate = useNavigate();
   const activeMeet = useRealTimeMeet();
+  const [showQRZoom, setShowQRZoom] = useState(false);
   const {
     selectedDay, setSelectedDay, attendances, dbProfile,
     liveSessions, setSelectedLiveId, selectedLive, showToast, triggerToast, showPointage, setShowPointage,
@@ -36,12 +37,7 @@ export function StudentDashboardPage() {
           setShowPointage(true);
           startCamera();
         }}
-        onShowBadge={(type) => {
-          setPointageType(type);
-          setShowPointage(true);
-          stopCamera();
-          setPointageMethod('qrcode');
-        }}
+        onShowBadge={() => setShowQRZoom(true)}
       />
 
       {activeMeet && !selectedLive && (
@@ -54,16 +50,16 @@ export function StudentDashboardPage() {
       {showPointage && (
         <PresenceModal 
           pointageType={pointageType}
-          pointageMethod={pointageMethod}
-          setPointageMethod={setPointageMethod}
           onClose={() => { stopCamera(); setShowPointage(false); }}
-          cameraStream={cameraStream}
-          videoRef={videoRef}
           onRegisterClockIn={registerClockIn}
-          onStartCamera={startCamera}
-          onStopCamera={stopCamera}
+        />
+      )}
+
+      {showQRZoom && (
+        <StudentQRZoomOverlay
           studentName={dbProfile?.name}
           matricule={dbProfile?.matricule}
+          onClose={() => setShowQRZoom(false)}
         />
       )}
 
@@ -81,10 +77,6 @@ export function StudentDashboardPage() {
       )}
 
       <div className="grid grid-cols-12 gap-6">
-        <RegisteredCourses 
-          liveSessions={liveSessions} 
-          onSelectLive={handleJoinLive} 
-        />
         <WeeklySchedule 
           selectedDay={selectedDay} 
           setSelectedDay={setSelectedDay} 

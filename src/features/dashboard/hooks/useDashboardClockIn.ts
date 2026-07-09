@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { registerClockInUseCase } from '../infrastructure/config/dependencies';
 
 interface ClockInProps {
@@ -10,9 +10,6 @@ export function useDashboardClockIn({ triggerToast, loadData }: ClockInProps) {
   const [showPointage, setShowPointage] = useState(false);
   const [pointageType, setPointageType] = useState<'arrivée' | 'départ'>('arrivée');
   const [pointageMethod, setPointageMethod] = useState<'selection' | 'qrcode' | 'camera'>('selection');
-  const [cameraStream, setCameraStream] = useState<MediaStream | null>(null);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const cameraTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const playBeep = () => {
     try {
@@ -33,47 +30,28 @@ export function useDashboardClockIn({ triggerToast, loadData }: ClockInProps) {
   };
 
   const stopCamera = useCallback(() => {
-    if (cameraTimeoutRef.current) {
-      clearTimeout(cameraTimeoutRef.current);
-      cameraTimeoutRef.current = null;
-    }
-    if (cameraStream) {
-      cameraStream.getTracks().forEach(t => t.stop());
-      setCameraStream(null);
-    }
-  }, [cameraStream]);
+    // No-op - Camera is fully managed by the CameraScanner component
+  }, []);
 
-  const registerClockIn = useCallback(async (method: string) => {
+  const registerClockIn = useCallback(async (method: string, keepOpen = false) => {
     playBeep();
-    stopCamera();
     try {
       await registerClockInUseCase(pointageType, method);
-      setPointageMethod('selection');
-      setShowPointage(false);
+      if (!keepOpen) {
+        setPointageMethod('selection');
+        setShowPointage(false);
+      }
       triggerToast(`Pointage ${pointageType} validé`);
       await loadData();
     } catch (e) {
       console.error(e);
       triggerToast("Erreur lors du pointage");
     }
-  }, [pointageType, triggerToast, loadData, stopCamera]);
+  }, [pointageType, triggerToast, loadData]);
 
-  const startCamera = useCallback(async () => {
+  const startCamera = useCallback(() => {
     setPointageMethod('camera');
-    if (cameraTimeoutRef.current) {
-      clearTimeout(cameraTimeoutRef.current);
-    }
-    try {
-      const str = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
-      setCameraStream(str);
-      if (videoRef.current) {
-        videoRef.current.srcObject = str;
-      }
-    } catch (e) {
-      console.warn(e);
-    }
-    cameraTimeoutRef.current = setTimeout(() => registerClockIn('Camera Scan'), 3200);
-  }, [registerClockIn]);
+  }, []);
 
   return {
     showPointage,
@@ -82,8 +60,8 @@ export function useDashboardClockIn({ triggerToast, loadData }: ClockInProps) {
     setPointageType,
     pointageMethod,
     setPointageMethod,
-    cameraStream,
-    videoRef,
+    cameraStream: null,
+    videoRef: { current: null },
     startCamera,
     stopCamera,
     registerClockIn

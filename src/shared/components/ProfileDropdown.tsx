@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ROUTES } from '@/shared/constants';
 import { useAuthStore } from '@/core/store/authStore';
-import { Settings, LifeBuoy, LogOut, Edit3 } from 'lucide-react';
+import { Settings, LifeBuoy, LogOut, Edit3, X } from 'lucide-react';
 import { ProfileDetails } from './ProfileDetails';
 
 interface Props {
@@ -39,11 +39,11 @@ export function ProfileDropdown({
         {initials}
       </button>
       {showProfile && (
-        <div className="fixed top-16 left-4 right-4 sm:absolute sm:top-full sm:left-auto sm:right-0 mt-2 w-[min(92vw,24rem)] sm:w-84 bg-white border border-neutral-gray-200 rounded-3xl shadow-2xl z-[200] overflow-hidden animate-slide-up max-h-[min(86vh,38rem)]">
+        <div className="fixed top-16 left-4 right-4 sm:absolute sm:top-full sm:left-auto sm:right-0 mt-2 w-[min(92vw,24rem)] sm:w-84 bg-white border border-neutral-gray-200 rounded-3xl shadow-2xl z-[200] overflow-y-auto scrollbar-none animate-slide-up max-h-[min(88vh,40rem)]">
           <div className="p-5 text-center bg-gradient-to-br from-brand-red-deep to-[#8C1014] text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_50%)]" />
-            <button aria-label="Fermer" onClick={() => setShowProfile(false)} className="absolute top-3 right-3 text-white/85 hover:text-white bg-white/10 p-1.5 rounded-full transition-colors cursor-pointer z-20 hover:scale-105 active:scale-95 flex items-center justify-center">
-              <span translate="no" className="material-symbols-outlined text-xs">close</span>
+            <button aria-label="Fermer" onClick={() => setShowProfile(false)} className="absolute top-3 right-3 text-white/85 hover:text-white bg-white/10 p-1.5 rounded-full transition-colors cursor-pointer z-20 hover:scale-105 active:scale-95 flex items-center justify-center border-0">
+              <X className="h-4 w-4" />
             </button>
             <div className="relative z-10">
               <div className="w-14 h-14 rounded-2xl overflow-hidden mx-auto shadow-md border-2 border-white/20 mb-3 flex items-center justify-center bg-white/10 backdrop-blur-md">
@@ -58,14 +58,15 @@ export function ProfileDropdown({
               </span>
             </div>
           </div>
-          <div className="p-4 space-y-4">
+          <div className="p-4 space-y-4 pb-5">
             {!isProf && mood && setTempMood && setIsEditingMood && onMoodSave && (
               <div className="space-y-1.5">
                 <span className="text-[9px] font-label-md uppercase tracking-[0.2em] text-neutral-gray-400">Statut / Humeur</span>
                 {isEditingMood ? (
                   <div className="flex gap-1.5 items-center">
-                    <input type="text" value={tempMood} onChange={(e) => setTempMood(e.target.value)} className="flex-grow text-xs font-semibold border border-neutral-gray-300 rounded-lg px-2.5 py-2 focus:outline-none focus:border-brand-red-deep bg-neutral-gray-50" />
+                    <input type="text" value={tempMood} onChange={(e) => setTempMood(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') onMoodSave(); if (e.key === 'Escape') setIsEditingMood(false); }} className="flex-grow text-xs font-semibold border border-neutral-gray-300 rounded-lg px-2.5 py-2 focus:outline-none focus:border-brand-red-deep bg-neutral-gray-50" autoFocus />
                     <button onClick={onMoodSave} className="bg-brand-red-deep text-white px-2.5 py-2 rounded-lg text-xs font-black hover:bg-brand-red-deep/90 cursor-pointer">OK</button>
+                    <button onClick={() => setIsEditingMood(false)} className="bg-neutral-100 hover:bg-neutral-200 text-neutral-600 p-2 rounded-lg cursor-pointer"><X className="h-4 w-4" /></button>
                   </div>
                 ) : (
                   <div onClick={() => setIsEditingMood(true)} className="bg-neutral-gray-50 hover:bg-brand-red-light/30 border border-neutral-gray-150 p-2.5 rounded-xl cursor-pointer text-sm text-secondary font-body-md leading-relaxed flex items-center justify-between gap-2">

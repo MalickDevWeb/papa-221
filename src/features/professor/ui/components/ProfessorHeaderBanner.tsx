@@ -34,14 +34,6 @@ export function ProfessorHeaderBanner({ profName, coursesCount, vigilCheckInsCou
       </div>
 
       <div className="flex-shrink-0 flex flex-col items-center gap-2.5 w-[130px] relative z-20">
-        <button
-          onClick={() => onOpenPresence('scanner', nextPointerType)}
-          className="bg-[#B3181C] text-white rounded-xl font-black uppercase tracking-wider shadow-md hover:bg-[#961215] hover:scale-[1.03] active:scale-95 transition-all duration-300 cursor-pointer flex items-center justify-center gap-1.5 w-[130px] h-[34px] text-[9.5px] border border-brand-red-deep/10 relative z-30"
-        >
-          <span className="material-symbols-outlined text-[12px] font-black animate-pulse">qr_code_scanner</span>
-          Scanner ({nextPointerType === 'arrivée' ? 'Arrivée' : 'Départ'})
-        </button>
-
         <div
           onClick={onZoomQR}
           title="Cliquez pour agrandir"
@@ -62,6 +54,14 @@ export function ProfessorHeaderBanner({ profName, coursesCount, vigilCheckInsCou
             <div className="absolute inset-x-0 h-0.5 bg-[#B3181C]/50 top-1 animate-[bounce_4s_infinite] pointer-events-none"></div>
           </div>
         </div>
+
+        <button
+          onClick={() => onOpenPresence('scanner', nextPointerType)}
+          className="bg-[#B3181C] text-white rounded-xl font-black uppercase tracking-wider shadow-md hover:bg-[#961215] hover:scale-[1.03] active:scale-95 transition-all duration-300 cursor-pointer flex items-center justify-center gap-1.5 w-[130px] h-[34px] text-[9.5px] border border-brand-red-deep/10 relative z-30"
+        >
+          <span className="material-symbols-outlined text-[12px] font-black animate-pulse">qr_code_scanner</span>
+          Scanner ({nextPointerType === 'arrivée' ? 'Arrivée' : 'Départ'})
+        </button>
       </div>
     </div>
   );

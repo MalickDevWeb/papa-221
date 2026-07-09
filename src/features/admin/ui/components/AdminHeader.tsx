@@ -14,7 +14,7 @@ export function AdminHeader({ onLogout }: Props) {
         <div className="flex items-center gap-3 shrink-0">
           <span className="font-headline-md text-headline-md font-black text-brand-red-deep md:hidden tracking-tight">École 221</span>
           <div className="hidden md:flex items-center text-neutral-gray-400 select-none">
-            <span translate="no" className="material-symbols-outlined text-brand-red-deep text-[22px] animate-pulse">admin_panel_settings</span>
+            <span translate="no" className="material-symbols-outlined text-brand-red-deep text-[22px] animate-pulse">school</span>
             <span className="ml-2 font-bold text-xs text-[#1E293B] uppercase tracking-wider">Pilotage Académique</span>
           </div>
         </div>
