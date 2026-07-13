@@ -1,0 +1,861 @@
+{
+  "promotions": [
+    {
+      "id": "p-1",
+      "name": "221-GL",
+      "faculte": "Sciences g& Technologies",
+      "filiere": "Master 1 GL"
+    },
+    {
+      "id": "p-2",
+      "name": "221-MOBI",
+      "faculte": "Sciences & Technologies",
+      "filiere": "Master Flutter Mobile"
+    }
+  ],
+  "students": [
+    {
+      "id": "usr-etudiant-01",
+      "name": "Assane Diop",
+      "matricule": "221-M382",
+      "gpa": 3.8,
+      "average": 15.6,
+      "mood": "Motivé et concentré",
+      "statutFrais": "Paiement en retard",
+      "promotion_id": "p-1"
+    },
+    {
+      "id": "usr-etudiant-02",
+      "name": "Fatou Sow",
+      "matricule": "221-M383",
+      "gpa": 3.9,
+      "average": 17.2,
+      "mood": "Concentrée sur mon projet Flutter",
+      "statutFrais": null,
+      "promotion_id": "p-2"
+    },
+    {
+      "id": "usr-etudiant-03",
+      "name": "Malick Ndiaye",
+      "matricule": "221-M384",
+      "gpa": 3.4,
+      "average": 14.1,
+      "mood": "Ravi de retrouver la classe virtuelle",
+      "statutFrais": null,
+      "promotion_id": "p-1"
+    }
+  ],
+  "professors": [
+    {
+      "id": "prof-1",
+      "name": "Dr. Aly Diatta",
+      "email": "aly.diatta@ecole221.sn"
+    },
+    {
+      "id": "prof-2",
+      "name": "M. Malick Teuw",
+      "email": "malick.teuw@ecole221.sn"
+    },
+    {
+      "id": "prof-3",
+      "name": "Dr. Cheikh Ahmadou Bamba",
+      "email": "professeur221@gmail.com"
+    },
+    {
+      "id": "prof-4",
+      "name": "Prof. S. Diop",
+      "email": "professeur222@gmail.com"
+    }
+  ],
+  "courses": [
+    {
+      "id": "c-1",
+      "titre": "Algorithmique Avancée & Complexité",
+      "unites": [
+        "Graphes",
+        "Programmation Dynamique",
+        "Arbres Binaires"
+      ],
+      "progress": 85,
+      "coefficient": 4,
+      "promotion_id": "p-1",
+      "professeur_id": "prof-1",
+      "prochain_cours": "Lundi 8h00 - Amphi A"
+    },
+    {
+      "id": "c-2",
+      "titre": "Développement Web Fullstack",
+      "unites": [
+        "Vite/React",
+        "Node.js & Express",
+        "ORM & Database"
+      ],
+      "progress": 65,
+      "coefficient": 5,
+      "promotion_id": "p-1",
+      "professeur_id": "prof-2",
+      "prochain_cours": "Lundi 14h00 - Labo 10"
+    },
+    {
+      "id": "c-3",
+      "titre": "Intelligence Artificielle & TAL",
+      "unites": [
+        "Réseaux Neuronaux",
+        "NLP & Transformers",
+        "Prompt Engineering"
+      ],
+      "progress": 90,
+      "coefficient": 4,
+      "promotion_id": "p-1",
+      "professeur_id": "prof-3",
+      "prochain_cours": "Mardi 13h00 - Amphi A"
+    },
+    {
+      "id": "c-4",
+      "titre": "Développement Flutter Mobile",
+      "unites": [
+        "State management",
+        "Widgets advanced",
+        "Database Integration"
+      ],
+      "progress": 65,
+      "coefficient": 5,
+      "promotion_id": "p-2",
+      "professeur_id": "prof-4",
+      "prochain_cours": "Jeudi 10h00 - Salle 5"
+    }
+  ],
+  "attendances": [
+    {
+      "id": "att-1783633902126",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T21:51:42.126Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783633902123",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T21:51:42.123Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783633902119",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T21:51:42.119Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783633902102",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T21:51:42.102Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783619647938",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:54:07.938Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619647934",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:54:07.934Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619647929",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:54:07.929Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619647906",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:54:07.906Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783619380126",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:49:40.126Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619380120",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:49:40.120Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619380096",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:49:40.096Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783619326442",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:48:46.442Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619326437",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:48:46.437Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619326416",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:48:46.416Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783619306743",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:48:26.743Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619306738",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:48:26.738Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619306714",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:48:26.714Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783619028838",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:43:48.838Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619028833",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:43:48.833Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783619028807",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:43:48.807Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783618431367",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:33:51.367Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783618199436",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T17:29:59.436Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783613964957",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T16:19:24.957Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783613188236",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T16:06:28.236Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783612717681",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T15:58:37.681Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783612701530",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T15:58:21.530Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783567410698",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T03:23:30.698Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783565913577",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T02:58:33.577Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783565370947",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T02:49:30.947Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783565357991",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T02:49:17.991Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1783565346243",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T02:49:06.243Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-1",
+      "type": "arrivée",
+      "salle": "Amphi A",
+      "method": "QR Code",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-21T08:02:15.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-2",
+      "type": "départ",
+      "salle": "Amphi A",
+      "method": "Camera Scan",
+      "status": "Validé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-21T12:05:40.000Z",
+      "student_id": "usr-etudiant-01"
+    }
+  ],
+  "homeworks": [
+    {
+      "id": "t1",
+      "desc": "Créer les wireframes basse fidélité pour le module de gestion des notes de l'école.",
+      "prio": "haute",
+      "titre": "Wireframing Dashboard Portal",
+      "statut": "a_faire",
+      "progress": 0,
+      "course_id": "c-2",
+      "deadlineStr": "2 jours restants",
+      "submittedFiles": [],
+      "note": null
+    },
+    {
+      "id": "t2",
+      "desc": "Étude comparative des plateformes LMS majeures en Afrique de l'Ouest.",
+      "prio": "normale",
+      "titre": "Analyse de Marché EdTech",
+      "statut": "a_faire",
+      "progress": 0,
+      "course_id": "c-4",
+      "deadlineStr": "12 Oct",
+      "submittedFiles": [],
+      "note": null
+    },
+    {
+      "id": "t3",
+      "desc": "Implémentation d'arbres de recherche binaire optimisés et parcours.",
+      "prio": "haute",
+      "titre": "TP Arbres Binaires",
+      "statut": "en_cours",
+      "progress": 65,
+      "course_id": "c-1",
+      "deadlineStr": "Dernière modif: Il y a 2h",
+      "submittedFiles": [],
+      "note": null
+    },
+    {
+      "id": "t4",
+      "desc": "Optimisation de requêtes avec des jointures multiples et indexation avancée.",
+      "prio": "normale",
+      "titre": "Requêtes SQL Avancées",
+      "statut": "soumis",
+      "progress": 0,
+      "course_id": "c-2",
+      "deadlineStr": "Fini le 15 Oct",
+      "submittedFiles": [
+        "sql_optimize_final.sql"
+      ],
+      "note": "18 / 20"
+    }
+  ],
+  "liveSessions": [
+    {
+      "id": "live-1",
+      "title": "Introduction aux Réseaux Neuronaux Convolutifs (CNN)",
+      "hlsUrl": "https://meet.google.com/abc-defg-hij",
+      "status": "active",
+      "endTime": "14:00",
+      "startTime": "12:00",
+      "course_id": "c-3",
+      "reactions": {
+        "clap": 15,
+        "like": 42,
+        "heart": 24,
+        "mindblown": 9
+      },
+      "chatMessages": [
+        {
+          "id": "m1",
+          "text": "Bienvenue au cours en direct ! Aujourd'hui nous étudions les CNN.",
+          "user": "Dr. Cheikh Bamba (Professeur)",
+          "isTeacher": true,
+          "timestamp": "12:05"
+        },
+        {
+          "id": "m2",
+          "text": "Bonjour tout le monde ! Est-ce que le support PDF est sous Moodle ?",
+          "user": "Mariama Fall",
+          "isTeacher": false,
+          "timestamp": "12:08"
+        },
+        {
+          "id": "m3",
+          "text": "Oui Mariama, c'est dans le dossier de la semaine 4 !",
+          "user": "Ibrahima Ndiaye",
+          "isTeacher": false,
+          "timestamp": "12:10"
+        }
+      ],
+      "attendeesCount": 38,
+      "thumbnail": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500&auto=format&fit=crop&q=60"
+    }
+  ],
+  "grades": [
+    {
+      "id": "g-001",
+      "module": "Machine Learning Foundations",
+      "prof": "Prof. A. Ndiaye",
+      "ects": 8,
+      "cc": "17.50",
+      "examen": "18.75",
+      "moy_promo": "13.40",
+      "moyPromo": 13.4
+    },
+    {
+      "id": "g-002",
+      "module": "Cybersecurity Essentials",
+      "prof": "Prof. M. Fall",
+      "ects": 6,
+      "cc": "13.50",
+      "examen": "15.15",
+      "moy_promo": "12.10",
+      "moyPromo": 12.1
+    },
+    {
+      "id": "g-003",
+      "module": "Advanced Mobile Dev (Flutter)",
+      "prof": "Prof. S. Diop",
+      "ects": 8,
+      "cc": "15.50",
+      "examen": "17.65",
+      "moy_promo": "14.20",
+      "moyPromo": 14.2
+    },
+    {
+      "id": "g-004",
+      "module": "Business Intelligence",
+      "prof": "Prof. K. Sy",
+      "ects": 6,
+      "cc": "14.20",
+      "examen": "16.20",
+      "moy_promo": "12.80",
+      "moyPromo": 12.8
+    },
+    {
+      "id": "g-005",
+      "module": "Ethics in Technology",
+      "prof": "Prof. L. Camara",
+      "ects": 2,
+      "cc": "18.00",
+      "examen": "19.65",
+      "moy_promo": "16.50",
+      "moyPromo": 16.5
+    }
+  ],
+  "sessions": [
+    {
+      "id": "p1",
+      "nom": "Algorithmique Avancée",
+      "jour": "LUN",
+      "type": "CM",
+      "salle": "Amphi A",
+      "status": "termine",
+      "dateStr": "23 Oct",
+      "heureFin": "10:00",
+      "heureStr": "08:00 - 10:00",
+      "heureDebut": "08:00",
+      "professeur": "Dr. Aly Diatta",
+      "description": "Analyse de complexité théorique, structures de données avancées, graphes et programmation dynamique.",
+      "jourComplet": "LUNDI"
+    },
+    {
+      "id": "p2",
+      "nom": "Éthique & Droit Numérique",
+      "jour": "LUN",
+      "type": "CM",
+      "salle": "Amphi B",
+      "status": "termine",
+      "dateStr": "23 Oct",
+      "heureFin": "12:05",
+      "heureStr": "10:00 - 12:00",
+      "heureDebut": "10:00",
+      "professeur": "Dr. Kane",
+      "description": "Aspects juridiques des données à caractère personnel, législation cybernétique au Sénégal et éthique des algorithmes.",
+      "jourComplet": "LUNDI"
+    },
+    {
+      "id": "p3",
+      "nom": "Développement Web Fullstack",
+      "jour": "LUN",
+      "type": "TP",
+      "salle": "Labo 10",
+      "status": "termine",
+      "dateStr": "23 Oct",
+      "heureFin": "16:00",
+      "heureStr": "14:00 - 16:00",
+      "heureDebut": "14:00",
+      "professeur": "M. Malick Teuw",
+      "description": "Industrialisation d'une application React avec Vite, typage TypeScript strict, state managers et intégration back-end.",
+      "jourComplet": "LUNDI"
+    },
+    {
+      "id": "p4",
+      "nom": "Anglais Technique",
+      "jour": "MAR",
+      "type": "TD",
+      "salle": "Salle 301",
+      "status": "termine",
+      "dateStr": "24 Oct",
+      "heureFin": "11:00",
+      "heureStr": "09:00 - 11:00",
+      "heureDebut": "09:00",
+      "professeur": "Mrs. Ndiaye",
+      "description": "Lecture de documentations techniques en anglais informatique, rédaction de cahiers des charges et pitch de projets innovants.",
+      "jourComplet": "MARDI"
+    },
+    {
+      "id": "p5",
+      "nom": "Intelligence Artificielle",
+      "jour": "MAR",
+      "type": "CM",
+      "salle": "Amphi A",
+      "status": "termine",
+      "dateStr": "24 Oct",
+      "heureFin": "16:00",
+      "heureStr": "13:00 - 16:00",
+      "heureDebut": "13:00",
+      "professeur": "Prof. Sy",
+      "description": "Modélisation de réseaux neuronaux, apprentissage machine non-supervisé et applications du TAL.",
+      "jourComplet": "MARDI"
+    },
+    {
+      "id": "p6",
+      "nom": "Architecture Réseaux",
+      "jour": "MER",
+      "type": "TP",
+      "salle": "Labo 204",
+      "status": "actuel",
+      "dateStr": "25 Oct",
+      "heureFin": "11:00",
+      "heureStr": "08:00 - 11:00",
+      "heureDebut": "08:00",
+      "professeur": "M. Diop",
+      "description": "Modélisation de topologies physiques et virtuelles, routage dynamique, VPN IPSec et pare-feux de nouvelle génération.",
+      "jourComplet": "MERCREDI"
+    },
+    {
+      "id": "p7",
+      "nom": "Base de Données SQL",
+      "jour": "JEU",
+      "type": "TD",
+      "salle": "Salle 205",
+      "status": "a_venir",
+      "dateStr": "26 Oct",
+      "heureFin": "15:00",
+      "heureStr": "13:00 - 15:00",
+      "heureDebut": "13:00",
+      "professeur": "Mme. Sow",
+      "description": "Modélisation relationnelle de données, algèbre relationnelle complexe et optimisation de requêtes d'agrégation SQL.",
+      "jourComplet": "JEUDI"
+    },
+    {
+      "id": "p8",
+      "nom": "Cybersécurité",
+      "jour": "JEU",
+      "type": "CM",
+      "salle": "Amphi C",
+      "status": "a_venir",
+      "dateStr": "26 Oct",
+      "heureFin": "17:00",
+      "heureStr": "15:00 - 17:00",
+      "heureDebut": "15:00",
+      "professeur": "Dr. Wade",
+      "description": "Analyse des vulnérabilités logicielles communes (OWASP Top 10), cryptographie asymétrique et réponse de crise cyber.",
+      "jourComplet": "JEUDI"
+    },
+    {
+      "id": "p9",
+      "nom": "Mathématiques Appliquées",
+      "jour": "VEN",
+      "type": "TD",
+      "salle": "Salle 102",
+      "status": "a_venir",
+      "dateStr": "27 Oct",
+      "heureFin": "10:00",
+      "heureStr": "08:00 - 10:00",
+      "heureDebut": "08:00",
+      "professeur": "Prof. Ba",
+      "description": "Probabilités discrètes et de Poisson, algèbre linéaire numérique, vecteurs propres et valeurs singulières appliquées au traitement du signal.",
+      "jourComplet": "VENDREDI"
+    },
+    {
+      "id": "p10",
+      "nom": "Systèmes d'Exploitation",
+      "jour": "VEN",
+      "type": "TP",
+      "salle": "Salle Info 4",
+      "status": "a_venir",
+      "dateStr": "27 Oct",
+      "heureFin": "12:00",
+      "heureStr": "10:00 - 12:00",
+      "heureDebut": "10:00",
+      "professeur": "M. Sene",
+      "description": "Concurrence de processus, sémaphores de Dijkstra, gestion de la mémoire paginée et programmation système Bash/C.",
+      "jourComplet": "VENDREDI"
+    },
+    {
+      "id": "p-wed-12-14",
+      "nom": "TD Algorithmique Avancée",
+      "jour": "MER",
+      "type": "TD",
+      "salle": "Labo 5",
+      "status": "a_venir",
+      "dateStr": "25 Oct",
+      "heureFin": "14:00",
+      "heureStr": "12:00 - 14:00",
+      "heureDebut": "12:00",
+      "professeur": "Dr. Aly Diatta",
+      "description": "Séance pratique d'exercices sur la complexité et les tris.",
+      "jourComplet": "MERCREDI"
+    },
+    {
+      "id": "p-wed-17-20",
+      "nom": "Sécurité des Systèmes d'Information",
+      "jour": "MER",
+      "type": "CM",
+      "salle": "Amphi B",
+      "status": "a_venir",
+      "dateStr": "25 Oct",
+      "heureFin": "20:00",
+      "heureStr": "17:00 - 20:00",
+      "heureDebut": "17:00",
+      "professeur": "Dr. Aly Diatta",
+      "description": "Cryptographie avancée, modélisation de menaces et protocoles de communication sécurisés.",
+      "jourComplet": "MERCREDI"
+    }
+  ],
+  "candidatures": [
+    {
+      "id": "cand-1783612701576",
+      "email": "khadija.fall@gmail.com",
+      "statut": "En attente",
+      "numeroCni": "N/A",
+      "telephone": "+221 77 123 45 67",
+      "typeDepot": "En ligne",
+      "motivation": "Passionnée de nouvelles technologies et de codage.",
+      "nomComplet": "Khadija Fall",
+      "promotionNom": "Génie Logiciel",
+      "nomFichierCni": "Non fourni",
+      "dateSoumission": "2026-07-09T15:58:21.576Z",
+      "dernierDiplome": "N/A",
+      "nomFichierDiplome": "Non fourni",
+      "nomFichierBulletin": "Non fourni",
+      "dernierEtablissement": "N/A"
+    },
+    {
+      "id": "cand-1783612717698",
+      "email": "khadija.fall@gmail.com",
+      "statut": "En attente",
+      "numeroCni": "N/A",
+      "telephone": "+221 77 123 45 67",
+      "typeDepot": "En ligne",
+      "motivation": "Passionnée de nouvelles technologies et de codage.",
+      "nomComplet": "Khadija Fall",
+      "promotionNom": "Génie Logiciel",
+      "nomFichierCni": "Non fourni",
+      "dateSoumission": "2026-07-09T15:58:37.698Z",
+      "dernierDiplome": "N/A",
+      "nomFichierDiplome": "Non fourni",
+      "nomFichierBulletin": "Non fourni",
+      "dernierEtablissement": "N/A"
+    },
+    {
+      "id": "cand-1783613188291",
+      "email": "khadija.fall@gmail.com",
+      "statut": "En attente",
+      "numeroCni": "N/A",
+      "telephone": "+221 77 123 45 67",
+      "typeDepot": "En ligne",
+      "motivation": "Passionnée de nouvelles technologies et de codage.",
+      "nomComplet": "Khadija Fall",
+      "promotionNom": "Génie Logiciel",
+      "nomFichierCni": "Non fourni",
+      "dateSoumission": "2026-07-09T16:06:28.291Z",
+      "dernierDiplome": "N/A",
+      "nomFichierDiplome": "Non fourni",
+      "nomFichierBulletin": "Non fourni",
+      "dernierEtablissement": "N/A"
+    },
+    {
+      "id": "cand-1783613965007",
+      "email": "khadija.fall@gmail.com",
+      "statut": "En attente",
+      "numeroCni": "N/A",
+      "telephone": "+221 77 123 45 67",
+      "typeDepot": "En ligne",
+      "motivation": "Passionnée de nouvelles technologies et de codage.",
+      "nomComplet": "Khadija Fall",
+      "promotionNom": "Génie Logiciel",
+      "nomFichierCni": "Non fourni",
+      "dateSoumission": "2026-07-09T16:19:25.007Z",
+      "dernierDiplome": "N/A",
+      "nomFichierDiplome": "Non fourni",
+      "nomFichierBulletin": "Non fourni",
+      "dernierEtablissement": "N/A"
+    }
+  ],
+  "staff": [],
+  "badgeScans": [],
+  "securityEvents": []
+}

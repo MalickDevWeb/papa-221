@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>École 221 - Plateforme Éducative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style>
+        body { background-color: #fff8f7; -webkit-tap-highlight-color: transparent; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+        .active-nav-pill { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .glass-card { background: rgba(255, 255, 255, 0.8); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border: 1px solid #E9ECEF; }
+        @keyframes subtle-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+        .float-animation { animation: subtle-float 4s ease-in-out infinite; }
+        .animate-fade-in { animation: fadeIn 0.8s ease-out; animation-fill-mode: both; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+  </head>
+  <body class="font-body-md text-on-surface antialiased">
+    <script>
+      window.addEventListener('error', function(event) {
+        const msg = (event.message || '').toLowerCase();
+        const stack = (event.error && event.error.stack ? event.error.stack : '').toLowerCase();
+        if (msg.includes('websocket') || stack.includes('websocket')) {
+          return;
+        }
+        const errDiv = document.createElement('div');
+        errDiv.style.position = 'fixed';
+        errDiv.style.top = '0';
+        errDiv.style.left = '0';
+        errDiv.style.width = '100%';
+        errDiv.style.background = '#fee2e2';
+        errDiv.style.color = '#991b1b';
+        errDiv.style.padding = '16px';
+        errDiv.style.zIndex = '999999';
+        errDiv.style.borderBottom = '4px solid #ef4444';
+        errDiv.style.fontFamily = 'monospace';
+        errDiv.style.whiteSpace = 'pre-wrap';
+        errDiv.style.fontSize = '12px';
+        errDiv.style.boxShadow = '0 10px 15px -3px rgba(0,0,0,0.1)';
+        errDiv.innerHTML = '<strong>[Runtime Error]:</strong> ' + event.message + '\n' + (event.error ? event.error.stack : '');
+        document.body.appendChild(errDiv);
+      });
+      window.addEventListener('unhandledrejection', function(event) {
+        const reasonStr = event.reason ? String(event.reason).toLowerCase() : '';
+        const stackStr = (event.reason && event.reason.stack ? String(event.reason.stack) : '').toLowerCase();
+        if (reasonStr.includes('websocket') || stackStr.includes('websocket')) {
+          return;
+        }
+        const errDiv = document.createElement('div');
+        errDiv.style.position = 'fixed';
+        errDiv.style.top = '0';
+        errDiv.style.left = '0';
+        errDiv.style.width = '100%';
+        errDiv.style.background = '#fffbeb';
+        errDiv.style.color = '#92400e';
+        errDiv.style.padding = '16px';
+        errDiv.style.zIndex = '999999';
+        errDiv.style.borderBottom = '4px solid #f59e0b';
+        errDiv.style.fontFamily = 'monospace';
+        errDiv.style.whiteSpace = 'pre-wrap';
+        errDiv.style.fontSize = '12px';
+        errDiv.style.boxShadow = '0 10px 15px -3px rgba(0,0,0,0.1)';
+        errDiv.innerHTML = '<strong>[Unhandled Promise Rejection]:</strong> ' + event.reason + '\n' + (event.reason && event.reason.stack ? event.reason.stack : '');
+        document.body.appendChild(errDiv);
+      });
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
