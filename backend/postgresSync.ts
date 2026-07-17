@@ -76,7 +76,17 @@ export async function saveToPostgres(dbData: DbSchema): Promise<void> {
     // 2. Depends on promotions
     if (dbData.students) {
       for (const s of dbData.students) {
-        await upsertRecord(client, 'students', 'id', s, { statutFrais: 'statut_frais' });
+        const cleanStudent = {
+          id: s.id,
+          name: s.name,
+          matricule: s.matricule,
+          gpa: s.gpa,
+          average: s.average,
+          mood: s.mood,
+          statutFrais: s.statutFrais || s.financialStatus,
+          promotion_id: s.promotion_id || s.promotionId
+        };
+        await upsertRecord(client, 'students', 'id', cleanStudent, { statutFrais: 'statut_frais' });
       }
     }
 
