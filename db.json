@@ -1,0 +1,173 @@
+{
+  "studentProfile": {
+    "name": "Abdoulaye Diallo",
+    "matricule": "221-M382",
+    "promotion": "221-GL",
+    "filiere": "Master 1 GL",
+    "faculte": "Sciences & Technologies",
+    "average": 15.6,
+    "gpa": 3.8,
+    "mood": "En pleine préparation des examens de l'École 221"
+  },
+  "attendances": [
+    {
+      "id": "att-1",
+      "timestamp": "2026-06-21T08:02:15.000Z",
+      "type": "arrivée",
+      "method": "QR Code",
+      "status": "Validé d'office",
+      "salle": "Amphbi A",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441"
+    },
+    {
+      "id": "att-2",
+      "timestamp": "2026-06-21T12:05:40.000Z",
+      "type": "départ",
+      "method": "Camera Scan",
+      "status": "Validé",
+      "salle": "Amphi A",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441"
+    }
+  ],
+  "homeworks": [
+    {
+      "id": "t1",
+      "titre": "Wireframing Dashboard Portal",
+      "cours": "UI/UX Design",
+      "coursLabel": "UI/UX Design",
+      "desc": "Créer les wireframes basse fidélité pour le module de gestion des notes de l'école.",
+      "prio": "haute",
+      "statut": "a_faire",
+      "deadlineStr": "2 jours restants",
+      "submittedFiles": []
+    },
+    {
+      "id": "t2",
+      "titre": "Analyse de Marché EdTech",
+      "cours": "Marketing Digital",
+      "coursLabel": "Marketing",
+      "desc": "Étude comparative des plateformes LMS majeures en Afrique de l'Ouest.",
+      "prio": "normale",
+      "statut": "a_faire",
+      "deadlineStr": "12 Oct",
+      "submittedFiles": []
+    },
+    {
+      "id": "t3",
+      "titre": "TP Arbres Binaires",
+      "cours": "Développement Fullstack",
+      "coursLabel": "Algo & Structure",
+      "desc": "Implémentation d'arbres de recherche binaire optimisés et parcours.",
+      "prio": "haute",
+      "statut": "en_cours",
+      "deadlineStr": "Dernière modif: Il y a 2h",
+      "progress": 65,
+      "submittedFiles": []
+    },
+    {
+      "id": "t4",
+      "titre": "Requêtes SQL Avancées",
+      "cours": "Data Science",
+      "coursLabel": "Base de Données",
+      "desc": "Optimisation de requêtes avec des jointures multiples et indexation avancée.",
+      "prio": "normale",
+      "statut": "soumis",
+      "deadlineStr": "Fini le 15 Oct",
+      "note": "18 / 20",
+      "submittedFiles": [
+        "sql_optimize_final.sql"
+      ]
+    }
+  ],
+  "liveSessions": [
+    {
+      "id": "live-1",
+      "courseName": "Machine Learning Foundations",
+      "teacherName": "Dr. Cheikh Ahmadou Bamba",
+      "title": "Introduction aux Réseaux Neuronaux Convolutifs (CNN)",
+      "startTime": "12:00",
+      "endTime": "14:00",
+      "status": "finished",
+      "attendeesCount": 38,
+      "thumbnail": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500&auto=format&fit=crop&q=60",
+      "hlsUrl": "https://meet.google.com/abc-defg-hij",
+      "reactions": {
+        "heart": 24,
+        "like": 42,
+        "clap": 15,
+        "mindblown": 9
+      },
+      "chatMessages": [
+        {
+          "id": "m1",
+          "user": "Dr. Cheikh Bamba (Professeur)",
+          "text": "Bienvenue au cours en direct ! Aujourd'hui nous étudions les CNN.",
+          "timestamp": "12:05",
+          "isTeacher": true
+        },
+        {
+          "id": "m2",
+          "user": "Mariama Fall",
+          "text": "Bonjour tout le monde ! Est-ce que le support PDF est sous Moodle ?",
+          "timestamp": "12:08",
+          "isTeacher": false
+        },
+        {
+          "id": "m3",
+          "user": "Ibrahima Ndiaye",
+          "text": "Oui Mariama, c'est dans le dossier de la semaine 4 !",
+          "timestamp": "12:10",
+          "isTeacher": false
+        }
+      ]
+    },
+    {
+      "id": "live-2",
+      "courseName": "Développement Flutter Mobile",
+      "teacherName": "Prof. S. Diop",
+      "title": "Gestion du State global avec Provider & Riverpod",
+      "startTime": "15:00",
+      "endTime": "17:00",
+      "status": "preview",
+      "attendeesCount": 0,
+      "thumbnail": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60",
+      "hlsUrl": "",
+      "reactions": {
+        "heart": 0,
+        "like": 0,
+        "clap": 0,
+        "mindblown": 0
+      },
+      "chatMessages": []
+    }
+  ],
+  "courses": [
+    {
+      "id": "c1",
+      "titre": "Algorithmique Avancée & Complexité",
+      "coefficient": 4,
+      "progress": 80,
+      "unites": ["Graphes", "Programmation Dynamique", "Arbres Binaires"],
+      "professeur": "Dr. Aly Diatta",
+      "prochain_cours": "Lundi 8h00 - Amphi A"
+    },
+    {
+      "id": "c2",
+      "titre": "Développement Web Fullstack",
+      "coefficient": 5,
+      "progress": 65,
+      "unites": ["Vite/React", "Node.js & Express", "ORM & Database"],
+      "professeur": "M. Malick Teuw",
+      "prochain_cours": "Lundi 14h00 - Labo 10"
+    },
+    {
+      "id": "c3",
+      "titre": "Intelligence Artificielle & TAL",
+      "coefficient": 4,
+      "progress": 90,
+      "unites": ["Réseaux Neuronaux", "NLP & Transformers", "Prompt Engineering"],
+      "professeur": "Prof. Sy",
+      "prochain_cours": "Mardi 13h00 - Amphi A"
+    }
+  ]
+}
