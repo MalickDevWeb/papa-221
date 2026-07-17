@@ -13,6 +13,8 @@ export function PlanningSubSidebar({ activeTab, onSelectTab, isCollapsed, onTogg
     { id: 'calendar', label: 'Calendrier & Salles', icon: 'calendar_today' },
     { id: 'conflicts', label: 'Matrice des Conflits', icon: 'warning' },
     { id: 'ai_opt', label: 'Assistant IA Planner', icon: 'psychology' },
+    { id: 'history', label: 'Historique & Audit', icon: 'history' },
+    { id: 'stats', label: 'Associations & Stats', icon: 'analytics' },
   ];
 
   return (

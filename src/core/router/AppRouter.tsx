@@ -16,6 +16,7 @@ import {
   StudentGradesPage,
   StudentTutorPage,
 } from '@/features/student';
+import { CollaborationPage } from '@/features/collaboration/ui/pages/CollaborationPage';
 import { StudentLayout } from '@/features/student/ui/components/layout/StudentLayout';
 import {
   VigilPatrolPage,
@@ -68,6 +69,7 @@ export function AppRouter() {
               <Route path="/etudiant/planning"       element={<StudentSchedulePage />} />
               <Route path="/etudiant/notes"          element={<StudentGradesPage />} />
               <Route path="/etudiant/tuteur"         element={<StudentTutorPage />} />
+              <Route path="/etudiant/collaboration"  element={<CollaborationPage />} />
             </Route>
           </Route>
 

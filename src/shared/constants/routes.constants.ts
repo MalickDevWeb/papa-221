@@ -12,6 +12,7 @@ export const ROUTES = {
     planning:  '/etudiant/planning',
     notes:     '/etudiant/notes',
     tuteur:    '/etudiant/tuteur',
+    collaboration: '/etudiant/collaboration',
   },
   vigil: {
     dashboard: '/vigile',

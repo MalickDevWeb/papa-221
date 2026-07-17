@@ -69,34 +69,6 @@
   ],
   "courses": [
     {
-      "id": "c-1",
-      "titre": "Algorithmique Avancée & Complexité",
-      "unites": [
-        "Graphes",
-        "Programmation Dynamique",
-        "Arbres Binaires"
-      ],
-      "progress": 85,
-      "coefficient": 4,
-      "promotion_id": "p-1",
-      "professeur_id": "prof-1",
-      "prochain_cours": "Lundi 8h00 - Amphi A"
-    },
-    {
-      "id": "c-2",
-      "titre": "Développement Web Fullstack",
-      "unites": [
-        "Vite/React",
-        "Node.js & Express",
-        "ORM & Database"
-      ],
-      "progress": 65,
-      "coefficient": 5,
-      "promotion_id": "p-1",
-      "professeur_id": "prof-2",
-      "prochain_cours": "Lundi 14h00 - Labo 10"
-    },
-    {
       "id": "c-3",
       "titre": "Intelligence Artificielle & TAL",
       "unites": [
@@ -123,6 +95,34 @@
       "promotion_id": "p-2",
       "professeur_id": "prof-4",
       "prochain_cours": "Jeudi 10h00 - Salle 5"
+    },
+    {
+      "id": "c-1",
+      "titre": "Algorithmique Avancée & Complexité",
+      "unites": [
+        "Graphes",
+        "Programmation Dynamique",
+        "Arbres Binaires"
+      ],
+      "progress": 85,
+      "coefficient": 4,
+      "promotion_id": "p-1",
+      "professeur_id": "prof-1",
+      "prochain_cours": "Lundi 8h00 - Amphi A"
+    },
+    {
+      "id": "c-2",
+      "titre": "Développement Web Fullstack",
+      "unites": [
+        "Vite/React",
+        "Node.js & Express",
+        "ORM & Database"
+      ],
+      "progress": 65,
+      "coefficient": 5,
+      "promotion_id": "p-1",
+      "professeur_id": "prof-2",
+      "prochain_cours": "Lundi 14h00 - Labo 10"
     }
   ],
   "attendances": [
@@ -267,6 +267,26 @@
       "student_id": "usr-etudiant-01"
     },
     {
+      "id": "att-1783633902119",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T21:51:42.119Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-1783633902102",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-09T21:51:42.102Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
       "id": "att-1783619647938",
       "type": "départ",
       "salle": "Portail Principal",
@@ -407,26 +427,6 @@
       "student_id": "usr-etudiant-02"
     },
     {
-      "id": "att-1783633902119",
-      "type": "départ",
-      "salle": "Portail Principal",
-      "method": "QR Code Scan",
-      "status": "Validé d'office",
-      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
-      "timestamp": "2026-07-09T21:51:42.119Z",
-      "student_id": "usr-etudiant-02"
-    },
-    {
-      "id": "att-1783633902102",
-      "type": "arrivée",
-      "salle": "Portail Principal",
-      "method": "QR Code Scan",
-      "status": "Refusé",
-      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
-      "timestamp": "2026-07-09T21:51:42.102Z",
-      "student_id": "usr-etudiant-01"
-    },
-    {
       "id": "att-1783565346243",
       "type": "arrivée",
       "salle": "Portail Principal",
@@ -459,30 +459,6 @@
   ],
   "homeworks": [
     {
-      "id": "t1",
-      "desc": "Créer les wireframes basse fidélité pour le module de gestion des notes de l'école.",
-      "prio": "haute",
-      "titre": "Wireframing Dashboard Portal",
-      "statut": "a_faire",
-      "progress": 0,
-      "course_id": "c-2",
-      "deadlineStr": "2 jours restants",
-      "submittedFiles": [],
-      "note": null
-    },
-    {
-      "id": "t2",
-      "desc": "Étude comparative des plateformes LMS majeures en Afrique de l'Ouest.",
-      "prio": "normale",
-      "titre": "Analyse de Marché EdTech",
-      "statut": "a_faire",
-      "progress": 0,
-      "course_id": "c-4",
-      "deadlineStr": "12 Oct",
-      "submittedFiles": [],
-      "note": null
-    },
-    {
       "id": "t3",
       "desc": "Implémentation d'arbres de recherche binaire optimisés et parcours.",
       "prio": "haute",
@@ -507,6 +483,30 @@
         "sql_optimize_final.sql"
       ],
       "note": "18 / 20"
+    },
+    {
+      "id": "t1",
+      "desc": "Créer les wireframes basse fidélité pour le module de gestion des notes de l'école.",
+      "prio": "haute",
+      "titre": "Wireframing Dashboard Portal",
+      "statut": "a_faire",
+      "progress": 0,
+      "course_id": "c-2",
+      "deadlineStr": "2 jours restants",
+      "submittedFiles": [],
+      "note": null
+    },
+    {
+      "id": "t2",
+      "desc": "Étude comparative des plateformes LMS majeures en Afrique de l'Ouest.",
+      "prio": "normale",
+      "titre": "Analyse de Marché EdTech",
+      "statut": "a_faire",
+      "progress": 0,
+      "course_id": "c-4",
+      "deadlineStr": "12 Oct",
+      "submittedFiles": [],
+      "note": null
     }
   ],
   "liveSessions": [
@@ -600,96 +600,6 @@
   ],
   "sessions": [
     {
-      "id": "p1",
-      "nom": "Algorithmique Avancée",
-      "jour": "LUN",
-      "type": "CM",
-      "salle": "Amphi A",
-      "status": "termine",
-      "dateStr": "23 Oct",
-      "heureFin": "10:00",
-      "heureStr": "08:00 - 10:00",
-      "heureDebut": "08:00",
-      "professeur": "Dr. Aly Diatta",
-      "description": "Analyse de complexité théorique, structures de données avancées, graphes et programmation dynamique.",
-      "jourComplet": "LUNDI"
-    },
-    {
-      "id": "p2",
-      "nom": "Éthique & Droit Numérique",
-      "jour": "LUN",
-      "type": "CM",
-      "salle": "Amphi B",
-      "status": "termine",
-      "dateStr": "23 Oct",
-      "heureFin": "12:05",
-      "heureStr": "10:00 - 12:00",
-      "heureDebut": "10:00",
-      "professeur": "Dr. Kane",
-      "description": "Aspects juridiques des données à caractère personnel, législation cybernétique au Sénégal et éthique des algorithmes.",
-      "jourComplet": "LUNDI"
-    },
-    {
-      "id": "p3",
-      "nom": "Développement Web Fullstack",
-      "jour": "LUN",
-      "type": "TP",
-      "salle": "Labo 10",
-      "status": "termine",
-      "dateStr": "23 Oct",
-      "heureFin": "16:00",
-      "heureStr": "14:00 - 16:00",
-      "heureDebut": "14:00",
-      "professeur": "M. Malick Teuw",
-      "description": "Industrialisation d'une application React avec Vite, typage TypeScript strict, state managers et intégration back-end.",
-      "jourComplet": "LUNDI"
-    },
-    {
-      "id": "p4",
-      "nom": "Anglais Technique",
-      "jour": "MAR",
-      "type": "TD",
-      "salle": "Salle 301",
-      "status": "termine",
-      "dateStr": "24 Oct",
-      "heureFin": "11:00",
-      "heureStr": "09:00 - 11:00",
-      "heureDebut": "09:00",
-      "professeur": "Mrs. Ndiaye",
-      "description": "Lecture de documentations techniques en anglais informatique, rédaction de cahiers des charges et pitch de projets innovants.",
-      "jourComplet": "MARDI"
-    },
-    {
-      "id": "p5",
-      "nom": "Intelligence Artificielle",
-      "jour": "MAR",
-      "type": "CM",
-      "salle": "Amphi A",
-      "status": "termine",
-      "dateStr": "24 Oct",
-      "heureFin": "16:00",
-      "heureStr": "13:00 - 16:00",
-      "heureDebut": "13:00",
-      "professeur": "Prof. Sy",
-      "description": "Modélisation de réseaux neuronaux, apprentissage machine non-supervisé et applications du TAL.",
-      "jourComplet": "MARDI"
-    },
-    {
-      "id": "p6",
-      "nom": "Architecture Réseaux",
-      "jour": "MER",
-      "type": "TP",
-      "salle": "Labo 204",
-      "status": "actuel",
-      "dateStr": "25 Oct",
-      "heureFin": "11:00",
-      "heureStr": "08:00 - 11:00",
-      "heureDebut": "08:00",
-      "professeur": "M. Diop",
-      "description": "Modélisation de topologies physiques et virtuelles, routage dynamique, VPN IPSec et pare-feux de nouvelle génération.",
-      "jourComplet": "MERCREDI"
-    },
-    {
       "id": "p7",
       "nom": "Base de Données SQL",
       "jour": "JEU",
@@ -778,9 +688,116 @@
       "professeur": "Dr. Aly Diatta",
       "description": "Cryptographie avancée, modélisation de menaces et protocoles de communication sécurisés.",
       "jourComplet": "MERCREDI"
+    },
+    {
+      "id": "p1",
+      "nom": "Algorithmique Avancée",
+      "jour": "LUN",
+      "type": "CM",
+      "salle": "Amphi A",
+      "status": "termine",
+      "dateStr": "23 Oct",
+      "heureFin": "10:00",
+      "heureStr": "08:00 - 10:00",
+      "heureDebut": "08:00",
+      "professeur": "Dr. Aly Diatta",
+      "description": "Analyse de complexité théorique, structures de données avancées, graphes et programmation dynamique.",
+      "jourComplet": "LUNDI"
+    },
+    {
+      "id": "p2",
+      "nom": "Éthique & Droit Numérique",
+      "jour": "LUN",
+      "type": "CM",
+      "salle": "Amphi B",
+      "status": "termine",
+      "dateStr": "23 Oct",
+      "heureFin": "12:05",
+      "heureStr": "10:00 - 12:00",
+      "heureDebut": "10:00",
+      "professeur": "Dr. Kane",
+      "description": "Aspects juridiques des données à caractère personnel, législation cybernétique au Sénégal et éthique des algorithmes.",
+      "jourComplet": "LUNDI"
+    },
+    {
+      "id": "p3",
+      "nom": "Développement Web Fullstack",
+      "jour": "LUN",
+      "type": "TP",
+      "salle": "Labo 10",
+      "status": "termine",
+      "dateStr": "23 Oct",
+      "heureFin": "16:00",
+      "heureStr": "14:00 - 16:00",
+      "heureDebut": "14:00",
+      "professeur": "M. Malick Teuw",
+      "description": "Industrialisation d'une application React avec Vite, typage TypeScript strict, state managers et intégration back-end.",
+      "jourComplet": "LUNDI"
+    },
+    {
+      "id": "p4",
+      "nom": "Anglais Technique",
+      "jour": "MAR",
+      "type": "TD",
+      "salle": "Salle 301",
+      "status": "termine",
+      "dateStr": "24 Oct",
+      "heureFin": "11:00",
+      "heureStr": "09:00 - 11:00",
+      "heureDebut": "09:00",
+      "professeur": "Mrs. Ndiaye",
+      "description": "Lecture de documentations techniques en anglais informatique, rédaction de cahiers des charges et pitch de projets innovants.",
+      "jourComplet": "MARDI"
+    },
+    {
+      "id": "p5",
+      "nom": "Intelligence Artificielle",
+      "jour": "MAR",
+      "type": "CM",
+      "salle": "Amphi A",
+      "status": "termine",
+      "dateStr": "24 Oct",
+      "heureFin": "16:00",
+      "heureStr": "13:00 - 16:00",
+      "heureDebut": "13:00",
+      "professeur": "Prof. Sy",
+      "description": "Modélisation de réseaux neuronaux, apprentissage machine non-supervisé et applications du TAL.",
+      "jourComplet": "MARDI"
+    },
+    {
+      "id": "p6",
+      "nom": "Architecture Réseaux",
+      "jour": "MER",
+      "type": "TP",
+      "salle": "Labo 204",
+      "status": "actuel",
+      "dateStr": "25 Oct",
+      "heureFin": "11:00",
+      "heureStr": "08:00 - 11:00",
+      "heureDebut": "08:00",
+      "professeur": "M. Diop",
+      "description": "Modélisation de topologies physiques et virtuelles, routage dynamique, VPN IPSec et pare-feux de nouvelle génération.",
+      "jourComplet": "MERCREDI"
     }
   ],
   "candidatures": [
+    {
+      "id": "cand-1783613965007",
+      "email": "khadija.fall@gmail.com",
+      "statut": "En attente",
+      "numeroCni": "N/A",
+      "telephone": "+221 77 123 45 67",
+      "typeDepot": "En ligne",
+      "motivation": "Passionnée de nouvelles technologies et de codage.",
+      "nomComplet": "Khadija Fall",
+      "promotionNom": "Génie Logiciel",
+      "nomFichierCni": "Non fourni",
+      "dateSoumission": "2026-07-09T16:19:25.007Z",
+      "dernierDiplome": "N/A",
+      "nomFichierDiplome": "Non fourni",
+      "nomFichierBulletin": "Non fourni",
+      "dernierEtablissement": "N/A"
+    },
     {
       "id": "cand-1783612701576",
       "email": "khadija.fall@gmail.com",
@@ -831,23 +848,6 @@
       "nomFichierDiplome": "Non fourni",
       "nomFichierBulletin": "Non fourni",
       "dernierEtablissement": "N/A"
-    },
-    {
-      "id": "cand-1783613965007",
-      "email": "khadija.fall@gmail.com",
-      "statut": "En attente",
-      "numeroCni": "N/A",
-      "telephone": "+221 77 123 45 67",
-      "typeDepot": "En ligne",
-      "motivation": "Passionnée de nouvelles technologies et de codage.",
-      "nomComplet": "Khadija Fall",
-      "promotionNom": "Génie Logiciel",
-      "nomFichierCni": "Non fourni",
-      "dateSoumission": "2026-07-09T16:19:25.007Z",
-      "dernierDiplome": "N/A",
-      "nomFichierDiplome": "Non fourni",
-      "nomFichierBulletin": "Non fourni",
-      "dernierEtablissement": "N/A"
     }
   ],
   "staff": [],
@@ -882,6 +882,33 @@
       "prof": "Dr Diop",
       "roomName": "Salle 1 - Amphi A",
       "isLive": true
+    },
+    {
+      "id": "p-1784288327764",
+      "day": "Mardi",
+      "slot": "08h - 10h",
+      "classeId": "c-1",
+      "subject": "Ingénierie Structurale",
+      "prof": "Prof Diallo",
+      "roomName": ""
+    },
+    {
+      "id": "p-1784289490694",
+      "day": "Jeudi",
+      "slot": "08h - 10h",
+      "classeId": "c-1",
+      "subject": "Ingénierie Structurale",
+      "prof": "Prof Diallo",
+      "roomName": ""
+    },
+    {
+      "id": "p-1784289596967",
+      "day": "Vendredi",
+      "slot": "08h - 10h",
+      "classeId": "c-1",
+      "subject": "Ingénierie Structurale",
+      "prof": "Prof Diallo",
+      "roomName": ""
     }
   ],
   "planningFilieres": [
@@ -1033,6 +1060,12 @@
       "registrationFeePaid": false,
       "notifications": [
         {
+          "id": "not-1784291107039",
+          "type": "demande_pieces",
+          "message": "Nous sollicitons des pièces justificatives supplémentaires pour l'étude de vos équivalences.",
+          "sentAt": "2026-07-17T12:25:07.039Z"
+        },
+        {
           "id": "not-1",
           "type": "dossier_recu",
           "message": "Dossier de candidature en L1 reçu par la scolarité.",
@@ -1142,38 +1175,6 @@
           "type": "demande_pieces",
           "message": "Copie de l'attestation d'équivalence consulaire validée.",
           "sentAt": "2026-07-06T10:00:00Z"
-        }
-      ]
-    },
-    {
-      "id": "cand-2026-005",
-      "name": "Khadim Rassoul",
-      "email": "khadim.rassoul@gmail.com",
-      "type": "REINSCRIPTION",
-      "course": "Licence 3 Informatique",
-      "step": "admitted",
-      "docs": {
-        "diploma": true,
-        "idCard": true
-      },
-      "registrationFeePaid": true,
-      "details": {
-        "previousYearValidated": true,
-        "unpaidDues": 0,
-        "sanctionsCount": 0
-      },
-      "notifications": [
-        {
-          "id": "not-6",
-          "type": "dossier_recu",
-          "message": "Demande de réinscription déposée.",
-          "sentAt": "2026-07-10T08:00:00Z"
-        },
-        {
-          "id": "not-7",
-          "type": "admission_conditionnelle",
-          "message": "Réinscription admissible après audit automatique des frais et du bulletin.",
-          "sentAt": "2026-07-11T12:00:00Z"
         }
       ]
     },

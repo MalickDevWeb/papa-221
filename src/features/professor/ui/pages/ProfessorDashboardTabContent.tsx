@@ -3,6 +3,7 @@ import type { useProfessorDashboardPage } from '../../hooks/useProfessorDashboar
 import { DashboardTab } from './tabs/DashboardTab';
 import { ClassroomTab } from './tabs/ClassroomTab';
 import { ScheduleTab } from './tabs/ScheduleTab';
+import { CollaborationPage } from '@/features/collaboration/ui/pages/CollaborationPage';
 
 type ViewModel = ReturnType<typeof useProfessorDashboardPage>;
 
@@ -16,6 +17,7 @@ export function ProfessorDashboardTabContent({ vm }: Props) {
       {vm.activeTab === 'dashboard' && <DashboardTab vm={vm} />}
       {vm.activeTab === 'classroom' && <ClassroomTab vm={vm} />}
       {vm.activeTab === 'schedule' && <ScheduleTab vm={vm} />}
+      {vm.activeTab === 'collaboration' && <CollaborationPage />}
     </main>
   );
 }

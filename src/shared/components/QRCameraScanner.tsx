@@ -1,79 +1,50 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Html5Qrcode } from 'html5-qrcode';
 import { Icon } from '@iconify/react';
 import { motion } from 'motion/react';
+import { useQRCameraScanner } from './useQRCameraScanner';
 
 interface Props { readonly onScanComplete: (decodedText: string) => void; }
 
 export function QRCameraScanner({ onScanComplete }: Props) {
-  const [error, setError] = useState<string | null>(null);
-  const [isScanning, setIsScanning] = useState(false);
-  const [facingMode, setFacingMode] = useState<'environment' | 'user'>('environment');
-  const qrRef = useRef<Html5Qrcode | null>(null);
   const elementId = "shared-qr-camera-element";
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [, setDims] = useState({ w: 0, h: 0 });
+
+  const {
+    error,
+    isScanning,
+    facingMode,
+    setFacingMode,
+    zoomSupported,
+    currentZoom,
+    zoomCaps,
+    applyZoom,
+  } = useQRCameraScanner(elementId, onScanComplete);
 
   useEffect(() => {
-    let isMounted = true;
-    const html5QrCode = new Html5Qrcode(elementId);
-    qrRef.current = html5QrCode;
-    let startPromise: Promise<any> | null = null;
-
-    const startScanner = async () => {
-      try {
-        startPromise = html5QrCode.start({ facingMode }, { fps: 15, qrbox: { width: 180, height: 180 } }, async (text) => {
-          if (!isMounted) return;
-          if (html5QrCode.isScanning) {
-            try { await html5QrCode.stop(); } catch (err) { console.warn("Failed stop", err); }
-          }
-          if (isMounted) onScanComplete(text);
-        }, () => {});
-        await startPromise;
-        if (isMounted) {
-          setIsScanning(true);
-          setError(null);
-          try {
-            const track = html5QrCode.getRunningTrack();
-            if (track) {
-              const caps = track.getCapabilities() as any;
-              if (caps?.zoom) {
-                const targetZoom = Math.min(caps.zoom.min * 1.5, caps.zoom.max);
-                await track.applyConstraints({ advanced: [{ zoom: targetZoom }] } as any);
-              }
-            }
-          } catch (e) { console.warn("Track zoom err", e); }
-        }
-      } catch (err) {
-        if (isMounted) { console.error(err); setError("Erreur caméra ou accès requis"); }
+    if (!containerRef.current) return;
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setDims({ w: entry.contentRect.width, h: entry.contentRect.height });
       }
-    };
-    void startScanner();
+    });
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
 
-    return () => {
-      isMounted = false;
-      const cleanup = async () => {
-        if (startPromise) {
-          try { await startPromise; } catch (e) { /* Ignored */ }
-        }
-        if (html5QrCode.isScanning) {
-          try { await html5QrCode.stop(); } catch (err) { console.warn("Failed stop on cleanup", err); }
-        }
-      };
-      void cleanup();
-      qrRef.current = null;
-    };
-  }, [onScanComplete, facingMode]);
+  const zoomOptions = [1.0, 1.2, 1.4, 1.6, 2.0].filter(
+    (v) => !zoomCaps || (v >= zoomCaps.min && v <= zoomCaps.max)
+  );
 
   return (
-    <div className="space-y-3 w-full" id="qr-camera-scanner" style={{ width: '191px', height: '234px' }}>
+    <div className="space-y-3 w-full" id="qr-camera-scanner" ref={containerRef}>
       <style>{`
-        #${elementId} video {
-          transform: scale(1.5) !important;
-          transform-origin: center center !important;
-          object-fit: cover !important;
-        }
+        #${elementId} { display: grid !important; place-items: center !important; width: 100% !important; height: 100% !important; overflow: hidden !important; }
+        #${elementId} video { grid-area: 1 / 1 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; }
+        #${elementId} canvas { grid-area: 1 / 1 !important; z-index: 5 !important; object-fit: contain !important; }
       `}</style>
       <div className="relative aspect-square w-48 mx-auto rounded-2xl bg-neutral-950 border-2 border-[#ba0013]/40 overflow-hidden flex flex-col items-center justify-center text-white">
-        <div id={elementId} className="absolute inset-0 w-full h-full object-cover" />
+        <div id={elementId} className="absolute inset-0 w-full h-full" />
         <div className="absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-[#ba0013] z-10 pointer-events-none" />
         <div className="absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-[#ba0013] z-10 pointer-events-none" />
         <div className="absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-[#ba0013] z-10 pointer-events-none" />
@@ -86,6 +57,20 @@ export function QRCameraScanner({ onScanComplete }: Props) {
           >
             <Icon icon="lucide:switch-camera" className="h-4 w-4" />
           </button>
+        )}
+        {zoomSupported && zoomOptions.length > 1 && (
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1 bg-black/60 p-1 rounded-full border border-white/10">
+            {zoomOptions.map((v) => (
+              <button
+                key={v}
+                type="button"
+                onClick={(e) => { e.stopPropagation(); void applyZoom(v); }}
+                className={`h-5 px-1.5 text-[8px] font-black rounded-full transition ${Math.abs(currentZoom - v) < 0.1 ? 'bg-[#ba0013] text-white' : 'text-neutral-300 hover:bg-white/10'}`}
+              >
+                {v.toFixed(1)}x
+              </button>
+            ))}
+          </div>
         )}
         {!isScanning && !error && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-neutral-950 text-neutral-400 p-4 z-15">

@@ -9,6 +9,7 @@ const TAB_TITLES: Record<string, string> = {
   dashboard: 'Tableau de bord',
   classroom: 'Salle de Classe',
   schedule: 'Mon Emploi du Temps',
+  collaboration: 'Espace Collaboration',
 };
 
 export function ProfessorDashboardPageContent() {

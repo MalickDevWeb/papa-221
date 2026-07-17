@@ -48,6 +48,7 @@ export function StudentSidebar({ onOpenSettings, triggerToast }: Props) {
           { to: ROUTES.student.planning, icon: 'calendar_today', label: 'Planning' },
           { to: ROUTES.student.devoirs, icon: 'assignment', label: 'Devoirs' },
           { to: ROUTES.student.notes, icon: 'grade', label: 'Notes' },
+          { to: ROUTES.student.collaboration, icon: 'groups', label: 'Collaboration' },
         ].map(({ to, icon, label }) => (
           <NavLink
             key={to}
