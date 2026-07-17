@@ -39,8 +39,8 @@ const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     return (
-      <div className="bg-[#291715] text-white p-3 md:p-4 rounded-2xl shadow-xl border border-white/10 text-xs font-semibold space-y-1.5 min-w-[150px] select-none">
-        <p className="font-extrabold text-white/50 border-b border-white/10 pb-1 mb-1 uppercase tracking-widest text-[9px]">
+      <div className="bg-[#291715] text-white p-3 md:p-4 rounded-2xl shadow-md border border-neutral-850 text-xs font-semibold space-y-1.5 min-w-[150px] select-none">
+        <p className="font-extrabold text-white/50 border-b border-neutral-800 pb-1 mb-1 uppercase tracking-widest text-[9px]">
           {data.semester}
         </p>
         <div className="flex items-center justify-between gap-4">
@@ -126,8 +126,8 @@ export function RecentAcademicPerformance() {
               <Tooltip content={<CustomTooltip />} />
               <Bar 
                 dataKey="moyenne" 
-                radius={[12, 12, 0, 0]}
-                barSize={48}
+                radius={6}
+                barSize={32}
               >
                 {SEMESTER_TRENDS.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />

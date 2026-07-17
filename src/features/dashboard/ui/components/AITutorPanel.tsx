@@ -133,7 +133,7 @@ export function AITutorPanel() {
   };
 
   return (
-    <section id="ai-tutor-assistant" className="col-span-12 lg:col-span-4 bg-white/90 backdrop-blur-md border border-neutral-gray-250 rounded-3xl p-5 shadow-sm flex flex-col justify-between h-[450px]">
+    <section id="ai-tutor-assistant" className="col-span-12 lg:col-span-4 bg-white border border-neutral-200 rounded-3xl p-5 shadow-sm flex flex-col justify-between h-[450px]">
       
       {/* Dynamic Header */}
       <div className="shrink-0 space-y-3">

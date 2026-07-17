@@ -36,7 +36,7 @@ export function StudentHeaderBanner({
 
 
   return (
-    <div className="-mt-6 mb-[19px] mr-0 flex flex-row items-center justify-between gap-3 sm:gap-6 bg-white/90 backdrop-blur-md p-4 sm:p-6 pr-4 sm:pr-6 py-4 sm:py-6 rounded-3xl border border-neutral-gray-200 shadow-sm relative overflow-hidden">
+    <div className="-mt-6 mb-[19px] mr-0 flex flex-row items-center justify-between gap-3 sm:gap-6 bg-white p-4 sm:p-6 pr-4 sm:pr-6 py-4 sm:py-6 rounded-3xl border border-neutral-gray-200 shadow-sm relative overflow-hidden">
       {/* Background decoration elements */}
       <div className="absolute right-0 top-0 -mt-12 -mr-12 w-48 h-48 rounded-full bg-brand-red-light/5 pointer-events-none"></div>
 
