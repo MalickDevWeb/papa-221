@@ -8,6 +8,7 @@ import { CourseResourcesTab } from '../components/course-details/CourseResources
 import { CourseQuizzesTab } from '../components/course-details/CourseQuizzesTab';
 import { CourseHomeworksTab } from '../components/course-details/CourseHomeworksTab';
 import { CourseRemindersList } from '../components/course-details/CourseRemindersList';
+import { CourseParcoursTab } from '../components/course-details/CourseParcoursTab';
 
 export function CourseDetailPage() {
   const state = useCourseDetailState();
@@ -43,6 +44,7 @@ export function CourseDetailPage() {
           <div className="flex-grow flex flex-col">
             <CourseTabsNav state={state} />
             <div className="p-5 md:p-6 space-y-5">
+              {activeTab === 'parcours' && <CourseParcoursTab course={course} details={details} />}
               {activeTab === 'chapters' && (
                 <>
                   {courseReminders.length > 0 && <CourseRemindersList reminders={courseReminders} salle={course.salle} />}

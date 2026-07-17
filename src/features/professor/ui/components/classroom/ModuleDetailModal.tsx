@@ -4,6 +4,7 @@ import { ModuleGeneralSection } from './ModuleGeneralSection';
 import { ModuleLessonsSection } from './ModuleLessonsSection';
 import { ModuleQuizSection } from './ModuleQuizSection';
 import { ModuleHomeworkSection } from './ModuleHomeworkSection';
+import { ModuleSequencesSection } from './ModuleSequencesSection';
 import type { CourseModule, StudentEnrolled } from '../../../domain/ProfessorModels';
 
 interface Props {
@@ -14,7 +15,7 @@ interface Props {
 }
 
 export function ModuleDetailModal({ module, students, onClose, onModulesUpdated }: Props) {
-  const [activeTab, setActiveTab] = useState<'info' | 'lessons' | 'quizzes' | 'homework'>('info');
+  const [activeTab, setActiveTab] = useState<'info' | 'lessons' | 'quizzes' | 'homework' | 'sequences'>('info');
   const [title, setTitle] = useState(module.title);
   const [description, setDescription] = useState(module.description);
   const [isDraft, setIsDraft] = useState(module.status === 'brouillon');
@@ -55,6 +56,7 @@ export function ModuleDetailModal({ module, students, onClose, onModulesUpdated 
             { id: 'lessons', label: 'Chapitres & Leçons', icon: FileText },
             { id: 'quizzes', label: 'Quiz & QCM', icon: HelpCircle },
             { id: 'homework', label: 'Devoirs & Notes', icon: Clipboard },
+            { id: 'sequences', label: 'Séquences & Suivi', icon: BookOpen },
           ].map((tab) => {
             const Icon = tab.icon;
             const isSel = activeTab === tab.id;
@@ -90,6 +92,7 @@ export function ModuleDetailModal({ module, students, onClose, onModulesUpdated 
           {activeTab === 'lessons' && <ModuleLessonsSection moduleId={module.id} />}
           {activeTab === 'quizzes' && <ModuleQuizSection moduleId={module.id} />}
           {activeTab === 'homework' && <ModuleHomeworkSection moduleId={module.id} students={students} />}
+          {activeTab === 'sequences' && <ModuleSequencesSection moduleId={module.id} students={students} />}
         </div>
       </div>
     </div>

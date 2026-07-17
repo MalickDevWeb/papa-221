@@ -4,11 +4,12 @@ import { RoomsTab } from './school/RoomsTab';
 import { FilieresTab } from './school/FilieresTab';
 import { ClassesTab } from './school/ClassesTab';
 import { PlanningTab } from './school/PlanningTab';
+import { AcademicFrameworkTab } from './school/AcademicFrameworkTab';
 import { useAdminSchoolState } from '../../hooks/useAdminSchoolState';
 import { TabletDrawerWrapper } from '@/features/screenguard/ui/components/TabletDrawerWrapper';
 
 export function AdminSchoolManager() {
-  const [activeTab, setActiveTab] = useState('rooms');
+  const [activeTab, setActiveTab] = useState('academic');
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const {
@@ -42,6 +43,9 @@ export function AdminSchoolManager() {
         />
       </TabletDrawerWrapper>
       <div className="flex-grow min-w-0 w-full bg-white border border-[#E2DCDA] rounded-2xl p-3 sm:p-6 shadow-sm min-h-[550px] overflow-hidden">
+        {activeTab === 'academic' && (
+          <AcademicFrameworkTab />
+        )}
         {activeTab === 'rooms' && (
           <RoomsTab rooms={rooms} onUpdateRooms={updateRooms} slots={slots} onUpdateSlots={updateSlots} />
         )}

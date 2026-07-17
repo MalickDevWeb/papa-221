@@ -25,7 +25,7 @@ export function useCourseDetailState() {
     setTimeout(() => setShowToast(null), 3000);
   };
 
-  const [activeTab, setActiveTab] = useState<'chapters' | 'resources' | 'quizzes' | 'homework'>('chapters');
+  const [activeTab, setActiveTab] = useState<'chapters' | 'resources' | 'quizzes' | 'homework' | 'parcours'>('parcours');
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number>>({});
   const [quizValidated, setQuizValidated] = useState(false);
 
