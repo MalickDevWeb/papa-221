@@ -1,0 +1,2933 @@
+{
+  "promotions": [
+    {
+      "id": "p-1",
+      "name": "DEVWEB L1 A",
+      "faculte": "Sciences & Technologies",
+      "filiere": "Développement Web Full Stack"
+    },
+    {
+      "id": "p-2",
+      "name": "DEVWEB L2 A",
+      "faculte": "Sciences & Technologies",
+      "filiere": "Développement Web Full Stack"
+    },
+    {
+      "id": "p-3",
+      "name": "DEVWEB L3 A",
+      "faculte": "Sciences & Technologies",
+      "filiere": "Développement Web Full Stack"
+    },
+    {
+      "id": "p-4",
+      "name": "IA M1 A",
+      "faculte": "Sciences & Technologies",
+      "filiere": "Intelligence Artificielle"
+    },
+    {
+      "id": "p-5",
+      "name": "IA M2 A",
+      "faculte": "Sciences & Technologies",
+      "filiere": "Intelligence Artificielle"
+    },
+    {
+      "id": "p-6",
+      "name": "DEVOPS L2 A",
+      "faculte": "Sciences & Technologies",
+      "filiere": "DevOps & Cloud Computing"
+    },
+    {
+      "id": "p-7",
+      "name": "CYBER M1 A",
+      "faculte": "Sciences & Technologies",
+      "filiere": "Cybersécurité"
+    }
+  ],
+  "students": [
+    {
+      "id": "usr-etudiant-01",
+      "name": "Assane Diop",
+      "matricule": "221-M382",
+      "gpa": 3.8,
+      "average": 15.6,
+      "mood": "Motivé et concentré sur son mémoire",
+      "statutFrais": "À Jour",
+      "promotion_id": "p-1"
+    },
+    {
+      "id": "usr-etudiant-02",
+      "name": "Fatou Sow",
+      "matricule": "221-M383",
+      "gpa": 3.9,
+      "average": 17.2,
+      "mood": "Concentrée sur son projet Flutter",
+      "statutFrais": "À Jour",
+      "promotion_id": "p-2"
+    },
+    {
+      "id": "usr-etudiant-03",
+      "name": "Malick Ndiaye",
+      "matricule": "221-M384",
+      "gpa": 3.4,
+      "average": 14.1,
+      "mood": "Ravi de retrouver la classe virtuelle",
+      "statutFrais": "À Jour",
+      "promotion_id": "p-1"
+    },
+    {
+      "id": "usr-etudiant-04",
+      "name": "Khadija Fall",
+      "matricule": "221-M385",
+      "gpa": 1.8,
+      "average": 9.5,
+      "mood": "En difficulté mais s'accroche",
+      "statutFrais": "En Retard",
+      "promotion_id": "p-1"
+    },
+    {
+      "id": "usr-etudiant-05",
+      "name": "Ibrahima Ba",
+      "matricule": "221-M386",
+      "gpa": 3.1,
+      "average": 13.5,
+      "mood": "Travaille dur sur ses TP de DevOps",
+      "statutFrais": "À Jour",
+      "promotion_id": "p-6"
+    },
+    {
+      "id": "usr-etudiant-06",
+      "name": "Ousmane Sene",
+      "matricule": "221-M387",
+      "gpa": 2.1,
+      "average": 10.2,
+      "mood": "Souvent en retard aux cours du matin",
+      "statutFrais": "En Retard",
+      "promotion_id": "p-2"
+    },
+    {
+      "id": "usr-etudiant-07",
+      "name": "Mariama Diallo",
+      "matricule": "221-M388",
+      "gpa": 4,
+      "average": 19.1,
+      "mood": "Étudiante boursière extrêmement assidue",
+      "statutFrais": "Boursier",
+      "promotion_id": "p-4"
+    },
+    {
+      "id": "usr-etudiant-08",
+      "name": "Oumy Teuw",
+      "matricule": "221-M389",
+      "gpa": 2.5,
+      "average": 11.8,
+      "mood": "Souvent absente pour raisons médicales",
+      "statutFrais": "À Jour",
+      "promotion_id": "p-3"
+    },
+    {
+      "id": "usr-etudiant-09",
+      "name": "Aminata Gueye",
+      "matricule": "221-M390",
+      "gpa": 3.2,
+      "average": 14.5,
+      "mood": "En recherche de stage d'été",
+      "statutFrais": "À Jour",
+      "promotion_id": "p-3"
+    },
+    {
+      "id": "usr-etudiant-10",
+      "name": "Cheikh Tidiane",
+      "matricule": "221-M391",
+      "gpa": 0,
+      "average": 0,
+      "mood": "A abandonné la formation au Semestre 1",
+      "statutFrais": "En Retard",
+      "promotion_id": "p-5"
+    },
+    {
+      "id": "usr-etudiant-11",
+      "name": "Seynabou Diop",
+      "matricule": "221-M392",
+      "gpa": 3.6,
+      "average": 16,
+      "mood": "Stage alterné chez Orange Sénégal",
+      "statutFrais": "À Jour",
+      "promotion_id": "p-5"
+    },
+    {
+      "id": "usr-etudiant-12",
+      "name": "Moustapha Mbacke",
+      "matricule": "221-M393",
+      "gpa": 3.5,
+      "average": 15.2,
+      "mood": "Étudiant réinscrit motivé",
+      "statutFrais": "À Jour",
+      "promotion_id": "p-4"
+    },
+    {
+      "id": "usr-etudiant-13",
+      "name": "Papa Demba",
+      "matricule": "221-M394",
+      "gpa": 2.9,
+      "average": 12.6,
+      "mood": "Transféré de l'Université de Thiès",
+      "statutFrais": "À Jour",
+      "promotion_id": "p-7"
+    },
+    {
+      "id": "usr-etudiant-14",
+      "name": "Rokhy Sarr",
+      "matricule": "221-M395",
+      "gpa": 3.7,
+      "average": 16.8,
+      "mood": "Excellente participation en classe",
+      "statutFrais": "Boursier",
+      "promotion_id": "p-7"
+    },
+    {
+      "id": "usr-etudiant-15",
+      "name": "Aboubacar Sidikh",
+      "matricule": "221-M396",
+      "gpa": 2.2,
+      "average": 10.5,
+      "mood": "Travaille à temps partiel en parallèle",
+      "statutFrais": "À Jour",
+      "promotion_id": "p-6"
+    }
+  ],
+  "professors": [
+    {
+      "id": "prof-1",
+      "name": "Dr. Aly Diatta",
+      "email": "aly.diatta@ecole221.sn"
+    },
+    {
+      "id": "prof-2",
+      "name": "M. Malick Teuw",
+      "email": "malick.teuw@ecole221.sn"
+    },
+    {
+      "id": "prof-3",
+      "name": "Dr. Cheikh Ahmadou Bamba",
+      "email": "professeur221@gmail.com"
+    },
+    {
+      "id": "prof-4",
+      "name": "Prof. S. Diop",
+      "email": "professeur222@gmail.com"
+    },
+    {
+      "id": "prof-5",
+      "name": "Dr. Seynabou Wade",
+      "email": "seynabou.wade@ecole221.sn"
+    },
+    {
+      "id": "prof-6",
+      "name": "Prof. Amadou Ba",
+      "email": "amadou.ba@ecole221.sn"
+    },
+    {
+      "id": "prof-7",
+      "name": "Mrs. Awa Ndiaye",
+      "email": "awa.ndiaye@ecole221.sn"
+    },
+    {
+      "id": "prof-8",
+      "name": "Dr. Ousmane Kane",
+      "email": "ousmane.kane@ecole221.sn"
+    }
+  ],
+  "courses": [
+    {
+      "id": "c-1",
+      "titre": "Algorithmique Avancée & Complexité",
+      "unites": [
+        "Graphes",
+        "Programmation Dynamique",
+        "Arbres Binaires"
+      ],
+      "progress": 85,
+      "coefficient": 4,
+      "promotion_id": "p-1",
+      "professeur_id": "prof-1",
+      "prochain_cours": "Lundi 08h00 - Amphi A"
+    },
+    {
+      "id": "c-2",
+      "titre": "Développement Web Fullstack",
+      "unites": [
+        "Vite/React",
+        "Node.js & Express",
+        "ORM & Database"
+      ],
+      "progress": 75,
+      "coefficient": 5,
+      "promotion_id": "p-1",
+      "professeur_id": "prof-2",
+      "prochain_cours": "Lundi 14h00 - Labo 10"
+    },
+    {
+      "id": "c-3",
+      "titre": "Intelligence Artificielle & TAL",
+      "unites": [
+        "Réseaux Neuronaux",
+        "NLP & Transformers",
+        "Prompt Engineering"
+      ],
+      "progress": 90,
+      "coefficient": 4,
+      "promotion_id": "p-4",
+      "professeur_id": "prof-3",
+      "prochain_cours": "Mardi 13h00 - Amphi A"
+    },
+    {
+      "id": "c-4",
+      "titre": "Développement Flutter Mobile",
+      "unites": [
+        "State management",
+        "Widgets advanced",
+        "Database Integration"
+      ],
+      "progress": 65,
+      "coefficient": 5,
+      "promotion_id": "p-2",
+      "professeur_id": "prof-4",
+      "prochain_cours": "Jeudi 10h00 - Salle 5"
+    },
+    {
+      "id": "c-5",
+      "titre": "Fondations de DevOps",
+      "unites": [
+        "Docker Containers",
+        "CI/CD Actions",
+        "Kubernetes Clustering"
+      ],
+      "progress": 40,
+      "coefficient": 4,
+      "promotion_id": "p-6",
+      "professeur_id": "prof-2",
+      "prochain_cours": "Mercredi 08h00 - Labo 10"
+    },
+    {
+      "id": "c-6",
+      "titre": "Sécurité & Cryptographie",
+      "unites": [
+        "OWASP vulnerabilities",
+        "Asymmetric Cryptography",
+        "Cyber response"
+      ],
+      "progress": 50,
+      "coefficient": 4,
+      "promotion_id": "p-7",
+      "professeur_id": "prof-5",
+      "prochain_cours": "Vendredi 14h00 - Amphi C"
+    }
+  ],
+  "attendances": [
+    {
+      "id": "att-arr-usr-etudiant-01-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-dep-usr-etudiant-01-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-arr-usr-etudiant-01--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-dep-usr-etudiant-01--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-arr-usr-etudiant-01--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-dep-usr-etudiant-01--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-arr-usr-etudiant-01--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-dep-usr-etudiant-01--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-arr-usr-etudiant-01--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-dep-usr-etudiant-01--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-arr-usr-etudiant-01--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-dep-usr-etudiant-01--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-arr-usr-etudiant-01--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-dep-usr-etudiant-01--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-01"
+    },
+    {
+      "id": "att-arr-usr-etudiant-02-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-dep-usr-etudiant-02-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-arr-usr-etudiant-02--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-dep-usr-etudiant-02--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-arr-usr-etudiant-02--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-dep-usr-etudiant-02--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-arr-usr-etudiant-02--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-dep-usr-etudiant-02--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-arr-usr-etudiant-02--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-dep-usr-etudiant-02--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-arr-usr-etudiant-02--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-dep-usr-etudiant-02--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-arr-usr-etudiant-02--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-dep-usr-etudiant-02--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-02"
+    },
+    {
+      "id": "att-arr-usr-etudiant-03-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-dep-usr-etudiant-03-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-arr-usr-etudiant-03--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-dep-usr-etudiant-03--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-arr-usr-etudiant-03--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-dep-usr-etudiant-03--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-arr-usr-etudiant-03--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-dep-usr-etudiant-03--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-arr-usr-etudiant-03--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-dep-usr-etudiant-03--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-arr-usr-etudiant-03--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-dep-usr-etudiant-03--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-arr-usr-etudiant-03--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-dep-usr-etudiant-03--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-03"
+    },
+    {
+      "id": "att-arr-usr-etudiant-04-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-dep-usr-etudiant-04-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-arr-usr-etudiant-04--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-dep-usr-etudiant-04--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-arr-usr-etudiant-04--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-dep-usr-etudiant-04--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-arr-usr-etudiant-04--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-dep-usr-etudiant-04--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-arr-usr-etudiant-04--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-dep-usr-etudiant-04--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-arr-usr-etudiant-04--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-dep-usr-etudiant-04--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-arr-usr-etudiant-04--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-dep-usr-etudiant-04--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-04"
+    },
+    {
+      "id": "att-arr-usr-etudiant-05-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-dep-usr-etudiant-05-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-arr-usr-etudiant-05--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-dep-usr-etudiant-05--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-arr-usr-etudiant-05--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-dep-usr-etudiant-05--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-arr-usr-etudiant-05--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-dep-usr-etudiant-05--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-arr-usr-etudiant-05--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-dep-usr-etudiant-05--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-arr-usr-etudiant-05--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-dep-usr-etudiant-05--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-arr-usr-etudiant-05--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-dep-usr-etudiant-05--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-05"
+    },
+    {
+      "id": "att-arr-usr-etudiant-06-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-dep-usr-etudiant-06-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-arr-usr-etudiant-06--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T08:35:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-dep-usr-etudiant-06--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-arr-usr-etudiant-06--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-dep-usr-etudiant-06--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-arr-usr-etudiant-06--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T08:35:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-dep-usr-etudiant-06--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-arr-usr-etudiant-06--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T08:35:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-dep-usr-etudiant-06--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-arr-usr-etudiant-06--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T08:35:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-dep-usr-etudiant-06--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-arr-usr-etudiant-06--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Refusé",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T08:35:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-dep-usr-etudiant-06--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-06"
+    },
+    {
+      "id": "att-arr-usr-etudiant-07-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-dep-usr-etudiant-07-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-arr-usr-etudiant-07--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-dep-usr-etudiant-07--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-arr-usr-etudiant-07--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-dep-usr-etudiant-07--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-arr-usr-etudiant-07--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-dep-usr-etudiant-07--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-arr-usr-etudiant-07--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-dep-usr-etudiant-07--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-arr-usr-etudiant-07--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-dep-usr-etudiant-07--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-arr-usr-etudiant-07--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-dep-usr-etudiant-07--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-07"
+    },
+    {
+      "id": "att-arr-usr-etudiant-08--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-08"
+    },
+    {
+      "id": "att-dep-usr-etudiant-08--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-08"
+    },
+    {
+      "id": "att-arr-usr-etudiant-09-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-dep-usr-etudiant-09-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-arr-usr-etudiant-09--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-dep-usr-etudiant-09--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-arr-usr-etudiant-09--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-dep-usr-etudiant-09--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-arr-usr-etudiant-09--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-dep-usr-etudiant-09--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-arr-usr-etudiant-09--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-dep-usr-etudiant-09--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-arr-usr-etudiant-09--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-dep-usr-etudiant-09--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-arr-usr-etudiant-09--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-dep-usr-etudiant-09--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-09"
+    },
+    {
+      "id": "att-arr-usr-etudiant-10-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-dep-usr-etudiant-10-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-arr-usr-etudiant-10--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-dep-usr-etudiant-10--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-arr-usr-etudiant-10--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-dep-usr-etudiant-10--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-arr-usr-etudiant-10--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-dep-usr-etudiant-10--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-arr-usr-etudiant-10--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-dep-usr-etudiant-10--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-arr-usr-etudiant-10--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-dep-usr-etudiant-10--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-arr-usr-etudiant-10--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-dep-usr-etudiant-10--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-10"
+    },
+    {
+      "id": "att-arr-usr-etudiant-11-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-dep-usr-etudiant-11-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-arr-usr-etudiant-11--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-dep-usr-etudiant-11--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-arr-usr-etudiant-11--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-dep-usr-etudiant-11--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-arr-usr-etudiant-11--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-dep-usr-etudiant-11--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-arr-usr-etudiant-11--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-dep-usr-etudiant-11--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-arr-usr-etudiant-11--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-dep-usr-etudiant-11--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-arr-usr-etudiant-11--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-dep-usr-etudiant-11--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-11"
+    },
+    {
+      "id": "att-arr-usr-etudiant-12-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-dep-usr-etudiant-12-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-arr-usr-etudiant-12--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-dep-usr-etudiant-12--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-arr-usr-etudiant-12--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-dep-usr-etudiant-12--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-arr-usr-etudiant-12--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-dep-usr-etudiant-12--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-arr-usr-etudiant-12--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-dep-usr-etudiant-12--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-arr-usr-etudiant-12--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-dep-usr-etudiant-12--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-arr-usr-etudiant-12--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-dep-usr-etudiant-12--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-12"
+    },
+    {
+      "id": "att-arr-usr-etudiant-13-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-dep-usr-etudiant-13-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-arr-usr-etudiant-13--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-dep-usr-etudiant-13--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-arr-usr-etudiant-13--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-dep-usr-etudiant-13--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-arr-usr-etudiant-13--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-dep-usr-etudiant-13--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-arr-usr-etudiant-13--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-dep-usr-etudiant-13--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-arr-usr-etudiant-13--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-dep-usr-etudiant-13--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-arr-usr-etudiant-13--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-dep-usr-etudiant-13--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-13"
+    },
+    {
+      "id": "att-arr-usr-etudiant-14-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-dep-usr-etudiant-14-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-arr-usr-etudiant-14--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-dep-usr-etudiant-14--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-arr-usr-etudiant-14--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-dep-usr-etudiant-14--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-arr-usr-etudiant-14--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-dep-usr-etudiant-14--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-arr-usr-etudiant-14--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-dep-usr-etudiant-14--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-arr-usr-etudiant-14--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-dep-usr-etudiant-14--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-arr-usr-etudiant-14--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-dep-usr-etudiant-14--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-14"
+    },
+    {
+      "id": "att-arr-usr-etudiant-15-0",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T07:54:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-dep-usr-etudiant-15-0",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-07-01T12:05:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-arr-usr-etudiant-15--1",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T07:54:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-dep-usr-etudiant-15--1",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-30T12:05:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-arr-usr-etudiant-15--2",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T07:54:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-dep-usr-etudiant-15--2",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-29T12:05:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-arr-usr-etudiant-15--3",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "Camera Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T07:54:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-dep-usr-etudiant-15--3",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-28T12:05:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-arr-usr-etudiant-15--4",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T07:54:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-dep-usr-etudiant-15--4",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-27T12:05:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-arr-usr-etudiant-15--5",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T07:54:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-dep-usr-etudiant-15--5",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-26T12:05:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-arr-usr-etudiant-15--6",
+      "type": "arrivée",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T07:54:00.000Z",
+      "student_id": "usr-etudiant-15"
+    },
+    {
+      "id": "att-dep-usr-etudiant-15--6",
+      "type": "départ",
+      "salle": "Portail Principal",
+      "method": "QR Code Scan",
+      "status": "Validé d'office",
+      "location": "Dakar Campus - Coordonnées GPS: 14.6937, -17.4441",
+      "timestamp": "2026-06-25T12:05:00.000Z",
+      "student_id": "usr-etudiant-15"
+    }
+  ],
+  "homeworks": [
+    {
+      "id": "t1",
+      "desc": "Implémenter l'algorithme de Dijkstra optimisé avec un tas binaire.",
+      "prio": "haute",
+      "titre": "TP Graphes et Dijkstra",
+      "statut": "corrige",
+      "progress": 100,
+      "course_id": "c-1",
+      "deadlineStr": "Fini",
+      "submittedFiles": [],
+      "note": "18 / 20"
+    },
+    {
+      "id": "t2",
+      "desc": "Créer un panier d'achat interactif et persistant avec React Context.",
+      "prio": "haute",
+      "titre": "Projet E-Commerce React",
+      "statut": "soumis",
+      "progress": 100,
+      "course_id": "c-2",
+      "deadlineStr": "Soumis",
+      "submittedFiles": [],
+      "note": "16 / 20"
+    },
+    {
+      "id": "t3",
+      "desc": "Implémentation d'arbres de recherche binaire optimisés et parcours.",
+      "prio": "haute",
+      "titre": "TP Arbres Binaires",
+      "statut": "en_cours",
+      "progress": 65,
+      "course_id": "c-1",
+      "deadlineStr": "2 jours restants",
+      "submittedFiles": [],
+      "note": null
+    },
+    {
+      "id": "t4",
+      "desc": "Rédiger un rapport d'architecture comparatif de gestion des états.",
+      "prio": "normale",
+      "titre": "Étude comparative Riverpod vs Provider",
+      "statut": "a_faire",
+      "progress": 0,
+      "course_id": "c-4",
+      "deadlineStr": "Dans 5 jours",
+      "submittedFiles": [],
+      "note": null
+    },
+    {
+      "id": "t5",
+      "desc": "Créer un Dockerfile multi-stage optimisé pour une app Node.js.",
+      "prio": "normale",
+      "titre": "Dockerfile Config",
+      "statut": "corrige",
+      "progress": 100,
+      "course_id": "c-5",
+      "deadlineStr": "Fini",
+      "submittedFiles": [],
+      "note": "19 / 20"
+    }
+  ],
+  "liveSessions": [
+    {
+      "id": "live-1",
+      "title": "Introduction aux Réseaux Neuronaux Convolutifs (CNN)",
+      "hlsUrl": "https://meet.google.com/abc-defg-hij",
+      "status": "active",
+      "endTime": "14:00",
+      "startTime": "12:00",
+      "course_id": "c-3",
+      "reactions": {
+        "clap": 15,
+        "like": 42,
+        "heart": 24,
+        "mindblown": 9
+      },
+      "chatMessages": [
+        {
+          "id": "m1",
+          "text": "Bienvenue au cours en direct ! Aujourd'hui nous étudions les CNN.",
+          "user": "Dr. Cheikh Bamba (Professeur)",
+          "isTeacher": true,
+          "timestamp": "12:05"
+        },
+        {
+          "id": "m2",
+          "text": "Bonjour tout le monde ! Le support PDF est-il sur Moodle ?",
+          "user": "Mariama Fall",
+          "isTeacher": false,
+          "timestamp": "12:08"
+        },
+        {
+          "id": "m3",
+          "text": "Oui Mariama, c'est dans le dossier de la semaine 4 !",
+          "user": "Ibrahima Ndiaye",
+          "isTeacher": false,
+          "timestamp": "12:10"
+        }
+      ],
+      "attendeesCount": 38,
+      "thumbnail": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500&auto=format&fit=crop&q=60"
+    }
+  ],
+  "grades": [
+    {
+      "id": "g-001",
+      "module": "Machine Learning Foundations",
+      "prof": "Dr. Cheikh Ahmadou Bamba",
+      "ects": 8,
+      "cc": "17.50",
+      "examen": "18.75",
+      "moyPromo": 13.4
+    },
+    {
+      "id": "g-002",
+      "module": "Cybersecurity Essentials",
+      "prof": "Dr. Seynabou Wade",
+      "ects": 6,
+      "cc": "13.50",
+      "examen": "15.15",
+      "moyPromo": 12.1
+    },
+    {
+      "id": "g-003",
+      "module": "Advanced Mobile Dev (Flutter)",
+      "prof": "Prof. S. Diop",
+      "ects": 8,
+      "cc": "15.50",
+      "examen": "17.65",
+      "moyPromo": 14.2
+    },
+    {
+      "id": "g-004",
+      "module": "Développement Web Fullstack",
+      "prof": "M. Malick Teuw",
+      "ects": 6,
+      "cc": "14.20",
+      "examen": "16.20",
+      "moyPromo": 12.8
+    },
+    {
+      "id": "g-005",
+      "module": "Algorithmique Avancée & Complexité",
+      "prof": "Dr. Aly Diatta",
+      "ects": 2,
+      "cc": "18.00",
+      "examen": "19.65",
+      "moyPromo": 16.5
+    }
+  ],
+  "sessions": [
+    {
+      "id": "p1",
+      "nom": "Algorithmique Avancée",
+      "jour": "LUN",
+      "type": "CM",
+      "salle": "Amphi A",
+      "status": "termine",
+      "dateStr": "20 Oct",
+      "heureFin": "10:00",
+      "heureStr": "08:00 - 10:00",
+      "heureDebut": "08:00",
+      "professeur": "Dr. Aly Diatta",
+      "description": "Complexité théorique et arbres binaires.",
+      "jourComplet": "LUNDI"
+    },
+    {
+      "id": "p2",
+      "nom": "Développement Web Fullstack",
+      "jour": "LUN",
+      "type": "TP",
+      "salle": "Labo 10",
+      "status": "termine",
+      "dateStr": "20 Oct",
+      "heureFin": "16:00",
+      "heureStr": "14:00 - 16:00",
+      "heureDebut": "14:00",
+      "professeur": "M. Malick Teuw",
+      "description": "Industrialisation React avec TypeScript.",
+      "jourComplet": "LUNDI"
+    },
+    {
+      "id": "p3",
+      "nom": "Intelligence Artificielle",
+      "jour": "MAR",
+      "type": "CM",
+      "salle": "Amphi A",
+      "status": "termine",
+      "dateStr": "21 Oct",
+      "heureFin": "16:00",
+      "heureStr": "13:00 - 16:00",
+      "heureDebut": "13:00",
+      "professeur": "Dr. Cheikh Ahmadou Bamba",
+      "description": "Introduction aux CNN et réseaux neuronaux.",
+      "jourComplet": "MARDI"
+    },
+    {
+      "id": "p4",
+      "nom": "Développement Flutter",
+      "jour": "JEU",
+      "type": "TD",
+      "salle": "Salle 5",
+      "status": "a_venir",
+      "dateStr": "23 Oct",
+      "heureFin": "12:00",
+      "heureStr": "10:00 - 12:00",
+      "heureDebut": "10:00",
+      "professeur": "Prof. S. Diop",
+      "description": "Gestion d'état global avec Riverpod.",
+      "jourComplet": "JEUDI"
+    },
+    {
+      "id": "p5",
+      "nom": "Docker & Kubernetes",
+      "jour": "MER",
+      "type": "TP",
+      "salle": "Labo 10",
+      "status": "a_venir",
+      "dateStr": "22 Oct",
+      "heureFin": "11:00",
+      "heureStr": "08:00 - 11:00",
+      "heureDebut": "08:00",
+      "professeur": "M. Malick Teuw",
+      "description": "Déploiement d'images multi-conteneurs.",
+      "jourComplet": "MERCREDI"
+    },
+    {
+      "id": "p6",
+      "nom": "Sécurité Applicative",
+      "jour": "VEN",
+      "type": "CM",
+      "salle": "Amphi C",
+      "status": "a_venir",
+      "dateStr": "24 Oct",
+      "heureFin": "17:00",
+      "heureStr": "14:00 - 17:00",
+      "heureDebut": "14:00",
+      "professeur": "Dr. Seynabou Wade",
+      "description": "Cryptographie symétrique et asymétrique.",
+      "jourComplet": "VENDREDI"
+    }
+  ],
+  "candidatures": [
+    {
+      "id": "cand-1",
+      "email": "khadija.fall@gmail.com",
+      "statut": "En attente",
+      "numeroCni": "1234567890123",
+      "telephone": "+221 77 123 45 67",
+      "typeDepot": "En ligne",
+      "motivation": "Passionnée de nouvelles technologies et de codage.",
+      "nomComplet": "Khadija Fall",
+      "promotionNom": "DEVWEB L1 A",
+      "nomFichierCni": "cni_khadija.pdf",
+      "dateSoumission": "2026-06-21T10:00:00.000Z",
+      "dernierDiplome": "Baccalauréat",
+      "nomFichierDiplome": "bac_khadija.pdf",
+      "nomFichierBulletin": "bulletin_khadija.pdf",
+      "dernierEtablissement": "Lycée Lamine Guèye"
+    },
+    {
+      "id": "cand-2",
+      "email": "babacar.ndiaye@gmail.com",
+      "statut": "Accepté",
+      "numeroCni": "1987654321098",
+      "telephone": "+221 78 456 12 34",
+      "typeDepot": "Présentiel",
+      "motivation": "Je souhaite renforcer mes compétences en programmation.",
+      "nomComplet": "Babacar Ndiaye",
+      "promotionNom": "IA M1 A",
+      "nomFichierCni": "cni_babacar.pdf",
+      "dateSoumission": "2026-06-26T11:30:00.000Z",
+      "dernierDiplome": "Licence",
+      "nomFichierDiplome": "licence_babacar.pdf",
+      "nomFichierBulletin": "bulletin_licence.pdf",
+      "dernierEtablissement": "UCAD"
+    },
+    {
+      "id": "cand-3",
+      "email": "fatoumata.diallo@yahoo.fr",
+      "statut": "Refusé",
+      "numeroCni": "2345678901234",
+      "telephone": "+221 70 789 45 56",
+      "typeDepot": "En ligne",
+      "motivation": "Intéressée par le DevOps et le cloud computing.",
+      "nomComplet": "Fatoumata Diallo",
+      "promotionNom": "DEVOPS L2 A",
+      "nomFichierCni": "cni_fatoumata.pdf",
+      "dateSoumission": "2026-06-29T14:15:00.000Z",
+      "dernierDiplome": "BTS",
+      "nomFichierDiplome": "bts_fatoumata.pdf",
+      "nomFichierBulletin": "bulletin_bts.pdf",
+      "dernierEtablissement": "ESP"
+    }
+  ],
+  "staff": [
+    {
+      "id": "staff-1",
+      "name": "Samba Sylla",
+      "email": "samba.sylla@ecole221.sn",
+      "role": "Directeur des Études",
+      "telephone": "+221 77 111 22 33"
+    },
+    {
+      "id": "staff-2",
+      "name": "Ousmane Sene",
+      "email": "surv221@gmail.com",
+      "role": "Secrétaire Académique",
+      "telephone": "+221 77 222 33 44"
+    },
+    {
+      "id": "staff-3",
+      "name": "Abdoulaye Diallo",
+      "email": "vigile221@gmail.com",
+      "role": "Chef de la Sécurité / Vigile",
+      "telephone": "+221 77 333 44 55"
+    }
+  ],
+  "badgeScans": [
+    {
+      "id": "scan-1",
+      "badgeId": "B-001",
+      "badgeOwner": "Assane Diop",
+      "studentId": "usr-etudiant-01",
+      "statut": "Autorisé",
+      "message": "Accès Accordé",
+      "assiduite": "Présent",
+      "statutFrais": "À Jour",
+      "zone": "Portail Principal",
+      "time": "07:54",
+      "date": "2026-07-17",
+      "type": "arrivée"
+    },
+    {
+      "id": "scan-2",
+      "badgeId": "B-002",
+      "badgeOwner": "Fatou Sow",
+      "studentId": "usr-etudiant-02",
+      "statut": "Autorisé",
+      "message": "Accès Accordé",
+      "assiduite": "Présent",
+      "statutFrais": "À Jour",
+      "zone": "Portail Principal",
+      "time": "08:05",
+      "date": "2026-07-17",
+      "type": "arrivée"
+    },
+    {
+      "id": "scan-3",
+      "badgeId": "B-004",
+      "badgeOwner": "Khadija Fall",
+      "studentId": "usr-etudiant-04",
+      "statut": "Suspendu",
+      "message": "Accès Refusé - Scolarité en retard",
+      "assiduite": "Retard",
+      "statutFrais": "En Retard",
+      "zone": "Portail Principal",
+      "time": "08:45",
+      "date": "2026-07-17",
+      "type": "arrivée"
+    }
+  ],
+  "securityEvents": [
+    {
+      "id": "evt-1",
+      "eventName": "Détection de Visage",
+      "occurredAt": "2026-07-01T07:55:00.000Z",
+      "payload": {
+        "name": "Assane Diop",
+        "camera": "Cam-01-Portail",
+        "confidence": 98.4
+      }
+    },
+    {
+      "id": "evt-2",
+      "eventName": "Badge Refusé",
+      "occurredAt": "2026-07-01T08:45:00.000Z",
+      "payload": {
+        "zone": "Portail",
+        "reason": "Scolarité en retard",
+        "studentId": "usr-etudiant-04"
+      }
+    }
+  ],
+  "planningRooms": [
+    {
+      "id": "r-1",
+      "name": "Salle 1 - Amphi A",
+      "capacity": 120,
+      "equipment": [
+        "Projecteur",
+        "Climatisation"
+      ],
+      "status": "Disponible"
+    },
+    {
+      "id": "r-2",
+      "name": "Salle 2 - Informatique",
+      "capacity": 40,
+      "equipment": [
+        "PC Fixes",
+        "Climatisation"
+      ],
+      "status": "Occupée"
+    },
+    {
+      "id": "r-3",
+      "name": "Salle 3 - Labo GC",
+      "capacity": 30,
+      "equipment": [
+        "Maquettes",
+        "Projecteur"
+      ],
+      "status": "Disponible"
+    }
+  ],
+  "planningFilieres": [
+    {
+      "id": "f-1",
+      "name": "Génie Civil & Construction",
+      "code": "GC",
+      "description": "Étude des structures et chantiers"
+    },
+    {
+      "id": "f-2",
+      "name": "Technologies de l'Information",
+      "code": "TI",
+      "description": "Génie logiciel et intelligence artificielle"
+    }
+  ],
+  "planningClasses": [
+    {
+      "id": "c-1",
+      "name": "L1 Génie Civil",
+      "level": "L1",
+      "filiereId": "f-1",
+      "capacityMax": 50,
+      "price": 850000
+    },
+    {
+      "id": "c-2",
+      "name": "L3 CM (Construction Métallique)",
+      "level": "L3",
+      "filiereId": "f-1",
+      "capacityMax": 40,
+      "price": 950000
+    },
+    {
+      "id": "c-3",
+      "name": "Master 1 Spécialité IA",
+      "level": "M1",
+      "filiereId": "f-2",
+      "capacityMax": 30,
+      "price": 1400000
+    }
+  ],
+  "planningSlots": [
+    {
+      "id": "p-1",
+      "day": "Lundi",
+      "slot": "08h - 10h",
+      "classeId": "c-1",
+      "subject": "Résistance des Matériaux",
+      "prof": "Prof Diallo",
+      "roomName": "Salle 1 - Amphi A"
+    },
+    {
+      "id": "p-2",
+      "day": "Mardi",
+      "slot": "10h - 12h",
+      "classeId": "c-2",
+      "subject": "Charpentes Métalliques",
+      "prof": "Mme Sow",
+      "roomName": "Salle 2 - Informatique",
+      "isLive": true
+    },
+    {
+      "id": "p-3",
+      "day": "Mercredi",
+      "slot": "14h - 16h",
+      "classeId": "c-3",
+      "subject": "Intelligence Artificielle",
+      "prof": "Dr Diop",
+      "roomName": "Salle 1 - Amphi A",
+      "isLive": true
+    }
+  ],
+  "admissions_campaigns": [
+    {
+      "id": "camp-1",
+      "title": "Licence 1 Génie Logiciel 2026",
+      "code": "BAC",
+      "state": "Ouverte",
+      "deadline": "2026-10-31",
+      "fees": 50000,
+      "requirements": [
+        "Relevé de notes du Bac",
+        "Copie de la CNI / Passeport",
+        "Photo d'identité"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500"
+    },
+    {
+      "id": "camp-2",
+      "title": "Admission Spécifique Licence 2 (L2)",
+      "code": "L2",
+      "state": "Ouverte",
+      "deadline": "2026-10-31",
+      "fees": 50000,
+      "requirements": [
+        "Relevé de notes de L1",
+        "Relevé de notes du Bac",
+        "Justificatif de transfert"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500"
+    }
+  ],
+  "admissions_candidates": [
+    {
+      "id": "cand-2026-001",
+      "name": "Nafissatou Diallo",
+      "email": "nafi.diallo@gmail.com",
+      "type": "BAC",
+      "course": "Licence 1 Génie Logiciel",
+      "step": "new",
+      "docs": {
+        "diploma": true,
+        "idCard": false
+      },
+      "registrationFeePaid": false,
+      "notifications": []
+    }
+  ],
+  "admissions_logs": [],
+  "admissions_messages": [],
+  "candidatureSettings": {
+    "ouvert": true,
+    "dateOuverture": "2026-06-01",
+    "dateFermeture": "2026-09-30",
+    "messageAvis": "La campagne d'inscription officielle pour l'année universitaire 2026/2027 est active.",
+    "showRegisterButton": true
+  },
+  "users": [
+    {
+      "id": "usr-admin-01",
+      "email": "admin@ecole221.sn",
+      "password": "passer",
+      "nom": "Sylla",
+      "prenom": "Admin",
+      "role": "ADMIN"
+    },
+    {
+      "id": "usr-etudiant-01",
+      "email": "etudiant221@gmail.com",
+      "password": "ecole221",
+      "nom": "Diop",
+      "prenom": "Assane",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-02",
+      "email": "etudiant222@gmail.com",
+      "password": "ecole221",
+      "nom": "Sow",
+      "prenom": "Fatou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-03",
+      "email": "etudiant223@gmail.com",
+      "password": "ecole221",
+      "nom": "Ndiaye",
+      "prenom": "Malick",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-admin-02",
+      "email": "admin221@gmail.com",
+      "password": "ecole221",
+      "nom": "Ba",
+      "prenom": "Mariama",
+      "role": "ADMIN"
+    },
+    {
+      "id": "usr-prof-01",
+      "email": "professeur221@gmail.com",
+      "password": "ecole221",
+      "nom": "Cheikh Anta",
+      "prenom": "Dr.",
+      "role": "PROFESSEUR"
+    },
+    {
+      "id": "usr-prof-02",
+      "email": "professeur222@gmail.com",
+      "password": "ecole221",
+      "nom": "Seynabou",
+      "prenom": "Mme.",
+      "role": "PROFESSEUR"
+    },
+    {
+      "id": "usr-surv-01",
+      "email": "surv221@gmail.com",
+      "password": "ecole221",
+      "nom": "Sene",
+      "prenom": "Ousmane",
+      "role": "SECRETAIRE"
+    },
+    {
+      "id": "usr-surv-02",
+      "email": "surv222@gmail.com",
+      "password": "ecole221",
+      "nom": "Ndiaye",
+      "prenom": "Awa",
+      "role": "SECRETAIRE"
+    },
+    {
+      "id": "usr-vigil-01",
+      "email": "vigile221@gmail.com",
+      "password": "ecole221",
+      "nom": "Diallo",
+      "prenom": "Aboulaye",
+      "role": "VIGIL"
+    }
+  ]
+}
