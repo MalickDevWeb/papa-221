@@ -5,13 +5,11 @@ import { useRealTimeMeet } from '@/features/dashboard/hooks/useRealTimeMeet';
 import { PresenceModal } from '../components/PresenceModal';
 import { ActiveLiveStream } from '../components/ActiveLiveStream';
 import { WeeklySchedule } from '../components/WeeklySchedule';
-import { RecentAcademicPerformance } from '../components/RecentAcademicPerformance';
 import { AITutorPanel } from '../components/AITutorPanel';
 import { StudentNotificationToast } from '../components/StudentNotificationToast';
 import { StudentHeaderBanner } from '../components/StudentHeaderBanner';
 import { LiveStreamBanner } from '../components/LiveStreamBanner';
 import { StudentQRZoomOverlay } from '../components/StudentQRZoomOverlay';
-import { AdminDocsRestrictionCard } from '../components/AdminDocsRestrictionCard';
 
 export function StudentDashboardPage() {
   const navigate = useNavigate();
@@ -86,8 +84,6 @@ export function StudentDashboardPage() {
           enCoursId={enCoursId}
           prochainId={prochainId}
         />
-        <RecentAcademicPerformance />
-        <AdminDocsRestrictionCard />
         <AITutorPanel />
       </div>
     </div>

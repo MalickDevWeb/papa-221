@@ -1,13 +1,24 @@
-import { useState, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { VirtualClass, AdminMeeting, MeetAttendance } from '../domain/CollaborationModels';
-import { INITIAL_MEETS, INITIAL_ADMIN_MEETS } from '../domain/CollaborationMockData';
+import { subscribeMeets, saveMeet, subscribeAdminMeets, saveAdminMeet, subscribeAttendances, saveAttendance } from '../infrastructure/msgService';
 
 export function useVirtualClassState(triggerToast: (msg: string, isSuccess: boolean) => void) {
-  const [meets, setMeets] = useState<readonly VirtualClass[]>(INITIAL_MEETS);
-  const [adminMeets, setAdminMeets] = useState<readonly AdminMeeting[]>(INITIAL_ADMIN_MEETS);
+  const [meets, setMeets] = useState<readonly VirtualClass[]>([]);
+  const [adminMeets, setAdminMeets] = useState<readonly AdminMeeting[]>([]);
   const [attendances, setAttendances] = useState<readonly MeetAttendance[]>([]);
 
-  const createVirtualClass = useCallback((
+  useEffect(() => {
+    const unsubMeets = subscribeMeets(setMeets);
+    const unsubAdmin = subscribeAdminMeets(setAdminMeets);
+    const unsubAtts = subscribeAttendances(setAttendances);
+    return () => {
+      unsubMeets();
+      unsubAdmin();
+      unsubAtts();
+    };
+  }, []);
+
+  const createVirtualClass = useCallback(async (
     classIds: readonly string[],
     classNames: readonly string[],
     subjectName: string,
@@ -39,11 +50,11 @@ export function useVirtualClassState(triggerToast: (msg: string, isSuccess: bool
       restrictToGoogleAccount: restrict,
     };
 
-    setMeets((prev) => [...prev, newMeet]);
-    triggerToast(`Classe virtuelle publiée pour ${classNames.join(', ')} ! Notifications envoyées.`, true);
+    await saveMeet(newMeet);
+    triggerToast(`Classe virtuelle publiée pour ${classNames.join(', ')} !`, true);
   }, [triggerToast]);
 
-  const createAdminMeeting = useCallback((
+  const createAdminMeeting = useCallback(async (
     title: string,
     organizer: string,
     scope: AdminMeeting['targetScope'],
@@ -66,11 +77,11 @@ export function useVirtualClassState(triggerToast: (msg: string, isSuccess: bool
       date: 'Aujourd\'hui',
       time: '15h30',
     };
-    setAdminMeets((prev) => [...prev, newMeet]);
+    await saveAdminMeet(newMeet);
     triggerToast(`Réunion administrative "${title}" créée avec succès.`, true);
   }, [triggerToast]);
 
-  const recordAttendance = useCallback((meetId: string, studentName: string, emailUsed: string, isAuthorized: boolean) => {
+  const recordAttendance = useCallback(async (meetId: string, studentName: string, emailUsed: string, isAuthorized: boolean) => {
     const newAttendance: MeetAttendance = {
       id: `att-${Date.now()}`,
       meetId,
@@ -81,7 +92,7 @@ export function useVirtualClassState(triggerToast: (msg: string, isSuccess: bool
       participationScore: Math.floor(Math.random() * 5) + 1,
       isAuthorizedAccount: isAuthorized,
     };
-    setAttendances((prev) => [...prev, newAttendance]);
+    await saveAttendance(newAttendance);
   }, []);
 
   return { meets, adminMeets, attendances, createVirtualClass, createAdminMeeting, recordAttendance };

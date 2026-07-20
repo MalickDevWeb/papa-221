@@ -1237,103 +1237,74 @@ var User = class _User extends Entity {
   }
 };
 
-// vrai_backend/modules/auth/infrastructure/adapter/out/persistence/JsonAuthRepositoryAdapter.ts
-var simulatedUsers = [
-  {
-    email: "admin@ecole221.sn",
-    password: "passer",
-    user: { id: "usr-admin-01", nom: "Sylla", prenom: "Admin", email: "admin@ecole221.sn", role: "ADMIN" },
-    token: "fake-jwt-token-admin-12345"
-  },
-  {
-    email: "etudiant221@gmail.com",
-    password: "ecole221",
-    user: { id: "usr-etudiant-01", nom: "Diop", prenom: "Assane", email: "etudiant221@gmail.com", role: "ETUDIANT" },
-    token: "fake-jwt-token-etudiant-221"
-  },
-  {
-    email: "etudiant222@gmail.com",
-    password: "ecole221",
-    user: { id: "usr-etudiant-02", nom: "Sow", prenom: "Fatou", email: "etudiant222@gmail.com", role: "ETUDIANT" },
-    token: "fake-jwt-token-etudiant-222"
-  },
-  {
-    email: "etudiant223@gmail.com",
-    password: "ecole221",
-    user: { id: "usr-etudiant-03", nom: "Ndiaye", prenom: "Malick", email: "etudiant223@gmail.com", role: "ETUDIANT" },
-    token: "fake-jwt-token-etudiant-223"
-  },
-  {
-    email: "admin221@gmail.com",
-    password: "ecole221",
-    user: { id: "usr-admin-02", nom: "Ba", prenom: "Mariama", email: "admin221@gmail.com", role: "ADMIN" },
-    token: "fake-jwt-token-admin-221"
-  },
-  {
-    email: "professeur221@gmail.com",
-    password: "ecole221",
-    user: { id: "usr-prof-01", nom: "Cheikh Anta", prenom: "Dr.", email: "professeur221@gmail.com", role: "PROFESSEUR" },
-    token: "fake-jwt-token-prof-221"
-  },
-  {
-    email: "professeur222@gmail.com",
-    password: "ecole221",
-    user: { id: "usr-prof-02", nom: "Seynabou", prenom: "Mme.", email: "professeur222@gmail.com", role: "PROFESSEUR" },
-    token: "fake-jwt-token-prof-222"
-  },
-  {
-    email: "surv221@gmail.com",
-    password: "ecole221",
-    user: { id: "usr-surv-01", nom: "Sene", prenom: "Ousmane", email: "surv221@gmail.com", role: "SECRETAIRE" },
-    token: "fake-jwt-token-surv-221"
-  },
-  {
-    email: "surv222@gmail.com",
-    password: "ecole221",
-    user: { id: "usr-surv-02", nom: "Ndiaye", prenom: "Awa", email: "surv222@gmail.com", role: "SECRETAIRE" },
-    token: "fake-jwt-token-surv-222"
-  },
-  {
-    email: "vigile221@gmail.com",
-    password: "ecole221",
-    user: { id: "usr-vigil-01", nom: "Diallo", prenom: "Aboulaye", email: "vigile221@gmail.com", role: "VIGIL" },
-    token: "fake-jwt-token-vigil-221"
+// vrai_backend/shared/infrastructure/store/ProductionStore.ts
+var ProductionStore = class _ProductionStore {
+  static instance;
+  memoryCache = null;
+  constructor() {
+    this.reload();
   }
-];
-var JsonAuthRepositoryAdapter = class {
-  async findByEmail(email) {
-    const db = readDb();
-    const users = db.users || [];
-    const matched = users.find(
-      (u) => u.email.toLowerCase() === email.toLowerCase().trim() || u.tempIdentifier && u.tempIdentifier.toLowerCase() === email.toLowerCase().trim()
-    );
-    if (matched) {
-      const userEntity2 = User.create(
-        matched.id,
-        matched.email,
-        matched.nom,
-        matched.prenom || "Candidat",
-        matched.role
-      );
-      return {
-        user: userEntity2,
-        passwordHash: matched.password || "",
-        token: matched.token || `fake-jwt-token-${matched.id}`
-      };
+  static getInstance() {
+    if (!this.instance) {
+      this.instance = new _ProductionStore();
     }
-    const fallbackMatched = simulatedUsers.find((u) => u.email.toLowerCase() === email.toLowerCase().trim());
-    if (!fallbackMatched) return null;
-    const userEntity = User.create(
-      fallbackMatched.user.id,
-      fallbackMatched.user.email,
-      fallbackMatched.user.nom,
-      fallbackMatched.user.prenom,
-      fallbackMatched.user.role
+    return this.instance;
+  }
+  reload() {
+    this.memoryCache = readDb();
+  }
+  getTable(tableName) {
+    if (!this.memoryCache) {
+      this.reload();
+    }
+    return this.memoryCache[tableName] || [];
+  }
+  saveTable(tableName, data) {
+    if (!this.memoryCache) {
+      this.reload();
+    }
+    this.memoryCache[tableName] = data;
+    writeDb(this.memoryCache);
+  }
+  query(tableName, filterFn) {
+    return this.getTable(tableName).filter(filterFn);
+  }
+  findOne(tableName, filterFn) {
+    return this.getTable(tableName).find(filterFn) || null;
+  }
+  insert(tableName, record) {
+    const table = this.getTable(tableName);
+    table.unshift(record);
+    this.saveTable(tableName, table);
+  }
+  update(tableName, id, updateFn) {
+    const table = this.getTable(tableName);
+    const index = table.findIndex((item) => item.id === id);
+    if (index === -1) return false;
+    table[index] = { ...table[index], ...updateFn(table[index]) };
+    this.saveTable(tableName, table);
+    return true;
+  }
+};
+
+// vrai_backend/modules/auth/infrastructure/adapter/out/persistence/JsonAuthRepositoryAdapter.ts
+var JsonAuthRepositoryAdapter = class {
+  store = ProductionStore.getInstance();
+  async findByEmail(email) {
+    const users = this.store.getTable("users");
+    const userRecord = users.find((u) => u.email?.toLowerCase() === email.toLowerCase());
+    if (!userRecord) return null;
+    const user = User.create(
+      userRecord.id,
+      userRecord.email,
+      userRecord.nom || userRecord.name?.split(" ")[1] || "Utilisateur",
+      userRecord.prenom || userRecord.name?.split(" ")[0] || "",
+      userRecord.role
     );
     return {
-      user: userEntity,
-      passwordHash: fallbackMatched.password,
-      token: fallbackMatched.token
+      user,
+      passwordHash: userRecord.password || "",
+      token: userRecord.token || ""
     };
   }
 };
@@ -1503,71 +1474,105 @@ var BadgeScan = class _BadgeScan {
 
 // vrai_backend/modules/vigil/infrastructure/adapter/out/persistence/JsonBadgeScanRepositoryAdapter.ts
 var JsonBadgeScanRepositoryAdapter = class {
+  store = ProductionStore.getInstance();
   async save(scan) {
-    const db = readDb();
-    db.scanLogs = db.scanLogs || [];
-    db.scanLogs.push({
-      id: scan.id,
-      badgeId: scan.badgeId,
-      badgeOwner: scan.badgeOwner,
-      studentId: scan.studentId,
-      statut: scan.status,
-      message: scan.message,
-      assiduite: scan.assiduite,
-      statutFrais: scan.statutFrais,
-      zone: scan.zone,
-      time: scan.time,
-      date: scan.date,
-      type: scan.type
-    });
-    writeDb(db);
+    const scanJson = scan.toJSON();
+    this.store.insert("badgeScans", scanJson);
+    if (scan.status === "Autoris\xE9") {
+      const pastAtt = await this.findAttendancesForStudent(scan.studentId);
+      const isArrival = pastAtt.length % 2 === 0;
+      const attendanceRecord = {
+        id: `att-${isArrival ? "arr" : "dep"}-${scan.studentId}-${pastAtt.length}`,
+        type: isArrival ? "arriv\xE9e" : "d\xE9part",
+        salle: scan.zone || "Portail Principal",
+        method: "QR Code Scan",
+        status: "Valid\xE9 d'office",
+        location: "Dakar Campus - Coordonn\xE9es GPS: 14.6937, -17.4441",
+        timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+        student_id: scan.studentId
+      };
+      this.store.insert("attendances", attendanceRecord);
+    }
   }
   async findAll() {
-    const db = readDb();
-    const list = db.scanLogs || [];
-    return list.map(
-      (item) => BadgeScan.create(
-        item.id || "",
-        item.badgeId || item.id || "",
-        item.badgeOwner || "",
-        item.studentId || "",
-        item.statut || "Autoris\xE9",
-        item.message || "",
-        item.assiduite || "",
-        item.statutFrais || "",
-        item.zone || "",
-        item.time || "",
-        item.date || "",
-        item.type || ""
-      )
-    );
+    const scans = this.store.getTable("badgeScans");
+    return scans.map((s) => BadgeScan.create(
+      s.id,
+      s.badgeId || "B-001",
+      s.badgeOwner,
+      s.studentId,
+      s.statut === "Autoris\xE9" || s.status === "Autoris\xE9" ? "Autoris\xE9" : "Refus\xE9",
+      s.message,
+      s.assiduite,
+      s.statutFrais,
+      s.zone,
+      s.time,
+      s.date,
+      s.type || "Scanner"
+    ));
   }
   async findRecent() {
-    const list = await this.findAll();
-    if (list.length === 0) return null;
-    return list[list.length - 1];
+    const scans = await this.findAll();
+    return scans.length > 0 ? scans[0] : null;
   }
   async findStudentByBadgeId(badgeId) {
-    const db = readDb();
-    const students = db.students || [];
+    const students = this.store.getTable("students");
     return students.find((s) => s.matricule === badgeId || s.id === badgeId) || null;
   }
   async findAttendancesForStudent(studentId) {
-    const db = readDb();
-    const attendances = db.attendances || [];
-    return attendances.filter((a) => a.student_id === studentId);
+    const attendances = this.store.getTable("attendances");
+    return attendances.filter((a) => a.student_id === studentId || a.studentId === studentId);
   }
   async findPromotionById(promotionId) {
-    const db = readDb();
-    const promotions = db.promotions || [];
+    const promotions = this.store.getTable("promotions");
     return promotions.find((p) => p.id === promotionId) || null;
   }
 };
 
+// vrai_backend/modules/vigil/domain/event/BadgeScannedEvent.ts
+var BadgeScannedEvent = class {
+  constructor(scanId, badgeId, studentId, ownerName, status, time) {
+    this.scanId = scanId;
+    this.badgeId = badgeId;
+    this.studentId = studentId;
+    this.ownerName = ownerName;
+    this.status = status;
+    this.time = time;
+    this.occurredAt = /* @__PURE__ */ new Date();
+    Object.freeze(this);
+  }
+  scanId;
+  badgeId;
+  studentId;
+  ownerName;
+  status;
+  time;
+  occurredAt;
+  eventName = "BadgeScannedEvent";
+};
+
 // vrai_backend/modules/vigil/infrastructure/adapter/out/messaging/ConsoleSecurityEventPublisherAdapter.ts
 var ConsoleSecurityEventPublisherAdapter = class {
+  store = ProductionStore.getInstance();
   async publish(event) {
-    console.log(`[Security Event Published] ${event.eventName} occurred at ${event.occurredAt.toISOString()}:`, JSON.stringify(event));
+    console.log(`[SecurityEvent] ${event.eventName} occurred at ${event.occurredAt.toISOString()}`);
+    if (event instanceof BadgeScannedEvent) {
+      console.log(` -> Scan ID: ${event.scanId}, Owner: ${event.ownerName}, Status: ${event.status}`);
+      const eventRecord = {
+        id: `evt-${Date.now()}-${Math.floor(Math.random() * 1e3)}`,
+        eventName: "Badge Scann\xE9",
+        occurredAt: event.occurredAt.toISOString(),
+        payload: {
+          scanId: event.scanId,
+          badgeId: event.badgeId,
+          studentId: event.studentId,
+          name: event.ownerName,
+          status: event.status,
+          time: event.time
+        }
+      };
+      this.store.insert("securityEvents", eventRecord);
+    }
   }
 };
 
@@ -1592,28 +1597,6 @@ var BadgeScanFactory = class {
       type
     );
   }
-};
-
-// vrai_backend/modules/vigil/domain/event/BadgeScannedEvent.ts
-var BadgeScannedEvent = class {
-  constructor(scanId, badgeId, studentId, ownerName, status, time) {
-    this.scanId = scanId;
-    this.badgeId = badgeId;
-    this.studentId = studentId;
-    this.ownerName = ownerName;
-    this.status = status;
-    this.time = time;
-    this.occurredAt = /* @__PURE__ */ new Date();
-    Object.freeze(this);
-  }
-  scanId;
-  badgeId;
-  studentId;
-  ownerName;
-  status;
-  time;
-  occurredAt;
-  eventName = "BadgeScannedEvent";
 };
 
 // backend/qrSecurity.ts
@@ -1973,66 +1956,53 @@ var Eleve = class _Eleve extends Entity {
 
 // vrai_backend/modules/eleve/infrastructure/adapter/out/persistence/JsonEleveRepositoryAdapter.ts
 var JsonEleveRepositoryAdapter = class {
-  async findById(id) {
-    const db = readDb();
-    const student = (db.students || []).find((s) => s.id === id);
-    if (!student) return null;
-    const scolariteVal = student.financialStatus === "En Retard" ? "En Retard" : "\xC0 Jour";
+  store = ProductionStore.getInstance();
+  mapRecordToDomain(record) {
+    const scolarite = record.statutFrais || record.scolarite || "\xC0 Jour";
+    let stateVal = "\xC0 Jour";
+    if (scolarite === "En Retard" || scolarite === "Paiement en retard") {
+      stateVal = "En Retard";
+    } else if (scolarite === "Paiement partiel") {
+      stateVal = "Paiement partiel";
+    }
     return Eleve.create(
-      student.id,
-      student.name,
-      student.matricule,
-      student.promotion_id || "p-1",
-      scolariteVal,
-      parseFloat(student.average) || 15,
-      parseFloat(student.gpa) || 3.5,
-      student.mood || ""
+      record.id,
+      record.name,
+      record.matricule,
+      record.promotion_id || record.promotionId || "",
+      stateVal,
+      record.average || 0,
+      record.gpa || 0,
+      record.mood || ""
     );
+  }
+  async findById(id) {
+    const record = this.store.findOne("students", (s) => s.id === id);
+    if (!record) return null;
+    return this.mapRecordToDomain(record);
   }
   async findByMatricule(matricule) {
-    const db = readDb();
-    const student = (db.students || []).find((s) => s.matricule === matricule);
-    if (!student) return null;
-    const scolariteVal = student.financialStatus === "En Retard" ? "En Retard" : "\xC0 Jour";
-    return Eleve.create(
-      student.id,
-      student.name,
-      student.matricule,
-      student.promotion_id || "p-1",
-      scolariteVal,
-      parseFloat(student.average) || 15,
-      parseFloat(student.gpa) || 3.5,
-      student.mood || ""
-    );
+    const record = this.store.findOne("students", (s) => s.matricule === matricule);
+    if (!record) return null;
+    return this.mapRecordToDomain(record);
   }
   async save(eleve) {
-    const db = readDb();
-    db.students = db.students || [];
-    const idx = db.students.findIndex((s) => s.id === eleve.id);
-    const updatedStudent = {
-      id: eleve.id,
+    const studentId = eleve.id;
+    this.store.update("students", studentId, (existing) => ({
       name: eleve.name,
       matricule: eleve.matricule,
       promotion_id: eleve.promotionId,
+      statutFrais: eleve.scolarite.state,
       average: eleve.average,
       gpa: eleve.gpa,
-      mood: eleve.mood || "",
-      financialStatus: eleve.scolarite.state === "En Retard" ? "En Retard" : "En R\xE8gle",
-      qrStatus: eleve.scolarite.state === "En Retard" ? "SUSPENDU" : "AUTORIS\xC9"
-    };
-    if (idx !== -1) {
-      db.students[idx] = { ...db.students[idx], ...updatedStudent };
-    } else {
-      db.students.push(updatedStudent);
-    }
-    writeDb(db);
+      mood: eleve.mood
+    }));
   }
   async findPromotionName(promotionId) {
-    const db = readDb();
-    const promo = (db.promotions || []).find((p) => p.id === promotionId);
+    const promo = this.store.findOne("promotions", (p) => p.id === promotionId);
     if (!promo) return null;
     return {
-      name: promo.name,
+      name: promo.name || "",
       filiere: promo.filiere || "",
       faculte: promo.faculte || ""
     };
@@ -2142,71 +2112,76 @@ import { Router as Router12 } from "express";
 
 // vrai_backend/modules/admin/infrastructure/adapter/out/persistence/JsonAdminRepositoryAdapter.ts
 var JsonAdminRepositoryAdapter = class {
+  store = ProductionStore.getInstance();
+  saveItem(table, item) {
+    const existing = this.store.findOne(table, (x) => x.id === item.id);
+    if (existing) {
+      this.store.update(table, item.id, () => item);
+    } else {
+      this.store.insert(table, item);
+    }
+  }
+  deleteItem(table, id) {
+    const list = this.store.getTable(table);
+    const index = list.findIndex((item) => item.id === id);
+    if (index === -1) return false;
+    list.splice(index, 1);
+    this.store.saveTable(table, list);
+    return true;
+  }
   async getCounts() {
-    const db = readDb();
     return {
-      students: (db.students || []).length,
-      professors: (db.professors || []).length,
-      courses: (db.courses || []).length,
-      promotions: (db.promotions || []).length
+      students: this.store.getTable("students").length,
+      professors: this.store.getTable("professors").length,
+      courses: this.store.getTable("courses").length,
+      promotions: this.store.getTable("promotions").length
     };
   }
   async getUsers() {
-    const db = readDb();
-    return { students: db.students || [], professors: db.professors || [], promotions: db.promotions || [] };
+    return {
+      students: this.store.getTable("students"),
+      professors: this.store.getTable("professors"),
+      promotions: this.store.getTable("promotions")
+    };
   }
-  saveItem(collectionKey, item) {
-    const db = readDb();
-    db[collectionKey] = db[collectionKey] || [];
-    const idx = db[collectionKey].findIndex((x) => x.id === item.id);
-    if (idx !== -1) db[collectionKey][idx] = { ...db[collectionKey][idx], ...item };
-    else db[collectionKey].push(item);
-    writeDb(db);
-  }
-  deleteItem(collectionKey, id) {
-    const db = readDb();
-    db[collectionKey] = db[collectionKey] || [];
-    const initial = db[collectionKey].length;
-    db[collectionKey] = db[collectionKey].filter((x) => x.id !== id);
-    writeDb(db);
-    return db[collectionKey].length < initial;
-  }
-  async saveStudent(s) {
-    this.saveItem("students", s);
+  async saveStudent(student) {
+    this.saveItem("students", student);
   }
   async deleteStudent(id) {
     return this.deleteItem("students", id);
   }
   async findStudentById(id) {
-    return (readDb().students || []).find((s) => s.id === id) || null;
+    return this.store.findOne("students", (s) => s.id === id);
   }
-  async saveProfessor(p) {
-    this.saveItem("professors", p);
+  async saveProfessor(prof) {
+    this.saveItem("professors", prof);
   }
   async deleteProfessor(id) {
     return this.deleteItem("professors", id);
   }
   async getSessions() {
-    return readDb().sessions || [];
+    return this.store.getTable("sessions");
   }
   async findSessionById(id) {
-    return (readDb().sessions || []).find((s) => s.id === id) || null;
+    return this.store.findOne("sessions", (s) => s.id === id);
   }
-  async saveSession(s) {
-    this.saveItem("sessions", s);
+  async saveSession(session) {
+    this.saveItem("sessions", session);
   }
-  async savePromotion(p) {
-    this.saveItem("promotions", p);
+  async savePromotion(promo) {
+    this.saveItem("promotions", promo);
   }
-  async saveCourse(c) {
-    this.saveItem("courses", c);
+  async saveCourse(course) {
+    this.saveItem("courses", course);
   }
   async getPersonnel() {
-    const db = readDb();
-    return { professors: db.professors || [], staff: db.staff || [] };
+    return {
+      professors: this.store.getTable("professors"),
+      staff: this.store.getTable("staff")
+    };
   }
-  async saveStaff(s) {
-    this.saveItem("staff", s);
+  async saveStaff(staff) {
+    this.saveItem("staff", staff);
   }
   async deleteStaff(id) {
     return this.deleteItem("staff", id);
@@ -3620,6 +3595,12 @@ uploadRouter.post("/upload", async (req, res) => {
       res.status(400).json({ error: "Aucun fichier fourni sous forme de cha\xEEne de caract\xE8res Base64 (fileStr)" });
       return;
     }
+    const approxSizeBytes = Math.round(fileStr.length * 3 / 4);
+    const MAX_SIZE_BYTES = 10 * 1024 * 1024;
+    if (approxSizeBytes > MAX_SIZE_BYTES) {
+      res.status(400).json({ error: "Le fichier d\xE9passe la limite de taille autoris\xE9e de 10 Mo" });
+      return;
+    }
     const uploadResponse = await cloudinary.uploader.upload(fileStr, {
       resource_type: "auto",
       folder: "ecole221"
@@ -3714,6 +3695,223 @@ planningRouter.put("/planning/filieres", (req, res) => {
   res.json({ success: true, filieres: db.planningFilieres });
 });
 
+// backend/routes/collaboration.ts
+import { Router as Router19 } from "express";
+
+// backend/routes/collaborationHelper.ts
+function updateDbCollection(key, item) {
+  const db = readDb();
+  db[key] = db[key] || [];
+  db[key].push(item);
+  writeDb(db);
+  return item;
+}
+function createBalancedGroups(name, classId, criteria, numGroups) {
+  const db = readDb();
+  const promoStudents = (db.students || []).filter((s) => s.promotion_id === classId);
+  const sorted = [...promoStudents];
+  if (criteria === "gpa") {
+    sorted.sort((a, b) => b.gpa - a.gpa);
+  } else if (criteria === "average") {
+    sorted.sort((a, b) => b.average - a.average);
+  } else if (criteria === "gender") {
+    sorted.sort((a, b) => (a.gender || "M").localeCompare(b.gender || "M"));
+  } else if (criteria === "random") {
+    sorted.sort(() => Math.random() - 0.5);
+  }
+  const groupsCount = numGroups || 2;
+  const newGroups = Array.from({ length: groupsCount }, (_, i) => ({
+    id: `group-${Date.now()}-${i}`,
+    name: `${name} ${i + 1}`,
+    description: `Groupe \xE9quilibr\xE9 automatiquement par crit\xE8re : ${criteria}`,
+    creationDate: (/* @__PURE__ */ new Date()).toLocaleDateString("fr-FR"),
+    classId,
+    members: [],
+    projects: [],
+    leaderId: "",
+    leaderName: ""
+  }));
+  sorted.forEach((student, idx) => {
+    const groupIdx = idx % groupsCount;
+    newGroups[groupIdx].members.push({
+      id: student.id,
+      name: student.name,
+      email: `${student.name.toLowerCase().replace(/\s+/g, ".")}@ecole221.sn`,
+      gpa: student.gpa,
+      gender: student.gender || "M"
+    });
+  });
+  newGroups.forEach((g) => {
+    if (g.members.length > 0) {
+      g.leaderId = g.members[0].id;
+      g.leaderName = g.members[0].name;
+    }
+  });
+  db.workgroups = db.workgroups || [];
+  db.workgroups.push(...newGroups);
+  writeDb(db);
+  return newGroups;
+}
+function handleDocumentUpload(groupId, name, description, author) {
+  const db = readDb();
+  db.collabDocuments = db.collabDocuments || [];
+  const existing = db.collabDocuments.find((d) => d.groupId === groupId && d.name === name);
+  if (existing) {
+    existing.latestVersion += 1;
+    existing.updatedBy = author;
+    existing.updatedAt = (/* @__PURE__ */ new Date()).toLocaleString("fr-FR");
+    existing.history.push({
+      version: existing.latestVersion,
+      author,
+      fileUrl: "#",
+      updatedAt: existing.updatedAt,
+      comment: description || `Mise \xE0 jour v${existing.latestVersion}`
+    });
+    writeDb(db);
+    return existing;
+  }
+  const newDoc = {
+    id: `doc-${Date.now()}`,
+    groupId,
+    name,
+    description,
+    latestVersion: 1,
+    updatedBy: author,
+    updatedAt: (/* @__PURE__ */ new Date()).toLocaleString("fr-FR"),
+    history: [{ version: 1, author, fileUrl: "#", updatedAt: (/* @__PURE__ */ new Date()).toLocaleString("fr-FR"), comment: "Cr\xE9ation initiale" }],
+    status: "En attente",
+    comments: []
+  };
+  db.collabDocuments.push(newDoc);
+  writeDb(db);
+  return newDoc;
+}
+
+// backend/routes/collaboration.ts
+var collaborationRouter = Router19();
+collaborationRouter.get("/collaboration/students", (req, res) => {
+  res.json(readDb().students || []);
+});
+collaborationRouter.get("/collaboration/meets", (req, res) => {
+  res.json(readDb().virtualClasses || []);
+});
+collaborationRouter.post("/collaboration/meets", (req, res) => {
+  const newMeet = { id: `meet-${Date.now()}`, ...req.body };
+  res.json(updateDbCollection("virtualClasses", newMeet));
+});
+collaborationRouter.get("/collaboration/admin-meets", (req, res) => {
+  res.json(readDb().adminMeetings || []);
+});
+collaborationRouter.get("/collaboration/workgroups", (req, res) => {
+  res.json(readDb().workgroups || []);
+});
+collaborationRouter.post("/collaboration/workgroups", (req, res) => {
+  const { name, classId, members, type, criteria, numGroups } = req.body;
+  if (type === "automatic" || type === "balanced") {
+    return res.json(createBalancedGroups(name, classId, criteria, numGroups));
+  }
+  const newGroup = {
+    id: `group-${Date.now()}`,
+    name,
+    description: "Groupe cr\xE9\xE9 manuellement.",
+    creationDate: (/* @__PURE__ */ new Date()).toLocaleDateString("fr-FR"),
+    classId,
+    members: members || [],
+    projects: [],
+    leaderId: members?.[0]?.id || "",
+    leaderName: members?.[0]?.name || ""
+  };
+  res.json(updateDbCollection("workgroups", newGroup));
+});
+collaborationRouter.get("/collaboration/workgroups/:groupId/messages", (req, res) => {
+  const msgs = readDb().collabMessages || [];
+  res.json(msgs.filter((m) => m.groupId === req.params.groupId));
+});
+collaborationRouter.post("/collaboration/workgroups/:groupId/messages", (req, res) => {
+  const newMsg = { id: `m-${Date.now()}`, groupId: req.params.groupId, ...req.body };
+  res.json(updateDbCollection("collabMessages", newMsg));
+});
+collaborationRouter.get("/collaboration/workgroups/:groupId/documents", (req, res) => {
+  const docs = readDb().collabDocuments || [];
+  res.json(docs.filter((d) => d.groupId === req.params.groupId));
+});
+collaborationRouter.post("/collaboration/workgroups/:groupId/documents", (req, res) => {
+  const { name, description, author } = req.body;
+  res.json(handleDocumentUpload(req.params.groupId, name, description, author));
+});
+collaborationRouter.get("/collaboration/workgroups/:groupId/tasks", (req, res) => {
+  const tasks = readDb().collabTasks || [];
+  res.json(tasks.filter((t) => t.groupId === req.params.groupId));
+});
+collaborationRouter.post("/collaboration/workgroups/:groupId/tasks", (req, res) => {
+  const db = readDb();
+  const { id, title, status, assignedTo, deadline, checklist } = req.body;
+  db.collabTasks = db.collabTasks || [];
+  if (id) {
+    const idx = db.collabTasks.findIndex((t) => t.id === id);
+    if (idx !== -1) {
+      db.collabTasks[idx] = { ...db.collabTasks[idx], title, status, assignedTo, deadline, checklist };
+      writeDb(db);
+      return res.json(db.collabTasks[idx]);
+    }
+  }
+  const newTask = { id: `task-${Date.now()}`, groupId: req.params.groupId, title, status, assignedTo, deadline, checklist: checklist || [] };
+  db.collabTasks.push(newTask);
+  writeDb(db);
+  res.json(newTask);
+});
+collaborationRouter.get("/collaboration/workgroups/:groupId/homeworks", (req, res) => {
+  const hws = readDb().collabHomeworks || [];
+  res.json(hws.filter((h) => h.targetGroups && h.targetGroups.includes(req.params.groupId)));
+});
+collaborationRouter.post("/collaboration/workgroups/:groupId/homeworks", (req, res) => {
+  const db = readDb();
+  const { id, title, description, deadline, submissions } = req.body;
+  db.collabHomeworks = db.collabHomeworks || [];
+  if (id) {
+    const hw = db.collabHomeworks.find((h) => h.id === id);
+    if (hw) {
+      if (submissions) hw.submissions = submissions;
+      writeDb(db);
+      return res.json(hw);
+    }
+  }
+  const newHw = { id: `hw-${Date.now()}`, title, description, deadline, targetGroups: [req.params.groupId], submissions: [] };
+  db.collabHomeworks.push(newHw);
+  writeDb(db);
+  res.json(newHw);
+});
+
+// backend/routes/sync.ts
+import { Router as Router20 } from "express";
+import fs2 from "fs";
+import path2 from "path";
+var syncRouter = Router20();
+var DB_PATH2 = path2.resolve(process.cwd(), "backend", "db.json");
+syncRouter.get("/sync/check", (req, res) => {
+  try {
+    if (fs2.existsSync(DB_PATH2)) {
+      const stat = fs2.statSync(DB_PATH2);
+      const timestamp = stat.mtime.getTime();
+      const size = stat.size;
+      return res.json({
+        success: true,
+        timestamp,
+        version: `${timestamp}-${size}`,
+        message: "Version database r\xE9cup\xE9r\xE9e."
+      });
+    }
+  } catch (err) {
+    console.error("Sync check error:", err);
+  }
+  return res.json({
+    success: true,
+    timestamp: Date.now(),
+    version: "fresh",
+    message: "Version database fra\xEEche g\xE9n\xE9r\xE9e."
+  });
+});
+
 // backend/api-index.ts
 var app = express();
 app.use(cors());
@@ -3734,6 +3932,8 @@ app.use("/api", professorScheduleRouter);
 app.use("/api", candidaturesRouter);
 app.use("/api", uploadRouter);
 app.use("/api", planningRouter);
+app.use("/api", collaborationRouter);
+app.use("/api", syncRouter);
 app.use("/api/student", studentRouter);
 var api_index_default = app;
 export {

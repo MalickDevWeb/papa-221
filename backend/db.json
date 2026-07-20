@@ -2928,6 +2928,949 @@
       "nom": "Diallo",
       "prenom": "Aboulaye",
       "role": "VIGIL"
+    },
+    {
+      "id": "usr-etudiant-generated-10",
+      "email": "ramata.seck.10@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Seck",
+      "prenom": "Ramata",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-11",
+      "email": "habib.sene.11@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sene",
+      "prenom": "Habib",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-12",
+      "email": "moussa.sarr.12@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sarr",
+      "prenom": "Moussa",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-13",
+      "email": "mariama.gueye.13@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gueye",
+      "prenom": "Mariama",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-14",
+      "email": "khady.gueye.14@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gueye",
+      "prenom": "Khady",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-15",
+      "email": "samba.kouyate.15@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Kouyate",
+      "prenom": "Samba",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-16",
+      "email": "djibril.sene.16@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sene",
+      "prenom": "Djibril",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-17",
+      "email": "sokhna.camara.17@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Camara",
+      "prenom": "Sokhna",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-18",
+      "email": "ousmane.kouyate.18@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Kouyate",
+      "prenom": "Ousmane",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-19",
+      "email": "samba.mbaye.19@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mbaye",
+      "prenom": "Samba",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-20",
+      "email": "boulaye.faye.20@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Faye",
+      "prenom": "Boulaye",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-21",
+      "email": "penda.seck.21@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Seck",
+      "prenom": "Penda",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-22",
+      "email": "moussa.gomis.22@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gomis",
+      "prenom": "Moussa",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-23",
+      "email": "djibril.camara.23@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Camara",
+      "prenom": "Djibril",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-24",
+      "email": "fama.diop.24@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diop",
+      "prenom": "Fama",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-25",
+      "email": "aliou.cisse.25@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Cisse",
+      "prenom": "Aliou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-26",
+      "email": "djibril.gueye.26@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gueye",
+      "prenom": "Djibril",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-27",
+      "email": "nafi.diatta.27@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diatta",
+      "prenom": "Nafi",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-28",
+      "email": "seydou.gomis.28@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gomis",
+      "prenom": "Seydou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-29",
+      "email": "ousseynou.gning.29@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gning",
+      "prenom": "Ousseynou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-30",
+      "email": "fatoumata.mendy.30@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mendy",
+      "prenom": "Fatoumata",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-31",
+      "email": "youssou.kouyate.31@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Kouyate",
+      "prenom": "Youssou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-32",
+      "email": "djibril.diop.32@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diop",
+      "prenom": "Djibril",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-33",
+      "email": "mariama.keita.33@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Keita",
+      "prenom": "Mariama",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-34",
+      "email": "djibril.mané.34@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mané",
+      "prenom": "Djibril",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-35",
+      "email": "boubacar.dieng.35@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Dieng",
+      "prenom": "Boubacar",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-36",
+      "email": "gnilane.dione.36@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Dione",
+      "prenom": "Gnilane",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-37",
+      "email": "ramata.gomis.37@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gomis",
+      "prenom": "Ramata",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-38",
+      "email": "cheikh.mendy.38@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mendy",
+      "prenom": "Cheikh",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-39",
+      "email": "moussa.mbaye.39@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mbaye",
+      "prenom": "Moussa",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-40",
+      "email": "youssou.dieng.40@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Dieng",
+      "prenom": "Youssou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-41",
+      "email": "kalidou.thiam.41@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Thiam",
+      "prenom": "Kalidou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-42",
+      "email": "babacar.jackson.42@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Jackson",
+      "prenom": "Babacar",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-43",
+      "email": "moussa.keita.43@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Keita",
+      "prenom": "Moussa",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-44",
+      "email": "kalidou.badiane.44@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Badiane",
+      "prenom": "Kalidou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-45",
+      "email": "ndeye.seck.45@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Seck",
+      "prenom": "Ndeye",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-46",
+      "email": "mame.gomis.46@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gomis",
+      "prenom": "Mame",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-47",
+      "email": "mariama.mbaye.47@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mbaye",
+      "prenom": "Mariama",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-48",
+      "email": "ibrahima.lo.48@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Lo",
+      "prenom": "Ibrahima",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-49",
+      "email": "bator.dione.49@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Dione",
+      "prenom": "Bator",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-50",
+      "email": "adama.sy.50@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sy",
+      "prenom": "Adama",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-51",
+      "email": "malick.mendy.51@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mendy",
+      "prenom": "Malick",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-52",
+      "email": "ousseynou.ndiaye.52@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Ndiaye",
+      "prenom": "Ousseynou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-53",
+      "email": "mame.fall.53@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Fall",
+      "prenom": "Mame",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-54",
+      "email": "astou.kouyate.54@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Kouyate",
+      "prenom": "Astou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-55",
+      "email": "aliou.gning.55@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gning",
+      "prenom": "Aliou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-56",
+      "email": "aida.kane.56@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Kane",
+      "prenom": "Aida",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-57",
+      "email": "alassane.diouf.57@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diouf",
+      "prenom": "Alassane",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-58",
+      "email": "ndeye.wade.58@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Wade",
+      "prenom": "Ndeye",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-59",
+      "email": "modou.touré.59@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Touré",
+      "prenom": "Modou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-60",
+      "email": "ramata.sarr.60@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sarr",
+      "prenom": "Ramata",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-61",
+      "email": "moussa.mangane.61@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mangane",
+      "prenom": "Moussa",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-62",
+      "email": "amara.seck.62@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Seck",
+      "prenom": "Amara",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-63",
+      "email": "samba.mendy.63@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mendy",
+      "prenom": "Samba",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-64",
+      "email": "idrissa.camara.64@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Camara",
+      "prenom": "Idrissa",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-65",
+      "email": "aida.mané.65@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mané",
+      "prenom": "Aida",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-66",
+      "email": "souleymane.sane.66@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sane",
+      "prenom": "Souleymane",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-67",
+      "email": "babacar.badji.67@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Badji",
+      "prenom": "Babacar",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-68",
+      "email": "mame.mendy.68@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mendy",
+      "prenom": "Mame",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-69",
+      "email": "cheikh.mendy.69@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mendy",
+      "prenom": "Cheikh",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-70",
+      "email": "nafi.sabaly.70@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sabaly",
+      "prenom": "Nafi",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-71",
+      "email": "boubacar.sene.71@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sene",
+      "prenom": "Boubacar",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-72",
+      "email": "souleymane.jackson.72@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Jackson",
+      "prenom": "Souleymane",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-73",
+      "email": "ousmane.sy.73@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sy",
+      "prenom": "Ousmane",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-74",
+      "email": "kalidou.ba.74@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Ba",
+      "prenom": "Kalidou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-75",
+      "email": "awa.seck.75@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Seck",
+      "prenom": "Awa",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-76",
+      "email": "ismaila.seck.76@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Seck",
+      "prenom": "Ismaila",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-77",
+      "email": "assane.ndiaye.77@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Ndiaye",
+      "prenom": "Assane",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-78",
+      "email": "idrissa.ba.78@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Ba",
+      "prenom": "Idrissa",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-79",
+      "email": "youssou.sanogo.79@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sanogo",
+      "prenom": "Youssou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-80",
+      "email": "ismaila.kane.80@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Kane",
+      "prenom": "Ismaila",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-81",
+      "email": "boulaye.sy.81@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sy",
+      "prenom": "Boulaye",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-82",
+      "email": "lamine.diop.82@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diop",
+      "prenom": "Lamine",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-83",
+      "email": "ismaila.seck.83@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Seck",
+      "prenom": "Ismaila",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-84",
+      "email": "lamine.diatta.84@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diatta",
+      "prenom": "Lamine",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-85",
+      "email": "coumba.diallo.85@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diallo",
+      "prenom": "Coumba",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-86",
+      "email": "lamine.gning.86@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gning",
+      "prenom": "Lamine",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-87",
+      "email": "krépin.thiam.87@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Thiam",
+      "prenom": "Krépin",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-88",
+      "email": "omar.mbaye.88@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Mbaye",
+      "prenom": "Omar",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-89",
+      "email": "ramata.jackson.89@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Jackson",
+      "prenom": "Ramata",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-90",
+      "email": "kalidou.gueye.90@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gueye",
+      "prenom": "Kalidou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-91",
+      "email": "sokhna.fall.91@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Fall",
+      "prenom": "Sokhna",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-92",
+      "email": "modou.dione.92@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Dione",
+      "prenom": "Modou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-93",
+      "email": "boubacar.diouf.93@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diouf",
+      "prenom": "Boubacar",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-94",
+      "email": "amara.ba.94@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Ba",
+      "prenom": "Amara",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-95",
+      "email": "ngoné.diallo.95@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diallo",
+      "prenom": "Ngoné",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-96",
+      "email": "amy.camara.96@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Camara",
+      "prenom": "Amy",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-97",
+      "email": "abdoulaye.seck.97@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Seck",
+      "prenom": "Abdoulaye",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-98",
+      "email": "habib.jackson.98@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Jackson",
+      "prenom": "Habib",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-99",
+      "email": "astou.sabaly.99@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sabaly",
+      "prenom": "Astou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-100",
+      "email": "boubacar.sene.100@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sene",
+      "prenom": "Boubacar",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-101",
+      "email": "fama.gomis.101@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Gomis",
+      "prenom": "Fama",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-102",
+      "email": "habib.kouyate.102@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Kouyate",
+      "prenom": "Habib",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-103",
+      "email": "mariama.seck.103@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Seck",
+      "prenom": "Mariama",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-104",
+      "email": "boulaye.dione.104@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Dione",
+      "prenom": "Boulaye",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-105",
+      "email": "habib.diop.105@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diop",
+      "prenom": "Habib",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-106",
+      "email": "penda.keita.106@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Keita",
+      "prenom": "Penda",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-107",
+      "email": "astou.sanogo.107@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Sanogo",
+      "prenom": "Astou",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-108",
+      "email": "boubacar.niang.108@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Niang",
+      "prenom": "Boubacar",
+      "role": "ETUDIANT"
+    },
+    {
+      "id": "usr-etudiant-generated-109",
+      "email": "aminata.diallo.109@ecole221.sn",
+      "password": "ecole221",
+      "nom": "Diallo",
+      "prenom": "Aminata",
+      "role": "ETUDIANT"
+    }
+  ],
+  "virtualClasses": [
+    {
+      "id": "meet-1",
+      "classIds": [
+        "p-1"
+      ],
+      "classNames": [
+        "DEVWEB L1 A"
+      ],
+      "subjectName": "Algorithmique Avancée & Complexité",
+      "teacherName": "Dr. Aly Diatta",
+      "meetLink": "https://meet.google.com/abc-defg-hij",
+      "isPublished": true,
+      "date": "Lundi 20 Juillet",
+      "time": "10h - 12h",
+      "restrictToGoogleAccount": true
+    }
+  ],
+  "adminMeetings": [
+    {
+      "id": "admin-meet-1",
+      "title": "Cérémonie d'Accueil & Orientation 2026",
+      "organizer": "Administration Générale",
+      "targetScope": "ALL",
+      "targetDetails": "Tous les étudiants",
+      "type": "cérémonie",
+      "meetLink": "https://meet.google.com/xyz-work-shp",
+      "date": "Vendredi 24 Juillet",
+      "time": "09h - 11h"
+    }
+  ],
+  "workgroups": [
+    {
+      "id": "group-1",
+      "name": "Groupe Alpha - Intelligence Artificielle",
+      "description": "Recherche et développement sur le Deep Learning appliqué à la santé.",
+      "creationDate": "17/07/2026",
+      "leaderId": "usr-etudiant-generated-10",
+      "leaderName": "Awa Diop",
+      "members": [
+        {
+          "id": "usr-etudiant-generated-10",
+          "name": "Awa Diop",
+          "email": "awa.diop.10@ecole221.sn",
+          "gpa": 3.8,
+          "gender": "F"
+        },
+        {
+          "id": "usr-etudiant-generated-11",
+          "name": "Moussa Sow",
+          "email": "moussa.sow.11@ecole221.sn",
+          "gpa": 3.5,
+          "gender": "M"
+        }
+      ],
+      "projects": [
+        "Classification d'imagerie médicale"
+      ],
+      "classId": "p-1"
+    }
+  ],
+  "collabMessages": [
+    {
+      "id": "m-1",
+      "groupId": "group-1",
+      "senderName": "Awa Diop",
+      "senderRole": "ETUDIANT",
+      "text": "Bonjour à tous ! J'ai téléversé les diapositives de notre projet.",
+      "fileType": "presentation",
+      "fileName": "Rapport_Projet_IA_Sante.pptx",
+      "timestamp": "09:42"
+    }
+  ],
+  "collabDocuments": [
+    {
+      "id": "doc-1",
+      "groupId": "group-1",
+      "name": "Rapport Final de Spécifications",
+      "description": "Cahier des charges et architecture logicielle pour l'analyseur d'imagerie médicale.",
+      "latestVersion": 2,
+      "updatedBy": "Moussa Sow",
+      "updatedAt": "17/07/2026 10:15",
+      "history": [
+        {
+          "version": 1,
+          "author": "Awa Diop",
+          "fileUrl": "#",
+          "updatedAt": "16/07/2026 14:00",
+          "comment": "Initialisation du cahier des charges"
+        },
+        {
+          "version": 2,
+          "author": "Moussa Sow",
+          "fileUrl": "#",
+          "updatedAt": "17/07/2026 10:15",
+          "comment": "Mise à jour des diagrammes de cas d'utilisation"
+        }
+      ],
+      "status": "En attente",
+      "comments": [
+        {
+          "id": "dc-1",
+          "author": "Dr. Aly Diatta",
+          "text": "Excellent début de structure, n'oubliez pas de détailler l'analyse de performances.",
+          "timestamp": "17/07/2026 11:30"
+        }
+      ]
+    }
+  ],
+  "collabTasks": [
+    {
+      "id": "task-1",
+      "groupId": "group-1",
+      "title": "Nettoyage du jeu de données d'images",
+      "status": "En cours",
+      "assignedTo": "Moussa Sow",
+      "deadline": "22/07/2026",
+      "checklist": [
+        {
+          "id": "c-1",
+          "text": "Retirer les images floues",
+          "done": true
+        },
+        {
+          "id": "c-2",
+          "text": "Normaliser la taille en 224x224",
+          "done": false
+        }
+      ]
+    }
+  ],
+  "collabHomeworks": [
+    {
+      "id": "g-hw-1",
+      "title": "Livrable Architecture & Spécifications",
+      "description": "Soumettez le cahier des charges et diagrammes UML de votre solution.",
+      "deadline": "25/07/2026",
+      "targetGroups": [
+        "group-1"
+      ],
+      "submissions": []
     }
   ]
 }

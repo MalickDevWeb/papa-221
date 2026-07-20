@@ -1,90 +1,65 @@
 import { AdminRepositoryPort } from '../../../../domain/port/AdminRepositoryPort';
-import { readDb, writeDb } from '../../../../../../../backend/db';
+import { ProductionStore } from '../../../../../../shared/infrastructure/store/ProductionStore';
 
 export class JsonAdminRepositoryAdapter implements AdminRepositoryPort {
-  async getCounts() {
-    const db = readDb();
+  private readonly store = ProductionStore.getInstance();
+
+  private saveItem(table: string, item: any): void {
+    const existing = this.store.findOne(table, (x: any) => x.id === item.id);
+    if (existing) {
+      this.store.update(table, item.id, () => item);
+    } else {
+      this.store.insert(table, item);
+    }
+  }
+
+  private deleteItem(table: string, id: string): boolean {
+    const list = this.store.getTable(table);
+    const index = list.findIndex((item: any) => item.id === id);
+    if (index === -1) return false;
+    list.splice(index, 1);
+    this.store.saveTable(table, list);
+    return true;
+  }
+
+  public async getCounts() {
     return {
-      students: (db.students || []).length,
-      professors: (db.professors || []).length,
-      courses: (db.courses || []).length,
-      promotions: (db.promotions || []).length
+      students: this.store.getTable('students').length,
+      professors: this.store.getTable('professors').length,
+      courses: this.store.getTable('courses').length,
+      promotions: this.store.getTable('promotions').length
     };
   }
 
-  async getUsers() {
-    const db = readDb();
-    return { students: db.students || [], professors: db.professors || [], promotions: db.promotions || [] };
+  public async getUsers() {
+    return {
+      students: this.store.getTable('students'),
+      professors: this.store.getTable('professors'),
+      promotions: this.store.getTable('promotions')
+    };
   }
 
-  private saveItem(collectionKey: string, item: any) {
-    const db = readDb();
-    db[collectionKey] = db[collectionKey] || [];
-    const idx = db[collectionKey].findIndex((x: any) => x.id === item.id);
-    if (idx !== -1) db[collectionKey][idx] = { ...db[collectionKey][idx], ...item };
-    else db[collectionKey].push(item);
-    writeDb(db);
+  public async saveStudent(student: any) { this.saveItem('students', student); }
+  public async deleteStudent(id: string) { return this.deleteItem('students', id); }
+  public async findStudentById(id: string) { return this.store.findOne('students', (s: any) => s.id === id); }
+
+  public async saveProfessor(prof: any) { this.saveItem('professors', prof); }
+  public async deleteProfessor(id: string) { return this.deleteItem('professors', id); }
+
+  public async getSessions() { return this.store.getTable('sessions'); }
+  public async findSessionById(id: string) { return this.store.findOne('sessions', (s: any) => s.id === id); }
+  public async saveSession(session: any) { this.saveItem('sessions', session); }
+
+  public async savePromotion(promo: any) { this.saveItem('promotions', promo); }
+  public async saveCourse(course: any) { this.saveItem('courses', course); }
+
+  public async getPersonnel() {
+    return {
+      professors: this.store.getTable('professors'),
+      staff: this.store.getTable('staff')
+    };
   }
 
-  private deleteItem(collectionKey: string, id: string): boolean {
-    const db = readDb();
-    db[collectionKey] = db[collectionKey] || [];
-    const initial = db[collectionKey].length;
-    db[collectionKey] = db[collectionKey].filter((x: any) => x.id !== id);
-    writeDb(db);
-    return db[collectionKey].length < initial;
-  }
-
-  async saveStudent(s: any) {
-    this.saveItem("students", s);
-  }
-
-  async deleteStudent(id: string) {
-    return this.deleteItem("students", id);
-  }
-
-  async findStudentById(id: string) {
-    return (readDb().students || []).find((s: any) => s.id === id) || null;
-  }
-
-  async saveProfessor(p: any) {
-    this.saveItem("professors", p);
-  }
-
-  async deleteProfessor(id: string) {
-    return this.deleteItem("professors", id);
-  }
-
-  async getSessions() {
-    return readDb().sessions || [];
-  }
-
-  async findSessionById(id: string) {
-    return (readDb().sessions || []).find((s: any) => s.id === id) || null;
-  }
-
-  async saveSession(s: any) {
-    this.saveItem("sessions", s);
-  }
-
-  async savePromotion(p: any) {
-    this.saveItem("promotions", p);
-  }
-
-  async saveCourse(c: any) {
-    this.saveItem("courses", c);
-  }
-
-  async getPersonnel() {
-    const db = readDb();
-    return { professors: db.professors || [], staff: db.staff || [] };
-  }
-
-  async saveStaff(s: any) {
-    this.saveItem("staff", s);
-  }
-
-  async deleteStaff(id: string) {
-    return this.deleteItem("staff", id);
-  }
+  public async saveStaff(staff: any) { this.saveItem('staff', staff); }
+  public async deleteStaff(id: string) { return this.deleteItem('staff', id); }
 }

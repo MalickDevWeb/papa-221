@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { ROUTES } from '@/shared/constants';
+import { setupOfflineInterceptors } from './setupOfflineInterceptors';
 
 export const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL || '/api',
@@ -25,3 +26,6 @@ apiClient.interceptors.response.use(
     return Promise.reject(error);
   },
 );
+
+setupOfflineInterceptors(apiClient);
+

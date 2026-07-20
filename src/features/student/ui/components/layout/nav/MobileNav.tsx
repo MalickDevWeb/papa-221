@@ -11,6 +11,7 @@ export function MobileNav() {
         { to: ROUTES.student.planning, icon: 'calendar_today', label: 'Agenda' },
         { to: ROUTES.student.devoirs, icon: 'assignment', label: 'Devoirs' },
         { to: ROUTES.student.notes, icon: 'grade', label: 'Notes' },
+        { to: ROUTES.student.collaboration, icon: 'groups', label: 'Collab' },
         { to: ROUTES.student.tuteur, icon: 'smart_toy', label: 'Tuteur IA' },
       ].map(({ to, icon, label }) => (
         <NavLink 

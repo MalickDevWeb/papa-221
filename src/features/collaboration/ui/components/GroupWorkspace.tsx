@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Send, FileText, Code, Link2, Paperclip, Music, Users } from 'lucide-react';
+import { Send, Search, Users } from 'lucide-react';
 import { CollabMessage } from '../../domain/CollaborationModels';
+import { MessageItem } from './MessageItem';
 
 interface Props {
   readonly groupId: string;
@@ -15,6 +16,7 @@ export function GroupWorkspace({ groupId, groupName, messages, onSendMessage, us
   const [text, setText] = useState('');
   const [fileType, setFileType] = useState<CollabMessage['fileType']>('none');
   const [fileName, setFileName] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,39 +27,45 @@ export function GroupWorkspace({ groupId, groupName, messages, onSendMessage, us
     setFileName('');
   };
 
-  const groupMsgs = messages.filter((m) => m.groupId === groupId);
+  const groupMsgs = messages.filter((m) => {
+    const matchesGroup = m.groupId === groupId;
+    const matchesSearch = searchQuery.trim() === '' || 
+      m.text.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      m.senderName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (m.fileName && m.fileName.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesGroup && matchesSearch;
+  });
 
   return (
     <div className="bg-white rounded-2xl border border-neutral-gray-200 shadow-sm flex flex-col h-[500px]">
-      <div className="p-4 border-b border-neutral-gray-100 flex items-center justify-between bg-neutral-gray-50/50 rounded-t-2xl">
+      <div className="p-4 border-b border-neutral-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-neutral-gray-50/50 rounded-t-2xl">
         <div className="flex items-center gap-2">
           <Users className="w-5 h-5 text-brand-red-deep animate-pulse" />
           <span className="font-bold text-xs text-gray-800">{groupName}</span>
+          <span className="text-[10px] bg-brand-red-light text-brand-red-deep px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">{userRole}</span>
         </div>
-        <span className="text-[10px] bg-brand-red-light text-brand-red-deep px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">{userRole}</span>
+        
+        {/* Search input to filter chat */}
+        <div className="relative">
+          <Search className="absolute left-2.5 top-2 h-3.5 w-3.5 text-neutral-400" />
+          <input
+            type="text"
+            placeholder="Rechercher message..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full sm:w-40 text-[10px] pl-8 pr-2 py-1 border border-neutral-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-brand-red-deep"
+          />
+        </div>
       </div>
 
       <div className="flex-grow p-4 overflow-y-auto space-y-3 no-scrollbar bg-[#FAF9F6]">
         {groupMsgs.length === 0 ? (
-          <p className="text-center text-xs text-neutral-400 py-10 font-medium">Aucun message pour le moment. Lancez la discussion !</p>
+          <p className="text-center text-xs text-neutral-400 py-10 font-medium">
+            {searchQuery ? 'Aucun résultat trouvé pour cette recherche.' : 'Aucun message pour le moment.'}
+          </p>
         ) : (
           groupMsgs.map((m) => (
-            <div key={m.id} className={`flex flex-col max-w-[80%] ${m.senderName === userName ? 'ml-auto items-end' : 'mr-auto items-start'}`}>
-              <span className="text-[9px] font-bold text-neutral-500 mb-0.5">{m.senderName} ({m.senderRole})</span>
-              <div className={`p-3 rounded-2xl text-xs font-semibold leading-relaxed ${m.senderName === userName ? 'bg-neutral-gray-900 text-white rounded-tr-none' : 'bg-white text-gray-800 border border-neutral-gray-200 rounded-tl-none shadow-3xs'}`}>
-                <p>{m.text}</p>
-                {m.fileType && m.fileType !== 'none' && (
-                  <div className="mt-2 flex items-center gap-2 bg-black/10 p-2 rounded-xl text-[10px]">
-                    {m.fileType === 'pdf' && <FileText className="w-4 h-4 text-rose-400" />}
-                    {m.fileType === 'zip' && <FileText className="w-4 h-4 text-amber-400" />}
-                    {m.fileType === 'code' && <Code className="w-4 h-4 text-emerald-400" />}
-                    {m.fileType === 'link' && <Link2 className="w-4 h-4 text-sky-400" />}
-                    {m.fileType === 'voice' && <Music className="w-4 h-4 text-purple-400" />}
-                    <span className="font-mono truncate">{m.fileName}</span>
-                  </div>
-                )}
-              </div>
-            </div>
+            <MessageItem key={m.id} m={m} isCurrentUser={m.senderName === userName} />
           ))
         )}
       </div>
@@ -68,13 +76,15 @@ export function GroupWorkspace({ groupId, groupName, messages, onSendMessage, us
           onChange={(e) => {
             const val = e.target.value as CollabMessage['fileType'];
             setFileType(val);
-            if (val !== 'none') setFileName(`Doc_Partage_${Date.now().toString().slice(-4)}.${val === 'code' ? 'ts' : val === 'voice' ? 'mp3' : val === 'zip' ? 'zip' : 'pdf'}`);
+            if (val !== 'none') {
+              setFileName(`Doc_Partage_${Date.now().toString().slice(-4)}.${val === 'code' ? 'ts' : val === 'voice' ? 'mp3' : val === 'zip' ? 'zip' : 'pdf'}`);
+            }
           }}
-          className="text-[10px] font-bold border border-neutral-gray-200 rounded-xl px-2 py-1.5 focus:outline-none"
+          className="text-[10px] font-bold border border-neutral-gray-200 rounded-xl px-2 py-1.5 focus:outline-none bg-white"
         >
           <option value="none">Texte seul</option>
           <option value="pdf">📄 PDF</option>
-          <option value="zip">📦 ZIP / Code</option>
+          <option value="zip">📦 ZIP</option>
           <option value="code">💻 Fichier Source</option>
           <option value="voice">🎙️ Message Vocal</option>
         </select>

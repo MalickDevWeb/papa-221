@@ -11,6 +11,8 @@ import { professorScheduleRouter } from './routes/professorSchedule';
 import { candidaturesRouter } from './routes/candidatures';
 import { uploadRouter } from './routes/upload';
 import { planningRouter } from './routes/planning';
+import { collaborationRouter } from './routes/collaboration';
+import { syncRouter } from './routes/sync';
 import { syncFromPostgres } from './db';
 
 const app = express();
@@ -37,6 +39,8 @@ app.use('/api', professorScheduleRouter);
 app.use('/api', candidaturesRouter);
 app.use('/api', uploadRouter);
 app.use('/api', planningRouter);
+app.use('/api', collaborationRouter);
+app.use('/api', syncRouter);
 app.use('/api/student', studentRouter);
 
 export default app;

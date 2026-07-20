@@ -26,6 +26,7 @@ import { ProfessorDashboardPage } from '@/features/professor';
 
 import { useDeviceInitializer } from '@/features/screenguard/hooks/useDeviceInitializer';
 import { GatekeeperModal } from '@/features/screenguard/ui/components/GatekeeperModal';
+import { OfflineSyncToast } from '@/shared/components/OfflineSyncToast';
 
 const PageSkeleton = () => <div className="p-8 text-center text-gray-500 font-bold text-xs">Chargement...</div>;
 
@@ -49,6 +50,7 @@ export function AppRouter() {
   return (
     <>
       <GatekeeperModal />
+      <OfflineSyncToast />
       <Suspense fallback={<PageSkeleton />}>
         <Routes>
           <Route path={ROUTES.login} element={<LoginPage />} />

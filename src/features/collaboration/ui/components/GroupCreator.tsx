@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { Users, Shuffle, Award, CheckCircle } from 'lucide-react';
+import { Users, Sparkles, UserCheck } from 'lucide-react';
 import { GroupingCriterion } from '../../domain/CollaborationAlgorithms';
+import { GroupMember } from '../../domain/CollaborationModels';
+import { ManualGroupCreator } from './ManualGroupCreator';
+import { AutoGroupCreator } from './AutoGroupCreator';
 
 interface Props {
   readonly onAutoGenerate: (
@@ -10,94 +13,60 @@ interface Props {
     count: number,
     leaderRule: 'random' | 'gpa' | 'teacher'
   ) => void;
+  readonly onCreateManual: (
+    name: string,
+    description: string,
+    classId: string,
+    leader: GroupMember,
+    members: readonly GroupMember[]
+  ) => void;
 }
 
-export function GroupCreator({ onAutoGenerate }: Props) {
-  const [baseName, setBaseName] = useState('Projet Annuel');
-  const [classId, setClassId] = useState('L3-INFO');
-  const [criterion, setCriterion] = useState<GroupingCriterion>('gpa');
-  const [count, setCount] = useState(3);
-  const [leaderRule, setLeaderRule] = useState<'random' | 'gpa' | 'teacher'>('gpa');
-
-  const handleGenerate = (e: React.FormEvent) => {
-    e.preventDefault();
-    onAutoGenerate(baseName, classId, criterion, count, leaderRule);
-  };
+export function GroupCreator({ onAutoGenerate, onCreateManual }: Props) {
+  const [activeTab, setActiveTab] = useState<'manual' | 'auto'>('manual');
 
   return (
-    <div className="bg-white rounded-2xl border border-neutral-gray-200 p-6 shadow-sm">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="p-2.5 rounded-xl bg-brand-red-light text-brand-red-deep">
-          <Users className="w-5 h-5" />
+    <div className="bg-white rounded-2xl border border-neutral-gray-200 p-5 shadow-sm">
+      <div className="flex items-center gap-2.5 mb-4">
+        <div className="p-2 rounded-xl bg-indigo-50 text-indigo-600">
+          <Users className="w-4 h-4" />
         </div>
         <div>
-          <h3 className="font-bold text-base text-gray-900">Générateur Automatique de Groupes</h3>
-          <p className="text-xs text-neutral-500">Répartissez les étudiants avec l&apos;algorithme équilibreur</p>
+          <h3 className="font-bold text-xs text-gray-900">Espace Création des Groupes</h3>
+          <p className="text-[10px] text-gray-500">Outils de répartition pour l&apos;enseignant</p>
         </div>
       </div>
 
-      <form onSubmit={handleGenerate} className="space-y-4">
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="block text-xs font-bold text-gray-700 mb-1">Nom de base</label>
-            <input
-              type="text"
-              value={baseName}
-              onChange={(e) => setBaseName(e.target.value)}
-              className="w-full text-xs px-3 py-2 border border-neutral-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-red-deep"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-xs font-bold text-gray-700 mb-1">Nombre de groupes</label>
-            <input
-              type="number"
-              min="1"
-              max="10"
-              value={count}
-              onChange={(e) => setCount(Number(e.target.value))}
-              className="w-full text-xs px-3 py-2 border border-neutral-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-red-deep"
-              required
-            />
-          </div>
-        </div>
-
-        <div>
-          <label className="block text-xs font-bold text-gray-700 mb-1">Critère de répartition équilibrée</label>
-          <select
-            value={criterion}
-            onChange={(e) => setCriterion(e.target.value as GroupingCriterion)}
-            className="w-full text-xs font-semibold px-3 py-2 border border-neutral-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-red-deep"
-          >
-            <option value="gpa">Moyenne Académique Équilibrée (Zig-zag GPA)</option>
-            <option value="gender">Mixité des Sexes Équilibrée (F/M)</option>
-            <option value="alpha">Ordre Alphabétique</option>
-            <option value="random">Aléatoire Pur</option>
-            <option value="mixed">Mélange de profils divers</option>
-          </select>
-        </div>
-
-        <div>
-          <label className="block text-xs font-bold text-gray-700 mb-1">Désignation du Chef de groupe</label>
-          <select
-            value={leaderRule}
-            onChange={(e) => setLeaderRule(e.target.value as 'random' | 'gpa' | 'teacher')}
-            className="w-full text-xs font-semibold px-3 py-2 border border-neutral-gray-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-red-deep"
-          >
-            <option value="gpa">Le plus haut niveau académique (Major GPA)</option>
-            <option value="random">Aléatoire au sein du groupe</option>
-            <option value="teacher">Manuel / Élection interne</option>
-          </select>
-        </div>
-
+      <div className="flex bg-gray-100 p-1 rounded-xl mb-4 gap-1">
         <button
-          type="submit"
-          className="w-full py-2.5 bg-neutral-gray-900 text-white font-bold text-xs rounded-xl hover:bg-neutral-gray-800 transition-all flex items-center justify-center gap-2 shadow-sm"
+          type="button"
+          onClick={() => setActiveTab('manual')}
+          className={`flex-1 py-1.5 text-[10px] font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+            activeTab === 'manual' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-900'
+          }`}
         >
-          <Shuffle className="w-4 h-4" />
-          <span>Générer & Répartir Automatiquement</span>
+          <UserCheck className="w-3.5 h-3.5" />
+          <span>Création Manuelle</span>
         </button>
-      </form>
+        <button
+          type="button"
+          onClick={() => setActiveTab('auto')}
+          className={`flex-1 py-1.5 text-[10px] font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+            activeTab === 'auto' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-900'
+          }`}
+        >
+          <Sparkles className="w-3.5 h-3.5" />
+          <span>Algorithme Automatique</span>
+        </button>
+      </div>
+
+      <div className="border-t border-gray-100 pt-3">
+        {activeTab === 'manual' ? (
+          <ManualGroupCreator onCreateManual={onCreateManual} />
+        ) : (
+          <AutoGroupCreator onAutoGenerate={onAutoGenerate} />
+        )}
+      </div>
     </div>
   );
 }

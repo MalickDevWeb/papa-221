@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface Props {
-  onSendCampaign: (title: string, target: string, channels: string[]) => void;
+  onSendCampaign: (title: string, content: string, target: string, channels: string[]) => void;
 }
 
 export function MassSendTab({ onSendCampaign }: Props) {
@@ -21,7 +21,7 @@ export function MassSendTab({ onSendCampaign }: Props) {
     if (!title || !content) return;
     setSending(true);
     setTimeout(() => {
-      onSendCampaign(title, target, channels);
+      onSendCampaign(title, content, target, channels);
       setTitle('');
       setContent('');
       setSending(false);

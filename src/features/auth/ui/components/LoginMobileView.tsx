@@ -23,7 +23,7 @@ export function LoginMobileView({ bgImageUrl, setShowMobileCalendarModal }: Logi
             <span translate="no" className="material-symbols-outlined text-[19px] font-bold">calendar_month</span>
           </button>
         </div>
-        <div className="relative -mt-8 flex-grow bg-[#FAF8F6] rounded-t-[32px] shadow-[-8px_-8px_32px_rgba(41,23,21,0.06)] flex flex-col justify-start px-6 pt-5 pb-4 z-10 overflow-y-auto no-scrollbar">
+        <div className="relative -mt-6 h-[531.25px] bg-[#FAF8F6] rounded-t-[32px] shadow-[-8px_-8px_32px_rgba(41,23,21,0.06)] flex flex-col justify-start px-6 pt-5 pb-4 z-10 overflow-y-auto no-scrollbar">
           <div className="relative text-center flex flex-col items-center shrink-0 mb-3">
             <EcoleLogo size="sm" />
             <p className="text-[#8E7977] text-[10px] font-bold tracking-widest mt-1 select-none uppercase">Sénégal · Plateforme Éducative</p>

@@ -16,6 +16,8 @@ import { interopSecurityRouter } from "./backend/routes/interopSecurity";
 import { interopStudentProfRouter } from "./backend/routes/interopStudentProf";
 import { tutorRouter } from "./backend/routes/tutor";
 import { planningRouter } from "./backend/routes/planning";
+import { collaborationRouter } from "./backend/routes/collaboration";
+import { syncRouter } from "./backend/routes/sync";
 import { syncFromPostgres } from "./backend/db";
 
 async function startServer() {
@@ -58,6 +60,8 @@ async function startServer() {
   app.use("/api", interopStudentProfRouter);
   app.use("/api", tutorRouter);
   app.use("/api", planningRouter);
+  app.use("/api", collaborationRouter);
+  app.use("/api", syncRouter);
 
   // Main high-completeness API endpoint routing mounts
   app.use("/api/student", studentRouter);

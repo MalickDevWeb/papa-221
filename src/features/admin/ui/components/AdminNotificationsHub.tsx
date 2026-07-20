@@ -5,6 +5,7 @@ import { EmergencyTab } from './notifications/EmergencyTab';
 import { HistoryAnalyticsTab } from './notifications/HistoryAnalyticsTab';
 import { NotificationCampaign, INITIAL_CAMPAIGNS } from '../../domain/NotificationsModels';
 import { TabletDrawerWrapper } from '@/features/screenguard/ui/components/TabletDrawerWrapper';
+import { sendPushNotification } from '@/shared/lib/pushNotifier';
 
 export function AdminNotificationsHub() {
   const [activeTab, setActiveTab] = useState('mass-send');
@@ -17,7 +18,7 @@ export function AdminNotificationsHub() {
     setTimeout(() => setToast(null), 4000);
   };
 
-  const handleSendCampaign = (title: string, target: string, channels: string[]) => {
+  const handleSendCampaign = (title: string, content: string, target: string, channels: string[]) => {
     const newCamp: NotificationCampaign = {
       id: `camp-${Math.floor(100 + Math.random() * 899)}`,
       title,
@@ -29,10 +30,15 @@ export function AdminNotificationsHub() {
     };
     setCampaigns([newCamp, ...campaigns]);
     showToast(`Campagne "${title}" diffusée avec succès !`, true);
+
+    if (channels.includes('Push App')) {
+      sendPushNotification(title, content);
+    }
   };
 
   const handleTriggerEmergency = (type: string) => {
     showToast(`ALERTE CRITIQUE DE TYPE [${type}] DIFFUSÉE ! Tous les terminaux mobiles ont vibré.`, false);
+    sendPushNotification(`⚠️ ALERTE CRITIQUE: ${type}`, `Protocole d'urgence activé immédiatement.`);
   };
 
   return (

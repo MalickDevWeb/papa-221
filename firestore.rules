@@ -1,11 +1,39 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /notifications/{docId} {
-      allow read, write: if true;
-    }
+    
+    // Catch-all default deny to enforce zero-trust security
     match /{document=**} {
-      allow read, write: if true;
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // --- Notifications Collection ---
+    match /notifications/{docId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // --- Collab Wikis Collection ---
+    match /collab_wikis/{docId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // --- Collab Notes Collection ---
+    match /collab_notes/{docId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // --- Collab Audits Collection ---
+    match /collab_audits/{docId} {
+      allow read: if true;
+      allow write: if true;
     }
   }
 }

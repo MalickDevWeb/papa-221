@@ -17,6 +17,15 @@ uploadRouter.post("/upload", async (req: Request, res: Response): Promise<void> 
       return;
     }
 
+    // Calcul de la taille approximative du fichier en octets
+    const approxSizeBytes = Math.round((fileStr.length * 3) / 4);
+    const MAX_SIZE_BYTES = 10 * 1024 * 1024; // 10 Mo
+
+    if (approxSizeBytes > MAX_SIZE_BYTES) {
+      res.status(400).json({ error: "Le fichier dépasse la limite de taille autorisée de 10 Mo" });
+      return;
+    }
+
     const uploadResponse = await cloudinary.uploader.upload(fileStr, {
       resource_type: "auto",
       folder: "ecole221"

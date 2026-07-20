@@ -1,12 +1,24 @@
-import { useState, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Workgroup, GroupMember } from '../domain/CollaborationModels';
-import { INITIAL_WORKGROUPS, COLLAB_STUDENTS_MOCK } from '../domain/CollaborationMockData';
-import { splitIntoBalancedGroups, GroupingCriterion } from '../domain/CollaborationAlgorithms';
+import { subscribeWorkgroups, saveWorkgroup } from '../infrastructure/groupService';
+import { apiClient } from '@/shared/lib/apiClient';
 
 export function useWorkgroupState(triggerToast: (msg: string, isSuccess: boolean) => void) {
-  const [workgroups, setWorkgroups] = useState<readonly Workgroup[]>(INITIAL_WORKGROUPS);
+  const [workgroups, setWorkgroups] = useState<readonly Workgroup[]>([]);
 
-  const createManualGroup = useCallback((name: string, description: string, classId: string, leader: GroupMember, members: readonly GroupMember[]) => {
+  useEffect(() => {
+    return subscribeWorkgroups((groups) => {
+      setWorkgroups(groups);
+    });
+  }, []);
+
+  const createManualGroup = useCallback(async (
+    name: string,
+    description: string,
+    classId: string,
+    leader: GroupMember,
+    members: readonly GroupMember[]
+  ) => {
     const newGroup: Workgroup = {
       id: `group-${Date.now()}`,
       name,
@@ -18,51 +30,39 @@ export function useWorkgroupState(triggerToast: (msg: string, isSuccess: boolean
       projects: ['Projet Académique'],
       classId,
     };
-    setWorkgroups((prev) => [...prev, newGroup]);
+    await saveWorkgroup(newGroup);
     triggerToast(`Groupe de travail "${name}" créé avec succès !`, true);
   }, [triggerToast]);
 
-  const generateAutoGroups = useCallback((
+  const generateAutoGroups = useCallback(async (
     baseName: string,
     classId: string,
-    criterion: GroupingCriterion,
-    targetCount: number,
-    leaderSelection: 'random' | 'gpa' | 'teacher'
+    criterion: string,
+    targetCount: number
   ) => {
-    const students = COLLAB_STUDENTS_MOCK;
-    const splitGroups = splitIntoBalancedGroups(students, targetCount, criterion);
-
-    const newGroups = splitGroups.map((groupStudents, i) => {
-      let leader = groupStudents[0];
-      if (leaderSelection === 'gpa') {
-        leader = [...groupStudents].sort((a, b) => b.gpa - a.gpa)[0];
-      } else if (leaderSelection === 'random') {
-        leader = groupStudents[Math.floor(Math.random() * groupStudents.length)];
-      }
-
-      return {
-        id: `group-auto-${Date.now()}-${i}`,
-        name: `${baseName} - Groupe ${i + 1}`,
-        description: `Groupe généré par algorithme répartiteux (${criterion})`,
-        creationDate: new Date().toLocaleDateString('fr-FR'),
-        leaderId: leader?.id || '',
-        leaderName: leader?.name || 'Aucun',
-        members: groupStudents,
-        projects: ['Projet Automatique'],
+    try {
+      await apiClient.post('/collaboration/workgroups', {
+        name: baseName,
         classId,
-      };
-    });
-
-    setWorkgroups((prev) => [...prev, ...newGroups]);
-    triggerToast(`${newGroups.length} groupes équilibrés créés automatiquement par l'algorithme !`, true);
+        type: 'balanced',
+        criteria: criterion,
+        numGroups: targetCount
+      });
+      triggerToast(`Groupes équilibrés créés automatiquement par critère ${criterion} !`, true);
+    } catch (e) {
+      console.error(e);
+      triggerToast('Erreur lors de la génération automatique des groupes.', false);
+    }
   }, [triggerToast]);
 
-  const changeGroupLeader = useCallback((groupId: string, newLeaderId: string, newLeaderName: string) => {
-    setWorkgroups((prev) =>
-      prev.map((g) => (g.id === groupId ? { ...g, leaderId: newLeaderId, leaderName: newLeaderName } : g))
-    );
-    triggerToast('Le chef de groupe a été mis à jour avec succès.', true);
-  }, [triggerToast]);
+  const changeGroupLeader = useCallback(async (groupId: string, newLeaderId: string, newLeaderName: string) => {
+    const existing = workgroups.find((g) => g.id === groupId);
+    if (existing) {
+      const updated = { ...existing, leaderId: newLeaderId, leaderName: newLeaderName };
+      await saveWorkgroup(updated);
+      triggerToast('Le chef de groupe a été mis à jour avec succès.', true);
+    }
+  }, [workgroups, triggerToast]);
 
   return { workgroups, createManualGroup, generateAutoGroups, changeGroupLeader };
 }
