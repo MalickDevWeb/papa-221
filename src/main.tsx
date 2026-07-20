@@ -30,4 +30,18 @@ createRoot(document.getElementById('root')!).render(
       <AppRouter />
     </AppProviders>
   </StrictMode>,
-)
+);
+
+// Enregistrement du Service Worker pour la PWA
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('Service Worker enregistré avec succès:', registration.scope);
+      })
+      .catch((error) => {
+        console.error('Échec de l\'enregistrement du Service Worker:', error);
+      });
+  });
+}
+
