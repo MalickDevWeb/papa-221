@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 import type { RoleUtilisateur } from '@/shared/constants';
 
 interface AuthState {
@@ -9,23 +10,29 @@ interface AuthState {
   deconnexion: () => void;
 }
 
-export const useAuthStore = create<AuthState>((set) => ({
-  // Pour tester facilement, on mock un admin connecté au démarrage si on veut
-  // utilisateur: { id: 'usr-001', nom: 'Admin', role: 'ADMIN' },
-  // token: 'mock-token',
-  // estConnecte: true,
-  utilisateur: null,
-  token: null,
-  estConnecte: false,
+export const useAuthStore = create<AuthState>()(
+  persist(
+    (set) => ({
+      utilisateur: null,
+      token: null,
+      estConnecte: false,
 
-  connexionReussie: (payload) => set({
-    utilisateur: payload.utilisateur,
-    token: payload.token,
-    estConnecte: true,
-  }),
-  deconnexion: () => set({
-    utilisateur: null,
-    token: null,
-    estConnecte: false,
-  }),
-}));
+      connexionReussie: (payload) => set({
+        utilisateur: payload.utilisateur,
+        token: payload.token,
+        estConnecte: true,
+      }),
+      deconnexion: () => {
+        localStorage.removeItem('access_token');
+        set({
+          utilisateur: null,
+          token: null,
+          estConnecte: false,
+        });
+      },
+    }),
+    {
+      name: 'ecole-221-auth-storage',
+    }
+  )
+);
